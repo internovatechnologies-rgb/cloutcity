@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "blender": {
+    "version": "5.2.2",
+    "executable": "/Applications/Blender.app/Contents/MacOS/Blender"
+  },
+  "outDir": "scripts/blender/out",
+  "models": []
+}

@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "blender": {
+    "version": "5.2.2",
+    "executable": "/Applications/Blender.app/Contents/MacOS/Blender"
+  },
+  "outDir": "scripts/blender/fixtures",
+  "models": [
+    {
+      "id": "smoke-crate",
+      "script": "scripts/blender/fixtures/smoke-crate.py",
+      "inputs": {
+        "scripts/blender/fixtures/smoke-crate.py": "929ea8dcba37effcde823bca11ab9d446dbb7169a9efc9e3821d3d939de1b4d5",
+        "scripts/blender/run.py": "c9ba81adf7da1ba6e0959243782823cfa9be5e5d8541004ae3588c62df2336fa"
+      },
+      "sha256": "fe5c705d959763947e6e92755815222cf3dd98092e6139f2889f42021ca0eaa7",
+      "bytes": 4156
+    }
+  ]
+}

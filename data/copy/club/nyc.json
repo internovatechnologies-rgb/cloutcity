@@ -1,0 +1,7 @@
+{
+  "id": "nyc",
+  "strings": {
+    "club.door.refused": "Bouncer checked the list, then checked your clout. Not tonight. Come back at {level}. You're {current}.",
+    "club.door.refusedVip": "Bouncer didn't even look up. This door is {level} only, and you're {current}. Not tonight."
+  }
+}

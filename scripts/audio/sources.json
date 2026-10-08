@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "downloads": [
+    {
+      "id": "oga-lofi-hip-hop-loop",
+      "url": "https://opengameart.org/sites/default/files/LofiLoop_2.ogg",
+      "file": "oga-lofi-hip-hop-loop.ogg",
+      "sha256": "e57ba821d4db8d66783ca984a2778ec68d1439e862239ec36407344ef3bd1eab",
+      "bytes": 1430666,
+      "retrieved": "2026-10-06"
+    },
+    {
+      "id": "oga-lofi-again",
+      "url": "https://opengameart.org/sites/default/files/lofiagain.ogg",
+      "file": "oga-lofi-again.ogg",
+      "sha256": "d3b3410a186d45dadbcf87a8072b5a7f3b3f5a11fe38d9a7e9bdb3f66d5d86fa",
+      "bytes": 2419417,
+      "retrieved": "2026-10-06"
+    },
+    {
+      "id": "freesound-369891-hq-preview",
+      "url": "https://cdn.freesound.org/previews/369/369891_1480854-hq.mp3",
+      "file": "freesound-369891-hq-preview.mp3",
+      "sha256": "a22873c91e153c24214d808c54ed2f7c186b6884c867c4afdacdef68cd101213",
+      "bytes": 23350612,
+      "retrieved": "2026-10-06"
+    },
+    {
+      "id": "kenney-interface-sounds",
+      "url": "https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip",
+      "file": "kenney-interface-sounds.zip",
+      "sha256": "f2193d072726d6758a5f7871b2dcc54dcce0d5c35c6f0a62f92549b327c81232",
+      "bytes": 834536,
+      "retrieved": "2026-10-06"
+    },
+    {
+      "id": "kenney-music-jingles",
+      "url": "https://kenney.nl/media/pages/assets/music-jingles/f37e530b9e-1677590399/kenney_music-jingles.zip",
+      "file": "kenney-music-jingles.zip",
+      "sha256": "b729ba57959bd58793d2c5cafa348aaf2655d354f3da35ec4729e03ec77197b8",
+      "bytes": 1239525,
+      "retrieved": "2026-10-06"
+    }
+  ],
+  "assets": [
+    {
+      "id": "lofi-loop",
+      "channel": "music",
+      "titleKey": "audio.track.lofiLoop",
+      "title": "Lofi Hip Hop Loop",
+      "author": "omfgdude",
+      "sourceUrl": "https://opengameart.org/content/lofi-hip-hop-loop",
+      "download": "oga-lofi-hip-hop-loop",
+      "excerpt": { "startS": 8, "durationS": 44 },
+      "loopCrossfadeS": 2,
+      "channels": 1
+    },
+    {
+      "id": "lofi-again",
+      "channel": "music",
+      "titleKey": "audio.track.lofiAgain",
+      "title": "Lofi again",
+      "author": "Omfgdude",
+      "sourceUrl": "https://opengameart.org/content/lofi-again",
+      "download": "oga-lofi-again",
+      "excerpt": { "startS": 10, "durationS": 44 },
+      "loopCrossfadeS": 2,
+      "channels": 1
+    },
+    {
+      "id": "nyc-night",
+      "channel": "ambience",
+      "title": "New York City night evening rooftop ambience traffic, Bushwick, Brooklyn, above-ground subway M train",
+      "author": "SpliceSound",
+      "sourceUrl": "https://freesound.org/people/SpliceSound/sounds/369891/",
+      "download": "freesound-369891-hq-preview",
+      "excerpt": { "startS": 120, "durationS": 34 },
+      "loopCrossfadeS": 3,
+      "channels": 1
+    },
+    {
+      "id": "ui-tap",
+      "channel": "sfx",
+      "title": "Interface Sounds: click_001",
+      "author": "Kenney",
+      "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+      "download": "kenney-interface-sounds",
+      "entry": "Audio/click_001.ogg",
+      "channels": 1
+    },
+    {
+      "id": "purchase",
+      "channel": "sfx",
+      "title": "Interface Sounds: confirmation_002",
+      "author": "Kenney",
+      "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+      "download": "kenney-interface-sounds",
+      "entry": "Audio/confirmation_002.ogg",
+      "channels": 1
+    },
+    {
+      "id": "clout-up",
+      "channel": "sfx",
+      "title": "Music Jingles: jingles_STEEL12",
+      "author": "Kenney",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "download": "kenney-music-jingles",
+      "entry": "Audio/Steel jingles/jingles_STEEL12.ogg",
+      "channels": 1
+    }
+  ],
+  "playlists": { "music": ["lofi-loop", "lofi-again"], "ambience": ["nyc-night"] },
+  "sfx": { "ui-tap": "ui-tap", "purchase": "purchase", "clout-up": "clout-up" }
+}

@@ -1,0 +1,988 @@
+{
+  "project": "Clout City: NYC",
+  "tagline": "Tap In. Blow Up.",
+  "phases": {
+    "1": "Foundation, 3D city, instant start",
+    "2": "World, landmarks, economy",
+    "3": "Clout, events, home, avatar",
+    "4": "Accounts, safety, friends, growth",
+    "5": "Shared live city",
+    "6": "Premium store",
+    "7": "Ship"
+  },
+  "requirementsKey": {
+    "network": "Sandbox can download public data and npm packages",
+    "webgl": "Headless Playwright Chromium can create a WebGL2 context (proved by tests/e2e/webgl-smoke.spec.ts, added in S01)",
+    "supabase": "Docker daemon running, local Supabase running (npx supabase start), and .env.local has NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY and SUPABASE_SERVICE_ROLE_KEY",
+    "realtime": "Local Supabase Realtime service healthy (npx supabase status lists it) with public access disabled for private channels in supabase/config.toml; verified by npm run check:realtime",
+    "stripe": "Stripe test-mode keys (STRIPE_SECRET_KEY, NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY, STRIPE_WEBHOOK_SECRET) in .env.local and Stripe CLI installed and logged in for webhook forwarding"
+  },
+  "tasks": [
+    {
+      "id": "S01",
+      "phase": 1,
+      "title": "Scaffold, PWA shell, quality gates",
+      "requires": [
+        "network"
+      ],
+      "acceptance": "Next.js 16.3.x (App Router) + TypeScript 6.0.x strict + Tailwind 4 builds with the exact versions pinned in CLAUDE.md (three, @react-three/fiber and @react-three/drei pinned without ^); npm scripts dev, build, start, typecheck, lint (ESLint CLI with jsx-a11y and no-console), format:check (Prettier), test (Vitest), e2e (Playwright, specs in tests/e2e) and budget, each with one passing sample; Playwright projects 'mobile-390' (390x844, touch) and 'desktop-1280'; tests/e2e/webgl-smoke.spec.ts proves headless Chromium creates a WebGL2 context, with launch flags documented in README; a shared e2e fixture fails any test on a console warning or error (PERF-1) and provides an axe check that fails on serious or critical violations (A11Y-2); PWA manifest via app/manifest.ts (name 'Clout City: NYC', short name 'Clout City'), icons, installable, locked mobile viewport; bottom tab layout correct at 390px; one overlay layer system (named layers, reserved safe zones for HUD, sheets, toasts and banners) with screenshot and bounding-box tests at 390 and 1280 proving no overlap (UX-1); structured logger in src/lib/log.ts; supabase CLI added as a devDependency and supabase/config.toml initialised (no running stack needed); .gitignore covers env files, build output, test artefacts and the geo download cache.",
+      "review": false,
+      "passes": true,
+      "blocked": false,
+      "attempts": 1
+    },
+    {
+      "id": "S02",
+      "phase": 1,
+      "title": "Data, copy, formatters, and store",
+      "requires": [],
+      "acceptance": "/data folders for items, premium, events, jobs, venues, landmarks, geo, zones, audio, config (including config/perf.json with every budget from CLAUDE.md, config/theme.json palette tokens, config/realtime.json) and copy, each validated by a zod schema with a test; central copy file with slang-pack layer (test proves swapping the pack changes rendered text); one shared formatter module: money shown as whole dollars (GR-11) and counts via Intl.NumberFormat notation 'compact' (UX-2); a copy test fails if any copy string uses a superlative (cheapest, biggest, best, most, fastest) as literal text rather than a value computed from data (GR-11); Zustand store with localStorage persistence and schema version (test for persist and rehydrate).",
+      "review": false,
+      "passes": true,
+      "blocked": false,
+      "attempts": 1
+    },
+    {
+      "id": "S03",
+      "phase": 1,
+      "title": "Core engine",
+      "requires": [],
+      "acceptance": "Pure-function game clock (1 real min = 10 game min of passive time, pauses when tab hidden, 1x/2x toggle); actions fast-forward the personal clock instantly by their duration; the engine never reads the real clock (time is injected) and exposes city time (real New York wall-clock time) separately from the personal game clock; energy, hunger, mood decay with penalties at zero; action system with time, money, energy costs and stat effects validated in the engine; save/load with a schema migration test; unit tests for time math, action fast-forward, day and week rollover, insufficient funds, and city time across a DST change.",
+      "review": false,
+      "passes": true,
+      "blocked": false,
+      "attempts": 1
+    },
+    {
+      "id": "S04",
+      "phase": 1,
+      "title": "Geo pipeline and projection",
+      "requires": [
+        "network"
+      ],
+      "acceptance": "npm run geo:build reproducibly downloads pinned sources (NYC Open Data borough boundaries clipped to shoreline, NYC parks, Neighborhood Tabulation Areas, MTA static GTFS subway shapes and stops; OSM only for a layer no city source provides, kept in its own ODbL file) into a gitignored cache and writes simplified, quantized layers to /data/geo plus play zones (grouped NTAs) to /data/zones; output is deterministic (checksum test: same input gives byte-identical output); raw MTA files are kept unmodified in the cache and derived files are labelled derived; /data/geo/SOURCES.md lists each source URL, retrieval date, license or terms, transformations and required attribution text (MTA: not endorsed, no accuracy claim; OSM ODbL notice if used); one projection module (lat/lng to local metres, fixed origin) is shared by scene and engine; base geo gzipped size is within perf.json geoBaseGzKB; unit tests prove known coordinates land in the correct borough (Times Square in Manhattan, the Unisphere in Queens, Prospect Park in Brooklyn, a Bronx point, St George in Staten Island), an Upper Bay point is in no borough, and every subway station lies on a line.",
+      "review": true,
+      "passes": true,
+      "blocked": false,
+      "attempts": 1
+    },
+    {
+      "id": "S04a",
+      "phase": 1,
+      "title": "3D city base scene",
+      "requires": [
+        "webgl"
+      ],
+      "acceptance": "The react-three-fiber canvas is lazy-loaded with no SSR so the DOM shell is interactive before the 3D chunk arrives; borough land extruded from /data/geo, water plane, parks, subway lines as ribbons in our own colours with plain line letters and stations as markers (no MTA logos or bullets); toon shading via a shared gradient ramp and palette tokens from config/theme.json; camera rig with one-finger pan, pinch zoom and limited two-finger rotate and tilt, bounded to the NYC extent with zoom limits; frameloop is on demand (test hook frame counter shows zero frames over 2 s idle); zero console warnings with the pinned three version (if R3F triggers three deprecation warnings, pin three to the newest version that does not and record it in progress.md); required map attribution visible on the map; a test-mode hook exposes camera state and renderer.info; Playwright pans and zooms on mobile-390 and asserts camera state; draw calls and triangles at the default view are within the mid-tier budget.",
+      "review": true,
+      "passes": true,
+      "blocked": false,
+      "attempts": 1
+    },
+    {
+      "id": "S04b",
+      "phase": 1,
+      "title": "Quality tiers and performance budgets",
+      "requires": [
+        "webgl"
+      ],
+      "acceptance": "A pure tier picker chooses low, mid or high from WebGL2 support, MAX_TEXTURE_SIZE, deviceMemory, hardwareConcurrency, renderer string and Save-Data/prefers-reduced-data, with every threshold in perf.json (unit tests per signal); the runtime steps down one tier via drei PerformanceMonitor when average FPS stays below the config floor, with hysteresis, and never auto-upgrades above the detected tier; a settings override is persisted; per-tier settings (DPR cap, shadows, outlines, building density, max visible avatars) come from config; npm run budget fails when shell JS, 3D chunk JS, total JS, base geo or district assets exceed perf.json (gzipped); npm run e2e:perf runs a cold load under the cc-mid-4g profile (4 Mbps down, 1 Mbps up, 150 ms RTT, 4x CPU) on the low tier and asserts shell interactive within budget and playable within budget (median of 3 runs), a warm load within budget, and draw calls and triangles per tier; any shadow uses PCFShadowMap, never PCFSoftShadowMap.",
+      "review": true,
+      "passes": true,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S04c",
+      "phase": 1,
+      "title": "Tappable places, accessible Places panel, no-WebGL fallback",
+      "requires": [
+        "webgl"
+      ],
+      "acceptance": "Points placed by real latitude and longitude render as instanced pins, are tappable with an on-screen hit area of at least 44 px and open a place sheet stub; a DOM Places panel lists every place grouped by borough, is fully keyboard navigable, offers the same actions as tapping in 3D and announces selection (A11Y-3); when WebGL is unavailable or the context is lost, the app shows the Places panel and a static stylised fallback and stays playable, and recovers when the context is restored; Playwright taps a point in the canvas (screen coordinates from the test hook) and the same place via the panel, and a WebGL-disabled run completes a place selection; axe passes; S07 render half (orchestrator note, approved S07 plan): pins come from src/lib/world/places.ts mapPlaces() with landmarks as placeholder markers until S07a/S07b; Bronx and Staten Island land renders dimmed per boroughRenderState with an 'expanding soon' label and teaser pins for bronx-ballpark and staten-island-ferry; the Places panel uses placeAccessibleName; a test hook reports per-borough land style and pin count; Playwright and axe prove locked places' names explain the lock.",
+      "review": false,
+      "passes": true,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S04d",
+      "phase": 1,
+      "title": "District buildings",
+      "requires": [
+        "network",
+        "webgl"
+      ],
+      "acceptance": "The geo script derives low-poly building masses from NYC Open Data building footprints (roof height field) for districts listed in config (Midtown, Lower Manhattan, Downtown Brooklyn and DUMBO, Williamsburg, Long Island City, Astoria, Flushing, Jamaica), simplified and merged per district per tier; elsewhere procedural low blocks by density; rendered as merged or instanced meshes with the shared scene shading (lit by default per DEC-24/28, toon optional) and flat emissive lit windows at night; no building carries a business name; each tier stays within its district-asset, draw-call and triangle budgets (npm run budget and e2e:perf); SOURCES.md updated.",
+      "review": true,
+      "passes": true,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "phase": 1,
+      "id": "S04f",
+      "title": "Day/night cycle on the personal game clock",
+      "acceptance": "The 3D city's lighting follows the player's personal game clock (user decision 2026-10-07): a real-world sky (morning blue, golden hour, dusk, real night) with real-world colours on the city (DEC-26), sun direction and colour, and ambient and hemisphere light interpolate between config keyframes (dawn, day, golden hour, dusk, night) in scene.json; the scene re-evaluates lighting only when the game minute changes (frameloop stays on demand, zero idle frames); at night building windows (S04d) and streetlight and landmark accents glow with flat emissive per tier, never on the memorial; this task does not change the UI theme (S04g owns it); reduced motion steps between keyframes instead of blending; draw calls, triangles and shader programs stay within perf.json for every tier; unit tests cover keyframe interpolation at boundaries and midnight wrap; Playwright screenshots at 08:00, golden hour, 21:00 and 03:00 via a seeded clock prove the look, and the console guard passes.",
+      "requires": [
+        "webgl"
+      ],
+      "review": false,
+      "passes": true,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S04g",
+      "phase": 1,
+      "title": "Interface theme: real-world palette, light by day and dark glass by night",
+      "acceptance": "Per DEC-26 (user decision 2026-10-07): the indigo/hot-pink palette is retired; the interface (HUD, tabs, sheets, panels, toasts, welcome card, legal pages) uses clean light frosted cards by day and dark glass by night with taxi yellow as the single brand accent, switching on the same personal game clock keyframes as S04f; both palettes are tokens in config/theme.json; the switch is driven by a data attribute on the root element set from a boot island, so the shell carries only CSS variables (shell budget holds), and pages render in the day palette until the game clock is known; every text and control colour pair meets WCAG 2.2 AA in both palettes (automated contrast test plus axe in both themes); the change cross-fades over config milliseconds and is instant under prefers-reduced-motion; no layout shift; darwin screenshot baselines for both palettes at 390 and 1280; the console guard passes.",
+      "requires": [],
+      "review": false,
+      "passes": true,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S04h",
+      "phase": 1,
+      "title": "Hand-made 3D asset pipeline (CC0 packs)",
+      "acceptance": "Per DEC-24 (user decision 2026-10-07): a reproducible `npm run assets:build` script downloads pinned CC0 hand-made low-poly packs (each with version, URL, sha256 and licence recorded in data/assets/SOURCES.md; a test fails on any asset without a CC0/MIT licence entry, or project-original for blender-script sources (DEC-25)), selects the models listed in data/assets/catalog.json, harmonises them to the real-world model palette (DEC-26), with the shading model (lit or toon) chosen from the showcase, and writes compressed glTF (meshopt geometry; colours baked to vertex colours, textures only with approval) under public/models with a manifest hashed into the asset version; per-asset triangle and byte budgets live in perf.json and the build fails over them; runtime loading uses the pinned three/drei loaders in lazy chunks only (never the shell), with instancing for repeats and disposal on unmount; a showcase test hook renders each catalog model for screenshots at 390 and 1280; npm run budget reports model bytes per tier against the bytes-to-playable budgets and the build reports (never silently changes) any budget pressure; zero console warnings.",
+      "requires": [
+        "network",
+        "webgl"
+      ],
+      "review": true,
+      "passes": true,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S04i",
+      "phase": 1,
+      "title": "Street dressing with hand-made props",
+      "acceptance": "Seeded, deterministic placement of S04h catalog props (streetlights, hydrants, benches, trees, parked taxis and cars, traffic lights, roof water towers) around the home, venues, landmarks and the camera focus along real street segments, instanced per model and tier with per-tier instance caps in perf.json (off on the low tier unless measured headroom allows), streetlights glowing at night through the shared night-glow uniform (S04f), never on or around the memorial, no text or liveries, no blocking of pins or picking (raycast off), zero idle frames; npm run budget and e2e:perf pass for every tier. Also fixes GLOW-1: Kenney commercial buildings (building-a..d) get real window glass (Blender-authored window panes or a geometric region rule) so only glass glows at night, re-enabling their night glow (disabled in the interim by S04h p2); the asset glow test is updated to include them. Amended 2026-10-08 (approved plan): props may be instanced or merged per model/chunk and tier (merged onto the district material so no new shader programs); includes fill-lite (lots, plates and trees in the block instancing beyond districts, triangle-neutral on low).",
+      "requires": [
+        "webgl",
+        "network"
+      ],
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S04j",
+      "phase": 1,
+      "title": "Real city fill",
+      "acceptance": "Beyond the detailed districts, the city uses real block footprints (DOF tax blocks or LION-derived) instead of the jittered grid, with lit windows on fill at night (fixes NOTE-27; lets TUNE-16 use coarser cells or a distance fade), street ribbons, and optional mini-districts with real footprints around off-district places; deterministic geo:build; per-tier bytes, triangles and draw calls within perf.json (any budget raise is put to the user first); zero new shader programs; zero idle frames; low tier stays within its caps; screenshots compared against the competitors.",
+      "requires": [
+        "network"
+      ],
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S04e",
+      "phase": 1,
+      "title": "Offline and caching",
+      "requires": [],
+      "acceptance": "A Serwist service worker precaches the shell, the 3D chunk, base geo and district assets for the detected tier, with versioned caches so updates replace old data; authenticated API responses are never cached; the service worker script is served with the no-cache headers from the Next.js PWA guide; Playwright loads the map, goes offline, reloads and completes a solo action; the warm-load budget passes.",
+      "review": false,
+      "passes": true,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S05",
+      "phase": 1,
+      "title": "Guest start on the 3D map",
+      "requires": [
+        "webgl"
+      ],
+      "acceptance": "Opening the root URL in a fresh browser shows the shell, then the playable 3D NYC map centred on the player's Queens start within the perf.json budgets, with no signup; a player avatar placeholder stands at the start point; anonymous Supabase auth with a local-only fallback when env vars are missing (test runs with env vars absent); HUD with stats, clock, money, clout and the goal line 'Make it in New York', placed in the overlay safe zones; page title and meta use the tagline 'Tap In. Blow Up.'; Playwright test confirms.",
+      "review": false,
+      "passes": true,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S05a",
+      "phase": 1,
+      "title": "Welcome card: 18+ check, consent, audio choice",
+      "requires": [],
+      "acceptance": "On first visit one welcome card sits over the already-loading map (the map keeps loading behind it and perf budgets still pass) with a neutral year-of-birth picker (no default, no hint of the threshold), a consent checkbox linking Terms and Privacy, and the audio choice 'Play our music' or 'I'll bring my own'; under 18 shows an in-voice 'come back when you're 18' screen, locks the gate on that device for 24 hours, and creates no Supabase user; 18+ stores attestation (boolean and timestamp, not the birth year), consent version and timestamp, and the audio choice locally; anonymous Supabase sign-in happens only after a passing attestation; the form follows the shared pattern (noValidate, one zod schema, all errors at once inline with aria-invalid and aria-describedby, focus on the first invalid field, errors recomputed on change) (GR-1, GR-2, GR-8); no AudioContext is created and no audio is requested before the audio choice (GR-13); returning players never see the card again; existing e2e specs use a shared fixture that passes the card; Playwright covers the 18+ path, the under-18 path, an empty submit and an error that is fixed.",
+      "review": true,
+      "passes": true,
+      "blocked": false,
+      "attempts": 1
+    },
+    {
+      "id": "S05b",
+      "phase": 1,
+      "title": "Audio channels and 'My own music'",
+      "requires": [],
+      "acceptance": "Audio system with separate music, sfx, ambience and voice channels plus master, each with its own volume; a one-tap HUD control and a settings toggle for 'My own music' mute in-game music only while sfx and ambience keep playing, with visible now-playing state and an accessible name; the choice is remembered per device (and synced to the account in S18c) and nothing overrides it; audio unlocks only from a deliberate tap on the audio choice or the sound control (GR-13); where the browser supports it, the audio session is set to mix with other apps (for example Safari's navigator.audioSession, checked against current docs) and sfx never take over the media session; all audio assets are CC0 or otherwise licensed and listed in /data/audio/SOURCES.md, with no third-party streams; audio loads lazily after the map is playable; unit tests for mixer state; Playwright proves no audio requests before the choice and that muting music keeps sfx enabled; mixing with a background music app on real iOS and Android is listed under Needs human review.",
+      "review": true,
+      "passes": true,
+      "blocked": false,
+      "attempts": 1
+    },
+    {
+      "id": "S05c",
+      "phase": 1,
+      "title": "Shell diet: boot path only",
+      "requires": [],
+      "acceptance": "The shell JS for / (npm run budget) contains only the boot path: layout, overlay shell, HUD, welcome card, persisted store and the engine modules the HUD needs; every other feature UI (event sheet, shop, place action sheet, panels, transit planner) and its data (event catalog, item catalog, transit network) loads via next/dynamic or a lazy loader on first use; player-facing copy is split into a small boot namespace bundled with the shell and per-feature namespaces loaded with their feature chunk through the existing copy() API (missing-namespace access is a typed error in tests, never a silent raw key); a test enumerates the shell chunks and fails if any feature module or feature copy namespace is reachable from the shell entry; the shell is at most perf.json shellJsGzKB minus 20 KB headroom after all merged slice tasks; first use of each lazy feature shows a loading state within the overlay system and no console warnings; existing tests stay green.",
+      "review": true,
+      "passes": true,
+      "blocked": false,
+      "attempts": 1
+    },
+    {
+      "id": "S06",
+      "phase": 1,
+      "title": "Guided first action and skippable tour",
+      "requires": [],
+      "acceptance": "A coach-mark tour over the live map (at most 6 steps, no tutorial screens, skippable, resumable from Help) leads the player through a first bodega purchase near their Queens start in about 20 seconds; a new player starts with at most 3 notifications, each meaningful (GR-9); no further gate or age check appears; Playwright completes the guided purchase and, separately, the skip and resume-from-Help path.",
+      "review": false,
+      "passes": true,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S07",
+      "phase": 2,
+      "title": "Boroughs, landmarks, and venues",
+      "requires": [],
+      "acceptance": "Five boroughs in data. Queens, Brooklyn, and Manhattan each have 8 invented venues with original names at plausible real coordinates (bodega, food spot, subway station, park or gym, coffee shop, thrift or boutique, club, job site). Landmarks at real coordinates with category, nameMode, and legalReviewed:false, at minimum: Brooklyn Bridge, Manhattan Bridge, Queensboro Bridge; Flatiron Building, Chrysler Building; Statue of Liberty (viewed from Battery Park), Washington Square Arch; Central Park, the High Line, Prospect Park, Flushing Meadows (Unisphere), Astoria Park; the Queens ballpark and the Brooklyn arena (generic labels); City Hall, Brooklyn Borough Hall, Queens Borough Hall; Grand Central, Penn Station, Jamaica Station; Times Square, DUMBO, Coney Island boardwalk, Flushing Main Street; 9/11 Memorial (memorial category). Landmarks show as placeholder markers in 3D until S07a and S07b. Bronx and Staten Island render as dimmed 'expanding soon' land teasing the Bronx ballpark and the Staten Island Ferry. Brooklyn and Manhattan unlock by clout level, with in-voice why-locked copy that is also in the accessible name. Validation tests: every landmark has a category and nameMode; branded names use generic labels; memorials have no flex, clout, emote, or event hooks; any superlative in venue copy is computed from data. Gating tests.",
+      "review": true,
+      "passes": true,
+      "blocked": false,
+      "attempts": 1
+    },
+    {
+      "id": "S07a",
+      "phase": 2,
+      "title": "Low-poly landmarks I: bridges, buildings, stations, government",
+      "requires": [
+        "webgl"
+      ],
+      "acceptance": "Code-built low-poly models (procedural primitives, no downloaded models) in the toon style for every S07 landmark in the bridge, building, station and government categories, placed at real coordinates and orientation; generic-labelled landmarks show only their generic label; per-tier LOD via drei Detailed; per-landmark triangle budget from perf.json; merged or instanced where repeated; npm run budget and e2e:perf pass for every tier; each model is reachable from the Places panel.",
+      "review": true,
+      "passes": true,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S07b",
+      "phase": 2,
+      "title": "Low-poly landmarks II: parks, monuments, stadiums, neighborhoods, memorial",
+      "requires": [
+        "webgl"
+      ],
+      "acceptance": "Code-built low-poly models for the remaining S07 landmarks; the Statue of Liberty is visible from Battery Park at the default zoom range; the memorial uses a muted palette with no emissive or animated effects, no emotes and no flex FX (test asserts no effect components are attached); per-tier LOD and triangle budgets as S07a; npm run budget and e2e:perf pass for every tier.",
+      "review": true,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S07c",
+      "phase": 2,
+      "title": "NYC landmark models built in Blender",
+      "acceptance": "Per DEC-25 (user decision 2026-10-07): every S07 landmark gets an original hand-made-style low-poly model authored by a committed, reproducible Blender Python script under scripts/blender/ (run headless with a pinned Blender version recorded in README; output byte-stable for the same inputs), built from real measurements recorded with sources in data/landmarks/SOURCES.md, coloured in real-world colours (DEC-26), with per-tier LODs, exported as glTF and processed through the S04h pipeline within per-landmark triangle and byte budgets in perf.json; trademark-sensitive landmarks stay generic (no logos, signage or text; LEGAL-1); the memorial stays muted with no emissive; models replace the code-built stand-ins at their real coordinates and headings (frames.derived.json) with the code-built kit as fallback; a showcase renders each landmark for screenshot review at 390 and 1280; npm run budget and e2e:perf pass for every tier.",
+      "requires": [
+        "webgl"
+      ],
+      "review": true,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S08",
+      "phase": 2,
+      "title": "Transit and rush hour",
+      "requires": [],
+      "acceptance": "Walk, subway, and taxi with time and cost computed from real distances between points, per-mode speeds and fares in config; subway trips route via the nearest stations on the real lines in /data/geo, with walking legs at each end; travel fast-forwards the personal clock while the avatar animates along the route in 3D (subway along its ribbon) for at most the config animation length, and users with prefers-reduced-motion get an instant cut; rush hour (7-10am, 4-7pm) slows subway and drains mood; random MTA delay event hook; no MTA logos or official line bullets; unit tests for distance, routing, and modifiers.",
+      "review": false,
+      "passes": true,
+      "blocked": false,
+      "attempts": 1
+    },
+    {
+      "id": "S09",
+      "phase": 2,
+      "title": "Location action sheet, club door, landmark visits",
+      "requires": [],
+      "acceptance": "Tapping a venue or landmark in 3D or choosing it in the Places panel opens the same action sheet filtered by personal time of day and opening hours; closed venues show opening time; the club opens at night with a cover charge, a minimum clout level at the door with in-voice refusal copy, and a clout gain inside; non-memorial landmarks have a Visit action (time cost, mood gain) and a flexMultiplier from config for use by S13; memorials show a respectful info card only; tests.",
+      "review": false,
+      "passes": true,
+      "blocked": false,
+      "attempts": 1
+    },
+    {
+      "id": "S10",
+      "phase": 2,
+      "title": "Items, inventory, and shop",
+      "requires": [],
+      "acceptance": "12 clothing and makeup items across 3 rarity tiers and 5 slots plus 3 gift types, all with currency 'cash', price, rarity, sellValue, cloutValue, statEffects; gifts are consumed when used on NPCs or yourself and cannot target another player; inventory and outfit equip; buy and sell with depreciation, prices displayed via the shared money formatter; schema validation and unit tests including insufficient funds.",
+      "review": false,
+      "passes": true,
+      "blocked": false,
+      "attempts": 1
+    },
+    {
+      "id": "S11",
+      "phase": 2,
+      "title": "Jobs and rent",
+      "requires": [],
+      "acceptance": "Four jobs per CLAUDE.md anchors (barista, retail, delivery with higher energy cost, junior dev gated by clout level with why-locked copy) with 4-hour shifts that fast-forward the personal clock; rent due every 7 game days; missed rent escalates to eviction and a move to cheaper housing; housing copy that compares rents is computed from data (GR-11); unit tests.",
+      "review": false,
+      "passes": true,
+      "blocked": false,
+      "attempts": 1
+    },
+    {
+      "id": "S10a",
+      "phase": 2,
+      "title": "Shop, jobs and rent UI in place sheets",
+      "requires": [],
+      "acceptance": "Inside the S09 location action sheet (lazy-loaded per DEC-11): boutique and thrift venues show a shop listing every for-sale item with copy name, slot, rarity, price via formatMoney and a Buy button whose disabled state explains why (owned, can't afford: shortfall) in its accessible name; an inventory panel reachable from the HUD lists owned wearables and gifts with Equip/Unequip, Sell (showing the current resale value) and Use on yourself; job-site and other job venues offer Work a shift for each job they list, with locked jobs showing the why-locked copy in the button's accessible name and an out-of-energy state; rent status (next due day, amount owed, last rent notice) shows in a HUD or phone panel using the S11 copy helpers; every action goes through the store and shows the engine's outcome or typed error in voice; all controls are native, 44 px targets, axe-clean, inside the overlay system (UX-1); Playwright on mobile-390 and desktop-1280 buys an item, equips it, sells it, works a shift and sees cash and clock change, and sees a rent payment notice after advancing past a rent day via a test hook.",
+      "review": false,
+      "passes": true,
+      "blocked": false,
+      "attempts": 1
+    },
+    {
+      "id": "S12",
+      "phase": 2,
+      "title": "Economy simulation test",
+      "requires": [],
+      "acceptance": "A scripted bot plays 30 game days solo with a sensible strategy and ends neither bankrupt nor wildly rich (bounds in test); it saves roughly $150 per week and reaches the first apartment upgrade affordability between game days 10 and 14; any cost tuning needed to hit this is done in /data/config and logged; the bot also records its maximum clout and cash gain per action and per game day into a fixture used by S18c plausibility ceilings; test fails if balance drifts.",
+      "review": true,
+      "passes": true,
+      "blocked": false,
+      "attempts": 1
+    },
+    {
+      "id": "S50",
+      "phase": 2,
+      "title": "Explore: filters, search, happening now",
+      "requires": [],
+      "acceptance": "Category chips (coffee, food, parks, landmarks, nightlife, culture, job sites) and text search over the Places panel, keyboard accessible; a 'Happening now' chip listing S34 live events with countdown (shown once S34 lands); the map pin filter mirrors the panel; lazy chunk within shell and perf budgets (DEC-11). Engine stays pure; data/config/copy in /data; grants only via the grant function (ECON-1); player-to-player cash and items only through the server-authoritative player economy (S56, DEC-38); the S12 bot still meets its targets; axe clean, 44 px targets, GR-1/2/8 form rules where forms exist; within perf.json budgets (lazy chunks, shell untouched).",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S13",
+      "phase": 3,
+      "title": "Clout, style, flex, levels",
+      "requires": [],
+      "acceptance": "Integer clout from item cloutValue (counts only while owned or equipped; a buy/sell loop cannot farm clout, proven by test), first paycheck, and a flex action with seeded-random viral chance weighted by outfit style score and the landmark flexMultiplier when flexing at a landmark; style score multiplies clout gains; six levels (Nobody, Local, Scene Regular, Known, Famous, Icon) in config with HUD progress; a level-up event is emitted; every clout change writes a typed ledger entry (source, amount, currency) so premium items (S25) plug in and can be capped and S18c can check plausibility without engine changes; unit tests.",
+      "review": true,
+      "passes": true,
+      "blocked": false,
+      "attempts": 1
+    },
+    {
+      "id": "S14",
+      "phase": 3,
+      "title": "Events",
+      "requires": [],
+      "acceptance": "Data-driven event engine with conditions (time, borough, location, stats, clout, items), weights, and choice outcomes; modal UI in the overlay system; 15 events in the voice of CLAUDE.md including MTA delay, rent hike, free pizza, club promoter offer, viral moment, 2 mild crime events, and at least 2 landmark-tied events; validation tests prove no event can fire at a memorial, no crime event can fire at a government building, and no event rewards or requires drinking or references drugs or sexual content; seeded-random tests.",
+      "review": false,
+      "passes": true,
+      "blocked": false,
+      "attempts": 1
+    },
+    {
+      "id": "S15",
+      "phase": 3,
+      "title": "Goals, grants, Icon moment, prestige",
+      "requires": [],
+      "acceptance": "Goals screen (first paycheck, first outfit, first landmark visit, first club night, first friend, level thresholds) with rewards and progress; every reward goes through one grant function that is idempotent (grant key), audited (grant log), eligibility-targeted and capped relative to the next progression goal from config, and granted value never counts toward goal progress (ECON-1, tests); reaching Icon shows a victory screen with a share hook and a prestige option (restart progress, keep cosmetics and premium items, earn a prestige badge; rules in config); tests; for players without a session, grants are local only and are re-validated by S18c when a session exists.",
+      "review": false,
+      "passes": true,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S16",
+      "phase": 3,
+      "title": "3D apartment and decor",
+      "requires": [
+        "webgl"
+      ],
+      "acceptance": "A low-poly toon 3D apartment interior for the Queens room and the Brooklyn 1BR upgrade (higher rent, more slots), within per-tier budgets; 6 decor items across rarity tiers placed in slots by tapping in 3D or through an equivalent DOM slot list (A11Y-3); colour variants have human-readable names (A11Y-1); locked upgrades show in-voice why-locked copy, also in the accessible name; home score feeds clout; Playwright places an item both ways.",
+      "review": false,
+      "passes": true,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S16a",
+      "phase": 3,
+      "title": "3D avatar and 'Make it you' creator",
+      "requires": [
+        "webgl"
+      ],
+      "acceptance": "A modular low-poly 3D avatar (code-built or CC0 parts listed in SOURCES.md) within per-tier triangle budgets, used on the map and in the apartment; guests start immediately with a randomized avatar and never meet the creator before first play; after the first action the creator is offered (skippable, always reachable from the HUD) with the flow Look, Traits, Dream (career path: influencer, streamer, artist/DJ, founder/hustler), Neighborhood roll (dice reveal among Queens start neighborhoods), Home; option and roll copy is generated from the same data that drives the options (GR-10); Hair, Facial hair, Accessories, Skin and Outfit are separate categories (GR-12); every swatch has a human colour name (A11Y-1); career path sets the goal line copy and a path-tagged bonus from config, and the S12 bot meets its targets for every path; native controls clicked in e2e; tests.",
+      "review": true,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S36",
+      "phase": 3,
+      "title": "Needs, moodlets and working home objects",
+      "requires": [],
+      "acceptance": "Six needs in /data/config (DEC-40): energy, hunger, fun, social, hygiene and bladder (bladder handled by home objects and venue restrooms, never humiliating); decay on the personal game clock only, pausing while hidden and never draining while away (GR-20). Moodlets from /data with source, size and game-minute expiry, listed with plain numbers in a 'Why you feel this way' sheet. Home objects work: fridge/stove (eat, cook from a pantry), bed (sleep), shower (hygiene), desk/guitar (skill hooks for S39), each usable by tapping in 3D or from an equivalent DOM list (A11Y-3). Groceries bought at bodegas; home delivery costs a fee. Optional 'Free will' setting (off by default) uses one home object when a need is critical, spending at most a config amount. No humiliating moodlet or event; nightlife moodlets never come from drinking. Unit tests: decay, hidden pause, stacking, expiry; S12 bot meets targets with needs on. Engine stays pure; data/config/copy in /data; grants only via the grant function (ECON-1); player-to-player cash and items only through the server-authoritative player economy (S56, DEC-38); the S12 bot still meets its targets; axe clean, 44 px targets, GR-1/2/8 form rules where forms exist; within perf.json budgets (lazy chunks, shell untouched).",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S37",
+      "phase": 3,
+      "title": "Daily Drop riddle hunt",
+      "requires": [],
+      "acceptance": "Each New York day one riddle (copy generated from place data, GR-10) points to a non-memorial, non-government landmark or venue, seeded and server-chosen when online. Up to two hints unlock at config city times. 'Search here' costs a little energy with a config daily attempt cap. Every finder gets the same capped cash and clout grant; early finders get only a cosmetic badge tier. Finder counts come from real server finds only (UX-3). Offline it runs on device time and rewards are re-validated by S18c. Tests: memorial exclusion, grant idempotency, attempt cap, city-time rollover across DST. Engine stays pure; data/config/copy in /data; grants only via the grant function (ECON-1); player-to-player cash and items only through the server-authoritative player economy (S56, DEC-38); the S12 bot still meets its targets; axe clean, 44 px targets, GR-1/2/8 form rules where forms exist; within perf.json budgets (lazy chunks, shell untouched).",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S38",
+      "phase": 3,
+      "title": "Wishes and Perks",
+      "requires": [],
+      "acceptance": "Three rotating wishes drawn from /data with conditions; swapping one costs perk points. Perk points come only from wishes, goals and promotions via the grant function and are never sold, premium or transferable. A perk shop sells permanent, config-capped buffs. Perk points and buffs never count toward goal clout (ECON-1). S18c plausibility covers perk ownership. Tests: swap cost, caps, no premium path grants points. Engine stays pure; data/config/copy in /data; grants only via the grant function (ECON-1); player-to-player cash and items only through the server-authoritative player economy (S56, DEC-38); the S12 bot still meets its targets; axe clean, 44 px targets, GR-1/2/8 form rules where forms exist; within perf.json budgets (lazy chunks, shell untouched).",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S39",
+      "phase": 3,
+      "title": "Skills and career ladders",
+      "requires": [],
+      "acceptance": "Skills in /data (charisma, fitness, creativity, music, coding, cooking, hustle), levels 0–10 raised by home objects, venue classes and shifts. Every career path and day job has a promotion ladder in /data/jobs (title, wage, skill or clout requirement). Promotions fast-forward like shifts (no real-time waits, GR-24). Locked rungs explain why in their accessible name. S12 bot meets targets on every path; reruns log wage tuning. Unit tests: promotion gates, skill gain. Engine stays pure; data/config/copy in /data; grants only via the grant function (ECON-1); player-to-player cash and items only through the server-authoritative player economy (S56, DEC-38); the S12 bot still meets its targets; axe clean, 44 px targets, GR-1/2/8 form rules where forms exist; within perf.json budgets (lazy chunks, shell untouched).",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S40",
+      "phase": 3,
+      "title": "Buy mode 2.0: grid, paint, floors, wardrobe",
+      "requires": [],
+      "acceptance": "Placement grid per home tier with footprints (1×1, 2×1, wall); move, rotate, sell and storage by tap or keyboard/DOM (A11Y-3). At least 10 furniture categories from CC0 packs within budgets. Wall paint and floor finishes with try-before-buy, visible to visitors (S45). Outfits by occasion (everyday, work, gym, sleep, night out). Colour variants have human names (A11Y-1). Rare luxury items carry weekly upkeep from config as cash sinks. Sale values depreciate and buy-sell loops cannot farm clout (S13 test extended). Engine stays pure; data/config/copy in /data; grants only via the grant function (ECON-1); player-to-player cash and items only through the server-authoritative player economy (S56, DEC-38); the S12 bot still meets its targets; axe clean, 44 px targets, GR-1/2/8 form rules where forms exist; within perf.json budgets (lazy chunks, shell untouched).",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S41",
+      "phase": 3,
+      "title": "Side hustles and small businesses",
+      "requires": [],
+      "acceptance": "Buyable NPC-customer hustles from /data (coffee cart, sneaker resale stall, studio time, food truck, founder pitch to NPC investors), each paying seeded, config-bounded nightly income on the personal clock with upkeep and occasional mild bad days. These are NPC-customer hustles; player-run shops and hiring are S56. Payback period shown honestly. S12 bot still lands the first upgrade between game day 10 and 14; owning every hustle stays within bounds. Engine stays pure; data/config/copy in /data; grants only via the grant function (ECON-1); player-to-player cash and items only through the server-authoritative player economy (S56, DEC-38); the S12 bot still meets its targets; axe clean, 44 px targets, GR-1/2/8 form rules where forms exist; within perf.json budgets (lazy chunks, shell untouched).",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S42",
+      "phase": 3,
+      "title": "Personal transport",
+      "requires": [],
+      "acceptance": "New modes in config: bike share (dock fee), owned e-bike, used car (weekly parking and insurance), Staten Island ferry when unlocked. An owned vehicle changes S08 time and cost. Delivery-bike and cab shifts are S11 jobs using the owned vehicle. Generic models, no brands or liveries. Travel fast-forwards (reduced motion cuts). Unit tests: mode choice, upkeep. Engine stays pure; data/config/copy in /data; grants only via the grant function (ECON-1); player-to-player cash and items only through the server-authoritative player economy (S56, DEC-38); the S12 bot still meets its targets; axe clean, 44 px targets, GR-1/2/8 form rules where forms exist; within perf.json budgets (lazy chunks, shell untouched).",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S43",
+      "phase": 3,
+      "title": "Bank, bills and money history",
+      "requires": [],
+      "acceptance": "Bank sheet: balance, weekly bills (rent, upkeep, parking) with due day, money history from the ledger. Optional savings with capped config interest on the personal clock. Every number via formatMoney; comparisons computed from data (GR-11). No loans for real money. S12 bot within bounds. Engine stays pure; data/config/copy in /data; grants only via the grant function (ECON-1); player-to-player cash and items only through the server-authoritative player economy (S56, DEC-38); the S12 bot still meets its targets; axe clean, 44 px targets, GR-1/2/8 form rules where forms exist; within perf.json budgets (lazy chunks, shell untouched).",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S44",
+      "phase": 3,
+      "title": "Origin story and more homes",
+      "requires": [],
+      "acceptance": "Origin: a dice reveal picks one of N backgrounds from /data with different starting cash and modifiers, shown once and locked per run (re-rolled only by prestige), never re-rolled via social posts or referrals; S12 bot meets targets for every origin; copy generated from data (GR-10). Homes: 3–4 per unlocked borough in /data/homes, move-in deposit from config, furniture moves with you, prices rounded and comparisons computed (GR-11), locked homes explain why; S12 targets hold. Engine stays pure; data/config/copy in /data; grants only via the grant function (ECON-1); player-to-player cash and items only through the server-authoritative player economy (S56, DEC-38); the S12 bot still meets its targets; axe clean, 44 px targets, GR-1/2/8 form rules where forms exist; within perf.json budgets (lazy chunks, shell untouched).",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S55",
+      "phase": 3,
+      "title": "Casino with in-game cash",
+      "requires": [
+        "supabase"
+      ],
+      "acceptance": "A casino venue (DEC-37) with roulette, high-low cards and sports-style bets on simulated NYC games, paid only with in-game cash, never real money or premium items, and never purchasable cash. Odds, house edge, min/max bets and a daily loss cap live in /data/config and are shown to the player before each bet (plain numbers). Outcomes are server-seeded and server-settled when online; offline play is re-validated by S18c with the casino's expected value modelled so honest winners are never rejected. Casino winnings never count toward goal clout and grant no clout. A one-tap 'cool-off' setting hides the casino for a chosen period. Copy is fun, never urges 'one more', never implies real money. Tests: odds match config, loss cap, settlement idempotency, S18c honest-winner replay, S12 bot bounds with and without casino play. Engine stays pure; data/config/copy in /data; grants only via the grant function (ECON-1); S12 bot still meets its targets; axe clean, 44 px targets, GR-1/2/8 form rules; within perf budgets (lazy chunks).",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S18",
+      "phase": 4,
+      "title": "Core schema, RLS, age attestation",
+      "requires": [
+        "supabase"
+      ],
+      "acceptance": "Migrations for profiles (with age attestation timestamp, consent version and timestamp, audio preference), saves, friendships, friend_boosts, roommates, referrals, live_stats, purchases, entitlements and grants, all with Row Level Security; purchases, entitlements and grants are readable only by their owner and writable only by the service role; a profile row is created on first guest session and receives the S05a attestation and consent; a server helper requires attestation and every social, realtime and purchase RPC calls it (test proves an unattested account is refused); a server-side function enforces one friend boost per sender per day; tests prove users cannot read or write others' private rows.",
+      "review": true,
+      "passes": true,
+      "blocked": false,
+      "attempts": 1
+    },
+    {
+      "id": "S18a",
+      "phase": 4,
+      "title": "Handles and public profile",
+      "requires": [
+        "supabase"
+      ],
+      "acceptance": "Guests get a generated safe handle from word lists in /data/copy; a handle form with live preview of the normalised handle, never a silent rewrite (GR-6), and the shared form pattern (GR-1, GR-2); server-side case-insensitive uniqueness, a filter for slurs, profanity, reserved and staff names and impersonation, and a rate limit on changes; the public profile exposes only handle, avatar, server-accepted level and career path, with no real-name field (GR-7); RLS and RPC tests including a filtered handle and a uniqueness race.",
+      "review": true,
+      "passes": true,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S18b",
+      "phase": 4,
+      "title": "Safety core: block, mute, report, moderation",
+      "requires": [
+        "supabase"
+      ],
+      "acceptance": "Migrations and RPCs for blocks (hide both ways), mutes, reports (reason enum, optional filtered note of at most 280 characters, context snapshot) and audited moderation actions, all with RLS (a reporter cannot read other reports; targets never see who reported them); content auto-hides after moderation.autoHideReports distinct reporters pending review; a /mod queue restricted server-side to accounts in MODERATOR_EMAILS with dismiss, warn, reset handle, suspend and ban actions; a /conduct Code of Conduct page; one reusable player actions component (Add friend, Mute, Block, Report) that every later player surface must use; the report form follows the shared form pattern; tests.",
+      "review": true,
+      "passes": true,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S18c",
+      "phase": 4,
+      "title": "Cloud save sync and server plausibility",
+      "requires": [
+        "supabase"
+      ],
+      "acceptance": "Whenever a session exists, saves sync to Supabase (debounced, versioned, offline queue, with conflict handling by version and a server check) and restore on load; the server validates each save delta against ceilings derived from the S12 bot fixture times a config margin (clout and cash per action and per real minute, owned cosmetics against cash-shop and entitlement rules) and rejects and flags implausible saves; only server-accepted level, career path and cosmetics are ever shown to other players; audio preference syncs; tests prove a tampered localStorage save cannot change the public level or show an unowned premium cosmetic, and offline play queues and later syncs.",
+      "review": true,
+      "passes": true,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S19",
+      "phase": 4,
+      "title": "Account upgrade keeps progress",
+      "requires": [
+        "supabase"
+      ],
+      "acceptance": "After the first milestone the player is prompted to save progress via email magic link or Google, and is nudged again at each level-up until saved (GR-4), with a clear warning that clearing browser data loses guest progress; all guest progress, attestation and consent carry over; the email form follows the shared form pattern; Playwright completes the magic-link flow using the local Supabase mail catcher; the Google button is present and its manual check is listed under Needs human review.",
+      "review": true,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "phase": 4,
+      "requires": [
+        "supabase"
+      ],
+      "review": true,
+      "blocked": false,
+      "attempts": 0,
+      "id": "S19a",
+      "title": "Delete account and data",
+      "acceptance": "A signed-in player can delete their account from the Me tab after a clear confirm step that says what is lost; the server (service role, Bearer auth) deletes the auth user and cascades profile, saves and social rows, keeping only banned-identity hashes and any moderation evidence the legal ruling (SEC-12) requires; a guest is told how to clear local progress instead; the local game is reset afterwards; integration tests prove the cascade and that another user's data is untouched; e2e covers the confirm flow.",
+      "passes": false
+    },
+    {
+      "id": "S20",
+      "phase": 4,
+      "title": "Invite link and friends",
+      "requires": [
+        "supabase"
+      ],
+      "acceptance": "Unique invite link with native share sheet; opening it lands on the map first (after the welcome card) with the referrer stored in the background, and an optional roommate-invite flag picked up by S21; friend list with send, accept, decline, mute, report, and block through the shared player actions component; friend prompts appear after first paycheck, first level-up, and first outfit purchase, capped per session; persistent 'Add friends' HUD button; no contact scraping; tests.",
+      "review": true,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S20a",
+      "phase": 4,
+      "title": "Friends-only chat with a fixed daily limit",
+      "requires": [
+        "supabase"
+      ],
+      "acceptance": "One-to-one text chat between accepted friends only, for attested 18+ accounts (server-checked); migrations for messages and chat_quota with Row Level Security (users read only conversations they are part of; no client writes to chat_quota); a server-side function sends a message and decrements quota atomically, allowing 10 text messages per player per day with a New York midnight reset and 140 characters max; the limit of 10 is read from config, applies to every player, and no purchase, reward, goal, referral, friend count, or account type can raise it; messages containing links, images, phone numbers, emails, or social handles are rejected server-side and do not use quota; unlimited emoji reactions and preset quick-replies that do not count toward the limit; a visible 'N of 10 left today' counter and an in-voice message when the limit is reached, with time until reset; report and block on every chat, and blocking hides the conversation both ways; tests prove the 11th message is refused, concurrent sends cannot exceed the limit, rejected messages keep quota, the reset happens at New York midnight, and users cannot read others' conversations.",
+      "review": true,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S21",
+      "phase": 4,
+      "title": "Friend advantage",
+      "requires": [
+        "supabase"
+      ],
+      "acceptance": "A friend can send one daily boost (energy plus small clout) per day and the sender gets a small reward, enforced server-side and issued through the grant function; each friend adds a capped clout-gain bonus; two friends can link as roommates at the same apartment tier (including from an S20 roommate invite) and each pays a config percentage of rent, with no cash moving between players and the link enforced server-side; the S12 solo bot still meets its targets with zero friends; tests.",
+      "review": true,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S22",
+      "phase": 4,
+      "title": "Share cards, photo snap, and deep links",
+      "requires": [],
+      "acceptance": "Branded 9:16 share cards via OG routes (footer 'Tap In. Blow Up. | Clout City: NYC') for level-up, borough move, viral flex, and landmark flex (landmark rendered in game art, never photos; never for memorials); a 'Snap' action renders the player's current 3D view into a card, where other players appear only as generic silhouettes with no handles; share links open a landing preview showing the real players-online count with one-tap 'Start your NYC story' that lands on the map with the referrer attached; snapshot and Playwright tests.",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S23",
+      "phase": 4,
+      "title": "Referral reward",
+      "requires": [
+        "supabase"
+      ],
+      "acceptance": "When an invitee reaches their first paycheck, inviter and invitee each receive a referral-exclusive cosmetic item through the grant function; one reward per account or device; enforced server-side; fraud cases tested (self-invite, repeat device, reward replay).",
+      "review": true,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S24",
+      "phase": 4,
+      "title": "Heartbeat and live stats page",
+      "requires": [
+        "supabase"
+      ],
+      "acceptance": "A heartbeat RPC every 60 seconds (config) upserts player_state.last_seen for attested sessions; cached aggregate counters (players online = distinct last_seen within 2 minutes, total players, visits today, visits all time) refreshed every 30 seconds with no per-viewer DB query; counts never include NPCs, ambient pedestrians, or test bots (UX-3, test); all numbers use the shared compact formatter (UX-2); public /live page labelling the count 'players in the live city' 'How New York is growing, live' with LIVE badge, 'updated Ns ago', and OG image; 'Post these numbers' button opens a pre-filled X post with tagline and referral-tagged link; no personal data exposed; tests.",
+      "review": true,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S46",
+      "phase": 4,
+      "title": "Clout leaderboards",
+      "requires": [
+        "supabase"
+      ],
+      "acceptance": "Weekly, all-time and friends boards ranked by server-accepted earned clout, excluding grant and premium clout (ECON-1, DEC-13); never ranked by cash. Ties shared with a deterministic tie-break (GR-22). Per-career-path filter. Opt-out via ghost/privacy. Cached server-side. Counts via the shared compact formatter. Tests: tampered save, premium-only account, tie ordering. Engine stays pure; data/config/copy in /data; grants only via the grant function (ECON-1); player-to-player cash and items only through the server-authoritative player economy (S56, DEC-38); the S12 bot still meets its targets; axe clean, 44 px targets, GR-1/2/8 form rules where forms exist; within perf.json budgets (lazy chunks, shell untouched).",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S47",
+      "phase": 4,
+      "title": "Updates inbox and opt-in push",
+      "requires": [
+        "supabase"
+      ],
+      "acceptance": "One Updates inbox (goals, rent, live events, friend requests) with a config badge cap and no '99+' floods (GR-21); fresh accounts start with ≤3 items (GR-9). Web push offered only after a win, per category (rent due, friend online, event starting), with quiet hours and a daily cap from config; push never contains chat text; settings mirrored to the server. Engine stays pure; data/config/copy in /data; grants only via the grant function (ECON-1); player-to-player cash and items only through the server-authoritative player economy (S56, DEC-38); the S12 bot still meets its targets; axe clean, 44 px targets, GR-1/2/8 form rules where forms exist; within perf.json budgets (lazy chunks, shell untouched).",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S48",
+      "phase": 4,
+      "title": "Settings, help and account hub",
+      "requires": [],
+      "acceptance": "Help and guide sheet (static FAQ from /data/copy); replay tour; keyboard shortcuts sheet (also via '?'); 'Clean screen' HUD toggle; QR code for the invite link; contact support (filtered form, email shown as text); ghost mode and live-feed visibility; 'Start a new life' with typed confirmation that keeps premium entitlements; export my data (deletion is S19a). Everything within 2 taps of the HUD. Engine stays pure; data/config/copy in /data; grants only via the grant function (ECON-1); player-to-player cash and items only through the server-authoritative player economy (S56, DEC-38); the S12 bot still meets its targets; axe clean, 44 px targets, GR-1/2/8 form rules where forms exist; within perf.json budgets (lazy chunks, shell untouched).",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S49",
+      "phase": 4,
+      "title": "Badges, postcards and Wrapped",
+      "requires": [],
+      "acceptance": "Badges in /data (first paycheck, all-borough tourist, 10 landmark postcards, Daily Drop finds) granted idempotently. Postcard collection: first photo at each non-memorial landmark. Weekly or seasonal 'Your NYC Wrapped' 9:16 card via S22 OG routes, own stats only, never other players' handles. Engine stays pure; data/config/copy in /data; grants only via the grant function (ECON-1); player-to-player cash and items only through the server-authoritative player economy (S56, DEC-38); the S12 bot still meets its targets; axe clean, 44 px targets, GR-1/2/8 form rules where forms exist; within perf.json budgets (lazy chunks, shell untouched).",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S51",
+      "phase": 4,
+      "title": "The Clout Times, live feed and weather",
+      "requires": [
+        "supabase"
+      ],
+      "acceptance": "A daily in-voice newspaper generated from data: city events, live events, simulated NYC weather and season, top weekly clout (opt-in handles only); no player free text. Landing page and HUD can show an enum-only activity feed ('@handle reached Known') only for opted-in players; default off. Weather shown in the HUD (simulated). Copy never mocks a group; memorial respectful info only. Engine stays pure; data/config/copy in /data; grants only via the grant function (ECON-1); player-to-player cash and items only through the server-authoritative player economy (S56, DEC-38); the S12 bot still meets its targets; axe clean, 44 px targets, GR-1/2/8 form rules where forms exist; within perf.json budgets (lazy chunks, shell untouched).",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S53",
+      "phase": 4,
+      "title": "Gentle daily streak",
+      "requires": [],
+      "acceptance": "One small capped grant a day after any meaningful action; streak counter with config free skip days (no loss aversion); resets on New York time; re-validated by S18c. Engine stays pure; data/config/copy in /data; grants only via the grant function (ECON-1); player-to-player cash and items only through the server-authoritative player economy (S56, DEC-38); the S12 bot still meets its targets; axe clean, 44 px targets, GR-1/2/8 form rules where forms exist; within perf.json budgets (lazy chunks, shell untouched).",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S29",
+      "phase": 5,
+      "title": "Zones, shards, and server-authored presence",
+      "requires": [
+        "supabase",
+        "realtime"
+      ],
+      "acceptance": "Migrations and security-definer RPCs join_zone, move, set_activity, leave_zone with RLS: join_zone assigns a shard of at most realtime.shardSize players (friends placed together when room allows), records membership, and returns the private topic plus a snapshot of players seen within 2 minutes, capped, excluding blocked users both ways and ghost-mode players; move validates the destination (known venue, landmark, station or in-zone point), the mode, borough unlock against the server-accepted level, and a minimum interval from config, then writes player_state and calls realtime.send with a private topic and an id-and-enum-only payload (from, to, mode, startedAt, durationMs); set_activity accepts only an enum; RLS on realtime.messages lets only shard members read a topic and lets no client insert; unattested accounts are refused; integration tests prove a non-member cannot subscribe, a client cannot broadcast, rate limits hold, blocked users never appear in each other's snapshots, and payloads contain no free text.",
+      "review": true,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S30",
+      "phase": 5,
+      "title": "Client realtime layer and graceful degradation",
+      "requires": [
+        "supabase",
+        "realtime"
+      ],
+      "acceptance": "A PresenceTransport interface in src/realtime with a Supabase implementation and an in-memory fake; the client joins the shard of its current zone, switches zones on travel, re-joins with exponential backoff after disconnect, leaves or pauses when the tab is hidden, and refreshes the access token on expiry; with env vars missing, offline, or Realtime unreachable the city stays fully playable solo with an honest 'You're offline' or 'City is quiet' status and no error toasts or console errors; unit tests with the fake transport for join, switch, reconnect and degrade; integration test against local Supabase.",
+      "review": true,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S31",
+      "phase": 5,
+      "title": "Other players and ambient life on the 3D map",
+      "requires": [
+        "supabase",
+        "realtime",
+        "webgl"
+      ],
+      "acceptance": "Other players render as instanced low-poly avatars (billboards on the low tier) capped at the per-tier max visible, nearest first, interpolating movement intents along the same routes as S08; optional handle labels with a settings toggle; a 'N people here' count from the snapshot only (UX-3) using the shared formatter; scripted ambient pedestrians are visibly different from players, never selectable as players, and never counted (test); every player avatar is also listed in the Places panel venue occupant list (A11Y-3); per-tier draw-call and triangle budgets still pass with the max visible players; a two-browser Playwright test proves player B sees player A arrive at a venue within 3 seconds.",
+      "review": true,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S32",
+      "phase": 5,
+      "title": "Player surfaces, privacy, and ghost mode",
+      "requires": [
+        "supabase",
+        "realtime"
+      ],
+      "acceptance": "Tapping another player's avatar or occupant-list entry opens a player card showing only handle, avatar, server-accepted level and career path, with the shared player actions (Add friend, Mute, Block, Report); block removes both players from each other's snapshots and renders immediately and server-side thereafter; mute hides that player's avatar and emotes locally and persists; ghost mode (settings and HUD) removes the player from snapshots and stops their broadcasts server-side; the app never requests geolocation (test asserts the permission is never queried); two-browser Playwright tests for block, mute, report and ghost mode; axe passes.",
+      "review": true,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S33",
+      "phase": 5,
+      "title": "Preset emotes between players",
+      "requires": [
+        "supabase",
+        "realtime"
+      ],
+      "acceptance": "A fixed set of preset emotes from /data/copy (for example wave, hype, dap), sent through a server RPC with a per-sender rate limit from config and broadcast to the shard as an enum; no free text, no custom content, no voice; emotes from muted or blocked players never render; emotes are disabled at memorials; emotes never count toward or interact with the chat quota; tests for the rate limit, the block and mute filters, and memorial suppression.",
+      "review": true,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S34",
+      "phase": 5,
+      "title": "City-time live events and calendar",
+      "requires": [],
+      "acceptance": "Scheduled live events defined in /data/events/live keyed to city time (real New York time, with server time offset when online and device time offline), including a weekly club night and at least 4 calendar dates with generic names for trademarked events; the map shows upcoming events with a countdown; event bonuses come from config and are issued through the grant function (ECON-1); attendance counts shown to players come from real presence only (UX-3); no event at memorials; unit tests for scheduling across DST and for offline behavior.",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S35",
+      "phase": 5,
+      "title": "Realtime load, cost, and abuse test",
+      "requires": [
+        "supabase",
+        "realtime"
+      ],
+      "acceptance": "A script (npm run sim:realtime) runs at least 50 simulated clients against local Supabase across several zones and measures messages per player-minute, join rate and snapshot latency; a test fails if messages per player-minute exceed realtime.budgetMsgsPerPlayerMinute in config or if any client exceeds server rate limits without being refused; the run writes a cost projection (monthly messages and connections at 100, 1,000 and 5,000 average concurrent players, using the Supabase pricing recorded in CLAUDE.md) to progress.md; abuse cases tested: rapid move spam, zone-hop spam, joining a full shard, and reconnect storms.",
+      "review": true,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S45",
+      "phase": 5,
+      "title": "Home visits and house parties",
+      "requires": [
+        "supabase"
+      ],
+      "acceptance": "A host opens their home to accepted friends, or creates a host-approved invite link with config caps (default 10 uses, 24 h, 5 guests); every entry needs a 'Let them in' tap; non-friend guests can only send preset emotes (whether links admit non-friends is a user decision). Block, mute, report and kick on every guest. Visitors see the room only, never cash or inventory. Home location shown only as a borough tier label. Guest list from server presence; ghost-mode hosts not listed. A 'Neighbours' list shows only friends who are home. Two-browser e2e: visit, approve, kick, block. Engine stays pure; data/config/copy in /data; grants only via the grant function (ECON-1); player-to-player cash and items only through the server-authoritative player economy (S56, DEC-38); the S12 bot still meets its targets; axe clean, 44 px targets, GR-1/2/8 form rules where forms exist; within perf.json budgets (lazy chunks, shell untouched).",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S52",
+      "phase": 5,
+      "title": "Seasons, event passport and bingo",
+      "requires": [
+        "supabase"
+      ],
+      "acceptance": "Each S34 live event awards a passport stamp once (presence-verified, minimum stay from config). A seasonal bingo card from /data gives cosmetic and badge rewards via the grant function. No paid pass. No geolocation; check-ins are in-game only. Engine stays pure; data/config/copy in /data; grants only via the grant function (ECON-1); player-to-player cash and items only through the server-authoritative player economy (S56, DEC-38); the S12 bot still meets its targets; axe clean, 44 px targets, GR-1/2/8 form rules where forms exist; within perf.json budgets (lazy chunks, shell untouched).",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S54",
+      "phase": 5,
+      "title": "Flex billboards",
+      "requires": [
+        "supabase"
+      ],
+      "acceptance": "Rent a Times Square or Brooklyn billboard slot for one game day with in-game cash only (a sink). Shows the renter's handle, server-validated avatar and a preset slogan from /data/copy; no uploads, links or free text. Slots capped per player per week. Reportable with S18b auto-hide. Never near the memorial. Grants no clout beyond a config cap. Engine stays pure; data/config/copy in /data; grants only via the grant function (ECON-1); player-to-player cash and items only through the server-authoritative player economy (S56, DEC-38); the S12 bot still meets its targets; axe clean, 44 px targets, GR-1/2/8 form rules where forms exist; within perf.json budgets (lazy chunks, shell untouched).",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S56",
+      "phase": 5,
+      "title": "Player economy: transfers, shops, hiring, robbery",
+      "requires": [
+        "supabase"
+      ],
+      "acceptance": "Server-authoritative player economy (DEC-38). Send cash or items to a friend (caps per day and per transfer from config; lower caps for new accounts; confirm sheet shows exact amount, GR-6). Player shops: list cash-shop items at a chosen price, others buy via a server RPC (fee as a money sink). Hustle board: post a job with a fee held in server escrow, released on completion confirmation or refunded on timeout; listings use preset job types and filtered titles only (no free text, GR-17). Robbery: tap a player at the same venue to try your luck; success odds, max take (a config share of carried cash, absolute cap), cooldowns, protection for new accounts and for players at home, and a mild cartoon tone (S14); victims are notified and can report. Every movement is a server ledger entry with an audit row, appears in money history, and S18c plausibility treats ledger credits as server-sourced. Anti-RMT: per-pair and per-day flow limits, flagging of one-way flows, 'selling game money for real money' as a report reason and ban reason. Block stops all transfers, shop purchases and robberies between the pair. RLS on every table. Tests: double-spend races, escrow timeout, caps, block, rob protection, tampered client. Engine stays pure; data/config/copy in /data; grants only via the grant function (ECON-1); S12 bot still meets its targets; axe clean, 44 px targets, GR-1/2/8 form rules; within perf budgets (lazy chunks).",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S57",
+      "phase": 5,
+      "title": "Dating and relationships",
+      "requires": [
+        "supabase"
+      ],
+      "acceptance": "Player dating (DEC-39). 'Ask to be my Bae' between accepted friends; both must accept; up to a config number of partners; either can end it any time with one tap and no notification spam. Date nights at venues (shared activity with a mood boost), date-night outfits (S40 occasions), partner badge on profiles visible only if both opt in. No sexual content, no free text beyond the existing friends chat (S20a limits), sexual or harassing requests are a report reason with fast auto-hide (S18b). Block ends the relationship and hides both. Ghost mode hides relationship status. Tests: mutual consent, cap, end-anytime, block, report flow, two-browser e2e. Engine stays pure; data/config/copy in /data; grants only via the grant function (ECON-1); S12 bot still meets its targets; axe clean, 44 px targets, GR-1/2/8 form rules; within perf budgets (lazy chunks).",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S25",
+      "phase": 6,
+      "title": "Premium catalog and clout rules",
+      "requires": [],
+      "acceptance": "/data/premium holds at least 8 premium items (outfits, apartment themes, profile badges, share-card frames) across rarity tiers, each with currency 'usd', a price tier from config, cloutValue, and styleValue; premium items cannot be bought or sold for in-game cash, have no sellValue, and cannot be transferred; total clout from premium items is capped by premiumCloutCap in config; premium store screen shows clear USD prices and owned state (purchase button wired in S26); S12 simulation extended so a bot owning every premium item stays within balance bounds and cannot reach Icon on premium clout alone; tests.",
+      "review": true,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S26",
+      "phase": 6,
+      "title": "Stripe Checkout and entitlements",
+      "requires": [
+        "supabase",
+        "stripe"
+      ],
+      "acceptance": "Stripe Checkout in test mode only, with the API version pinned to the one in the installed stripe-node; buying requires a saved account (guests are prompted to save progress first) and the server verifies the 18+ attestation before creating a session; the Checkout session is created server-side from catalog prices (the client never sends a price); the webhook verifies signatures and writes purchases and entitlements idempotently (duplicate-webhook test); entitlements restore on sign-in on any device and premium cosmetics become visible to other players only once the entitlement exists; a refund webhook revokes the entitlement, its clout, and its public visibility; tests using Stripe CLI fixtures.",
+      "review": true,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S27",
+      "phase": 7,
+      "title": "Copy, brand, and legal pages pass",
+      "requires": [],
+      "acceptance": "All player-facing text comes from the copy file with the slang pack applied to events, goals, prompts, emotes, chat quick-replies and limit messages, landmarks, live events, and share cards; welcome line and tagline present; placeholder Terms (stating 18+), Privacy (including 'No ad trackers, ever.' if still true), Purchases and Refunds, and Code of Conduct pages with a TODO for legal review; a credits page and in-app attribution for NYC Open Data, MTA (with not-endorsed and no-accuracy wording), OpenStreetMap with a link to openstreetmap.org/copyright and an ODbL download of any OSM-derived layer, and every CC0 or licensed asset.",
+      "review": true,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    },
+    {
+      "id": "S28",
+      "phase": 7,
+      "title": "Polish, smoke test, deploy readiness",
+      "requires": [],
+      "acceptance": "Loading, empty, and error states on every screen; offline solo play works and the shared city degrades honestly; every perf.json budget passes in npm run budget and e2e:perf; README covers setup, env vars, local Supabase and Realtime, Stripe CLI, data sources, quality tiers and budgets, moderation setup (MODERATOR_EMAILS), the production Supabase plan requirement and Realtime cost projection, adding items, premium items, events, live events, venues, landmarks, zones, and copy, and Vercel deploy steps (the deploy itself is a human step); end-to-end smoke test passes: open link, welcome card, land on the 3D map, first action, visit a landmark, buy item, level up, share card, and (when Supabase is configured) a second browser sees the player move.",
+      "review": false,
+      "passes": false,
+      "blocked": false,
+      "attempts": 0
+    }
+  ]
+}

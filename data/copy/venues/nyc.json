@@ -1,0 +1,26 @@
+{
+  "id": "nyc",
+  "strings": {
+    "venues.lateLanternDeli.blurb": "Lights on all night. Chopped cheese, a cat on the chips, zero judgment.",
+    "venues.nenasWindowArepas.blurb": "Arepa through the window, cheese pull for the camera.",
+    "venues.repCountGym.blurb": "Racks, plates and a playlist that won't let you skip leg day.",
+    "venues.steamVentCoffee.blurb": "Espresso strong enough to fix your whole week. They're hiring baristas.",
+    "venues.rerunRacks.blurb": "Somebody's old jacket is about to be your new personality. Hiring retail.",
+    "venues.glowmatic.blurb": "Neon, bass and a dance floor that doesn't check the time.",
+    "venues.northsideDispatch.blurb": "Grab a bag, hop on a bike, get that delivery money.",
+    "venues.twoMoonsDeli.blurb": "Egg sandwich at dawn, snacks at 1 a.m. Two Moons stays ready.",
+    "venues.kettleAndClove.blurb": "Curry roti and doubles. Your lunch break just got a glow-up.",
+    "venues.stoopStrengthGym.blurb": "Basement gym, chalk on the floor, no mirrors for selfies. Respect.",
+    "venues.ninthHourCoffee.blurb": "Pour-overs for the laptop crowd. Hiring baristas who can latte art.",
+    "venues.handMeUpThrift.blurb": "Vintage band tees and one-off finds. Your fit's about to talk. Hiring retail.",
+    "venues.brickwave.blurb": "Brick walls, heavy bass. The Gowanus night shift starts here.",
+    "venues.wallaboutFreight.blurb": "A riders' co-op by the Navy Yard. Your legs are your hustle.",
+    "venues.owlHoursDeli.blurb": "Lower East Side, lights on all night. The owl never clocks out.",
+    "venues.steamWindowDumplings.blurb": "Pork and chive, pan-fried or steamed. Either way, it's a W.",
+    "venues.liftLaneFitness.blurb": "Chelsea gym energy: rowers, racks and people filming their sets.",
+    "venues.overtimeEspresso.blurb": "Cortados for the grind. Hiring baristas with East Village patience.",
+    "venues.sidecutStudio.blurb": "Local designers, small racks, big fits. Hiring retail.",
+    "venues.afterglass.blurb": "Mirrors everywhere, so your outfit shows up twice. Late dance floor.",
+    "venues.sixthFloorLabs.blurb": "Startup office, free snacks, big dreams. Hiring junior devs."
+  }
+}

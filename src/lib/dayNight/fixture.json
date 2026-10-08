@@ -1,0 +1,160 @@
+{
+  "scene": {
+    "quantizeMinutes": 5,
+    "minSunElevationDeg": 25,
+    "keyframes": [
+      {
+        "id": "dawn",
+        "atMinute": 345,
+        "holdMinutes": 0,
+        "ui": "day",
+        "sun": {
+          "azimuthDeg": 75,
+          "elevationDeg": 4
+        },
+        "sunIntensity": 0.45,
+        "shadowIntensity": 0.5,
+        "ambientIntensity": 0.45,
+        "hemisphereIntensity": 0.35,
+        "nightGlow": 0.4
+      },
+      {
+        "id": "morning",
+        "atMinute": 420,
+        "holdMinutes": 60,
+        "ui": "day",
+        "sun": {
+          "azimuthDeg": 110,
+          "elevationDeg": 30
+        },
+        "sunIntensity": 0.8,
+        "shadowIntensity": 0.85,
+        "ambientIntensity": 0.55,
+        "hemisphereIntensity": 0.45,
+        "nightGlow": 0
+      },
+      {
+        "id": "day",
+        "atMinute": 600,
+        "holdMinutes": 330,
+        "ui": "day",
+        "sun": {
+          "azimuthDeg": 180,
+          "elevationDeg": 62
+        },
+        "sunIntensity": 0.9,
+        "shadowIntensity": 1,
+        "ambientIntensity": 0.55,
+        "hemisphereIntensity": 0.5,
+        "nightGlow": 0
+      },
+      {
+        "id": "golden",
+        "atMinute": 1050,
+        "holdMinutes": 30,
+        "ui": "day",
+        "sun": {
+          "azimuthDeg": 250,
+          "elevationDeg": 14
+        },
+        "sunIntensity": 0.75,
+        "shadowIntensity": 0.8,
+        "ambientIntensity": 0.5,
+        "hemisphereIntensity": 0.4,
+        "nightGlow": 0.1
+      },
+      {
+        "id": "dusk",
+        "atMinute": 1140,
+        "holdMinutes": 0,
+        "ui": "night",
+        "sun": {
+          "azimuthDeg": 285,
+          "elevationDeg": 3
+        },
+        "sunIntensity": 0.4,
+        "shadowIntensity": 0.5,
+        "ambientIntensity": 0.4,
+        "hemisphereIntensity": 0.3,
+        "nightGlow": 0.7
+      },
+      {
+        "id": "night",
+        "atMinute": 1230,
+        "holdMinutes": 0,
+        "ui": "night",
+        "sun": {
+          "azimuthDeg": 330,
+          "elevationDeg": 35
+        },
+        "sunIntensity": 0.25,
+        "shadowIntensity": 0.35,
+        "ambientIntensity": 0.3,
+        "hemisphereIntensity": 0.25,
+        "nightGlow": 1
+      }
+    ]
+  },
+  "sky": {
+    "dawn": {
+      "sky": "#f2b8a0",
+      "fog": "#e8c4b4",
+      "sun": "#ffb37a",
+      "ambient": "#9a8fb0",
+      "hemisphereSky": "#f0c8b8",
+      "hemisphereGround": "#5a4a52",
+      "unlitTint": "#c8b4b4",
+      "water": "#6f7f8a"
+    },
+    "morning": {
+      "sky": "#a9d3f0",
+      "fog": "#cfe3f0",
+      "sun": "#fff1d6",
+      "ambient": "#c8d8e8",
+      "hemisphereSky": "#bcdcf5",
+      "hemisphereGround": "#7a7268",
+      "unlitTint": "#f0f2f5",
+      "water": "#5f7f8e"
+    },
+    "day": {
+      "sky": "#8ec5ef",
+      "fog": "#c4def0",
+      "sun": "#fffaf0",
+      "ambient": "#d8e4f0",
+      "hemisphereSky": "#a8d2f2",
+      "hemisphereGround": "#857a6c",
+      "unlitTint": "#ffffff",
+      "water": "#5a7682"
+    },
+    "golden": {
+      "sky": "#f5c58a",
+      "fog": "#efd2b0",
+      "sun": "#ffc27a",
+      "ambient": "#d8b8a0",
+      "hemisphereSky": "#f4cfa0",
+      "hemisphereGround": "#6e5a4a",
+      "unlitTint": "#f2dcc4",
+      "water": "#6f7470"
+    },
+    "dusk": {
+      "sky": "#6a5a8c",
+      "fog": "#7a6a92",
+      "sun": "#ff9a6a",
+      "ambient": "#7c6c9a",
+      "hemisphereSky": "#8a78a8",
+      "hemisphereGround": "#3a3242",
+      "unlitTint": "#a898b8",
+      "water": "#3e4660"
+    },
+    "night": {
+      "sky": "#141c33",
+      "fog": "#1a2440",
+      "sun": "#9fb4e0",
+      "ambient": "#3a4670",
+      "hemisphereSky": "#2a3658",
+      "hemisphereGround": "#14161e",
+      "unlitTint": "#5a6488",
+      "water": "#141b2b"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "defaults": { "master": 80, "music": 60, "sfx": 80, "ambience": 40, "voice": 80 },
+  "volumeStep": 5,
+  "rampSeconds": 0.08,
+  "musicCrossfadeSeconds": 2,
+  "musicTrackPlaySeconds": 180,
+  "prefetchAheadSeconds": 20,
+  "tiers": {
+    "low": { "preloadSfx": false, "prefetchNextMusic": false },
+    "mid": { "preloadSfx": true, "prefetchNextMusic": true },
+    "high": { "preloadSfx": true, "prefetchNextMusic": true }
+  }
+}

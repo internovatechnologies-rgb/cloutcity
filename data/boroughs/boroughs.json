@@ -1,0 +1,33 @@
+{
+  "boroughs": [
+    {
+      "id": "queens",
+      "nameKey": "boroughs.queens.name",
+      "teaserLandmarkIds": []
+    },
+    {
+      "id": "brooklyn",
+      "nameKey": "boroughs.brooklyn.name",
+      "lockedKey": "boroughs.brooklyn.locked",
+      "teaserLandmarkIds": []
+    },
+    {
+      "id": "manhattan",
+      "nameKey": "boroughs.manhattan.name",
+      "lockedKey": "boroughs.manhattan.locked",
+      "teaserLandmarkIds": []
+    },
+    {
+      "id": "bronx",
+      "nameKey": "boroughs.bronx.name",
+      "teaserKey": "boroughs.bronx.teaser",
+      "teaserLandmarkIds": ["bronx-ballpark"]
+    },
+    {
+      "id": "staten-island",
+      "nameKey": "boroughs.statenIsland.name",
+      "teaserKey": "boroughs.statenIsland.teaser",
+      "teaserLandmarkIds": ["staten-island-ferry"]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "shardSize": 16,
+  "maxFriendFanout": 50,
+  "heartbeatIntervalMs": 60000,
+  "moveMinIntervalMs": 1000,
+  "emoteRateLimit": { "max": 5, "windowMs": 10000 },
+  "budgetMsgsPerPlayerMinute": 32
+}

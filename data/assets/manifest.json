@@ -1,0 +1,2571 @@
+{
+  "version": 1,
+  "assetVersion": "158ef5de7b6552b2",
+  "models": [
+    {
+      "id": "taxi",
+      "kind": "static",
+      "category": "vehicle",
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.taxi",
+      "bounds": { "min": [-1.0942, 0, -2.45], "max": [1.0942, 2.2695, 2.45] },
+      "slots": [],
+      "emissive": true,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/taxi.low.88ea255d.glb",
+          "sha256": "88ea255d8c6b16e0c9d7f68fc33e15fce033a216cf7d71eddf9378035d96d10f",
+          "bytes": 27860,
+          "gzBytes": 18344,
+          "triangles": 1058
+        },
+        "mid": {
+          "file": "/models/taxi.high.f6e1872d.glb",
+          "sha256": "f6e1872d038eb11a28c5d938f705e628fd70122002437953d565af183e6c1303",
+          "bytes": 32184,
+          "gzBytes": 20953,
+          "triangles": 1256
+        },
+        "high": {
+          "file": "/models/taxi.high.f6e1872d.glb",
+          "sha256": "f6e1872d038eb11a28c5d938f705e628fd70122002437953d565af183e6c1303",
+          "bytes": 32184,
+          "gzBytes": 20953,
+          "triangles": 1256
+        }
+      }
+    },
+    {
+      "id": "sedan",
+      "kind": "static",
+      "category": "vehicle",
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.sedan",
+      "bounds": { "min": [-1.0719, 0, -2.4], "max": [1.0719, 1.8869, 2.4] },
+      "slots": ["body"],
+      "emissive": true,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/sedan.low.3288c3e3.glb",
+          "sha256": "3288c3e3287c4b35341ce89b5bc3b122ea1639553d10229889afcb5392bdd600",
+          "bytes": 27764,
+          "gzBytes": 18344,
+          "triangles": 1018
+        },
+        "mid": {
+          "file": "/models/sedan.high.cf501a99.glb",
+          "sha256": "cf501a997c2387ce47d25cbd71b3b57fd7da9410a518616d98477cae69fe40ba",
+          "bytes": 30372,
+          "gzBytes": 19282,
+          "triangles": 1222
+        },
+        "high": {
+          "file": "/models/sedan.high.cf501a99.glb",
+          "sha256": "cf501a997c2387ce47d25cbd71b3b57fd7da9410a518616d98477cae69fe40ba",
+          "bytes": 30372,
+          "gzBytes": 19282,
+          "triangles": 1222
+        }
+      }
+    },
+    {
+      "id": "hatchback",
+      "kind": "static",
+      "category": "vehicle",
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.hatchback",
+      "bounds": { "min": [-1.0915, 0, -2.1], "max": [1.0915, 1.9214, 2.1] },
+      "slots": ["body"],
+      "emissive": true,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/hatchback.low.31172016.glb",
+          "sha256": "31172016fdccbd8c1082a2e57704e2e13ad7209752f04b8272441505f5885e55",
+          "bytes": 28596,
+          "gzBytes": 18449,
+          "triangles": 1018
+        },
+        "mid": {
+          "file": "/models/hatchback.high.60036afc.glb",
+          "sha256": "60036afc55334bce2d79aa0338daf9ede5c20c2c3de803d13aa3580298d700c2",
+          "bytes": 31156,
+          "gzBytes": 20011,
+          "triangles": 1194
+        },
+        "high": {
+          "file": "/models/hatchback.high.60036afc.glb",
+          "sha256": "60036afc55334bce2d79aa0338daf9ede5c20c2c3de803d13aa3580298d700c2",
+          "bytes": 31156,
+          "gzBytes": 20011,
+          "triangles": 1194
+        }
+      }
+    },
+    {
+      "id": "streetlight",
+      "kind": "static",
+      "category": "street-prop",
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.streetlight",
+      "bounds": { "min": [-1.1924, 0, -0.3056], "max": [1.1924, 8.5, 0.3056] },
+      "slots": [],
+      "emissive": true,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/streetlight.low.39353ff2.glb",
+          "sha256": "39353ff2a6cdc0aa051347c36101cd6139da6050b1d8ed49d61aa9a13c6a7cb7",
+          "bytes": 5560,
+          "gzBytes": 3494,
+          "triangles": 104
+        },
+        "mid": {
+          "file": "/models/streetlight.high.89193639.glb",
+          "sha256": "891936398fedf61db28c202308e2240ffb56a90f0c67491c2a5d84866b86b06d",
+          "bytes": 7060,
+          "gzBytes": 4760,
+          "triangles": 176
+        },
+        "high": {
+          "file": "/models/streetlight.high.89193639.glb",
+          "sha256": "891936398fedf61db28c202308e2240ffb56a90f0c67491c2a5d84866b86b06d",
+          "bytes": 7060,
+          "gzBytes": 4760,
+          "triangles": 176
+        }
+      }
+    },
+    {
+      "id": "hydrant",
+      "kind": "static",
+      "category": "street-prop",
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.hydrant",
+      "bounds": { "min": [-0.2262, 0, -0.2193], "max": [0.2262, 0.75, 0.2193] },
+      "slots": [],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/hydrant.low.fbf0fe50.glb",
+          "sha256": "fbf0fe50e4ff41fb1475e296da1ed753c6f5a60ffd624bb0128c85295820a734",
+          "bytes": 5304,
+          "gzBytes": 3012,
+          "triangles": 172
+        },
+        "mid": {
+          "file": "/models/hydrant.high.09a8c33f.glb",
+          "sha256": "09a8c33f52ad513d0f80a5321685edfe96de77f1bc69c8313981777839423381",
+          "bytes": 5484,
+          "gzBytes": 3188,
+          "triangles": 180
+        },
+        "high": {
+          "file": "/models/hydrant.high.09a8c33f.glb",
+          "sha256": "09a8c33f52ad513d0f80a5321685edfe96de77f1bc69c8313981777839423381",
+          "bytes": 5484,
+          "gzBytes": 3188,
+          "triangles": 180
+        }
+      }
+    },
+    {
+      "id": "bench",
+      "kind": "static",
+      "category": "street-prop",
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.bench",
+      "bounds": { "min": [-0.9, 0, -0.3375], "max": [0.9, 0.45, 0.3375] },
+      "slots": [],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/bench.high.a353dbda.glb",
+          "sha256": "a353dbdab7d349c9a4c04ae78f7f5a08344bec8914d5032e7e1399a178e69cba",
+          "bytes": 2992,
+          "gzBytes": 1306,
+          "triangles": 44
+        },
+        "mid": {
+          "file": "/models/bench.high.a353dbda.glb",
+          "sha256": "a353dbdab7d349c9a4c04ae78f7f5a08344bec8914d5032e7e1399a178e69cba",
+          "bytes": 2992,
+          "gzBytes": 1306,
+          "triangles": 44
+        },
+        "high": {
+          "file": "/models/bench.high.a353dbda.glb",
+          "sha256": "a353dbdab7d349c9a4c04ae78f7f5a08344bec8914d5032e7e1399a178e69cba",
+          "bytes": 2992,
+          "gzBytes": 1306,
+          "triangles": 44
+        }
+      }
+    },
+    {
+      "id": "bush",
+      "kind": "static",
+      "category": "street-prop",
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.bush",
+      "bounds": { "min": [-0.2488, 0, -0.2616], "max": [0.2488, 1, 0.2616] },
+      "slots": [],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/bush.high.50197819.glb",
+          "sha256": "50197819d56cff76c9a85d08756c343dbe2596fa9507b281eb100a2c545a4a78",
+          "bytes": 3944,
+          "gzBytes": 2407,
+          "triangles": 72
+        },
+        "mid": {
+          "file": "/models/bush.high.50197819.glb",
+          "sha256": "50197819d56cff76c9a85d08756c343dbe2596fa9507b281eb100a2c545a4a78",
+          "bytes": 3944,
+          "gzBytes": 2407,
+          "triangles": 72
+        },
+        "high": {
+          "file": "/models/bush.high.50197819.glb",
+          "sha256": "50197819d56cff76c9a85d08756c343dbe2596fa9507b281eb100a2c545a4a78",
+          "bytes": 3944,
+          "gzBytes": 2407,
+          "triangles": 72
+        }
+      }
+    },
+    {
+      "id": "traffic-light",
+      "kind": "static",
+      "category": "street-prop",
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.trafficLight",
+      "bounds": { "min": [-0.538, 0, -0.4644], "max": [0.538, 4.5, 0.4644] },
+      "slots": [],
+      "emissive": true,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/traffic-light.low.903ac205.glb",
+          "sha256": "903ac205d1a306a88b0300ca47290ab3c7775ed5ace506af79f27f87842b3f9e",
+          "bytes": 14928,
+          "gzBytes": 8961,
+          "triangles": 450
+        },
+        "mid": {
+          "file": "/models/traffic-light.high.78463b38.glb",
+          "sha256": "78463b38b472b692a8b3d38f0e971d9e738f377a2cb6622b57516fea3955ac39",
+          "bytes": 16104,
+          "gzBytes": 9501,
+          "triangles": 508
+        },
+        "high": {
+          "file": "/models/traffic-light.high.78463b38.glb",
+          "sha256": "78463b38b472b692a8b3d38f0e971d9e738f377a2cb6622b57516fea3955ac39",
+          "bytes": 16104,
+          "gzBytes": 9501,
+          "triangles": 508
+        }
+      }
+    },
+    {
+      "id": "trash-bags",
+      "kind": "static",
+      "category": "street-prop",
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.trashBags",
+      "bounds": { "min": [-0.5706, 0, -0.6], "max": [0.5706, 0.4715, 0.6] },
+      "slots": [],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/trash-bags.high.73f53322.glb",
+          "sha256": "73f53322154c2a058e024741d713a4f8a1d1833d9c9518321b66eb3deb17750c",
+          "bytes": 2556,
+          "gzBytes": 1126,
+          "triangles": 18
+        },
+        "mid": {
+          "file": "/models/trash-bags.high.73f53322.glb",
+          "sha256": "73f53322154c2a058e024741d713a4f8a1d1833d9c9518321b66eb3deb17750c",
+          "bytes": 2556,
+          "gzBytes": 1126,
+          "triangles": 18
+        },
+        "high": {
+          "file": "/models/trash-bags.high.73f53322.glb",
+          "sha256": "73f53322154c2a058e024741d713a4f8a1d1833d9c9518321b66eb3deb17750c",
+          "bytes": 2556,
+          "gzBytes": 1126,
+          "triangles": 18
+        }
+      }
+    },
+    {
+      "id": "dumpster",
+      "kind": "static",
+      "category": "street-prop",
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.dumpster",
+      "bounds": { "min": [-0.95, 0, -0.5922], "max": [0.95, 1.0652, 0.5922] },
+      "slots": [],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/dumpster.high.180385ef.glb",
+          "sha256": "180385ef5f93342f794716324f811dd7871b5a83ce964e88f05f4fdde7ab987c",
+          "bytes": 5456,
+          "gzBytes": 3270,
+          "triangles": 126
+        },
+        "mid": {
+          "file": "/models/dumpster.high.180385ef.glb",
+          "sha256": "180385ef5f93342f794716324f811dd7871b5a83ce964e88f05f4fdde7ab987c",
+          "bytes": 5456,
+          "gzBytes": 3270,
+          "triangles": 126
+        },
+        "high": {
+          "file": "/models/dumpster.high.180385ef.glb",
+          "sha256": "180385ef5f93342f794716324f811dd7871b5a83ce964e88f05f4fdde7ab987c",
+          "bytes": 5456,
+          "gzBytes": 3270,
+          "triangles": 126
+        }
+      }
+    },
+    {
+      "id": "water-tower",
+      "kind": "static",
+      "category": "street-prop",
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.waterTower",
+      "bounds": { "min": [-2.7923, 0, -2.7923], "max": [2.7923, 7.5, 2.7923] },
+      "slots": [],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/water-tower.high.04a4b20b.glb",
+          "sha256": "04a4b20bdfe7c9533f5f2a866692249292164502c68bafd618034fb3d6f7dd10",
+          "bytes": 5212,
+          "gzBytes": 2673,
+          "triangles": 146
+        },
+        "mid": {
+          "file": "/models/water-tower.high.04a4b20b.glb",
+          "sha256": "04a4b20bdfe7c9533f5f2a866692249292164502c68bafd618034fb3d6f7dd10",
+          "bytes": 5212,
+          "gzBytes": 2673,
+          "triangles": 146
+        },
+        "high": {
+          "file": "/models/water-tower.high.04a4b20b.glb",
+          "sha256": "04a4b20bdfe7c9533f5f2a866692249292164502c68bafd618034fb3d6f7dd10",
+          "bytes": 5212,
+          "gzBytes": 2673,
+          "triangles": 146
+        }
+      }
+    },
+    {
+      "id": "tree-oak",
+      "kind": "static",
+      "category": "tree",
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.treeOak",
+      "bounds": { "min": [-2.3507, 0, -2.7143], "max": [2.3507, 9, 2.7143] },
+      "slots": [],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/tree-oak.high.d1b28925.glb",
+          "sha256": "d1b28925f893042f9644aa4484ab2d196fb518eaf290850930e82a5a90476890",
+          "bytes": 5036,
+          "gzBytes": 3196,
+          "triangles": 196
+        },
+        "mid": {
+          "file": "/models/tree-oak.high.d1b28925.glb",
+          "sha256": "d1b28925f893042f9644aa4484ab2d196fb518eaf290850930e82a5a90476890",
+          "bytes": 5036,
+          "gzBytes": 3196,
+          "triangles": 196
+        },
+        "high": {
+          "file": "/models/tree-oak.high.d1b28925.glb",
+          "sha256": "d1b28925f893042f9644aa4484ab2d196fb518eaf290850930e82a5a90476890",
+          "bytes": 5036,
+          "gzBytes": 3196,
+          "triangles": 196
+        }
+      }
+    },
+    {
+      "id": "tree-round",
+      "kind": "static",
+      "category": "tree",
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.treeRound",
+      "bounds": { "min": [-1.7683, 0, -1.5314], "max": [1.7683, 8, 1.5314] },
+      "slots": [],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/tree-round.high.e2b93a48.glb",
+          "sha256": "e2b93a48ec5e18234a6667639635e8fc452290e4ba75d52ce98a88b06537798e",
+          "bytes": 3860,
+          "gzBytes": 2247,
+          "triangles": 114
+        },
+        "mid": {
+          "file": "/models/tree-round.high.e2b93a48.glb",
+          "sha256": "e2b93a48ec5e18234a6667639635e8fc452290e4ba75d52ce98a88b06537798e",
+          "bytes": 3860,
+          "gzBytes": 2247,
+          "triangles": 114
+        },
+        "high": {
+          "file": "/models/tree-round.high.e2b93a48.glb",
+          "sha256": "e2b93a48ec5e18234a6667639635e8fc452290e4ba75d52ce98a88b06537798e",
+          "bytes": 3860,
+          "gzBytes": 2247,
+          "triangles": 114
+        }
+      }
+    },
+    {
+      "id": "tree-tall",
+      "kind": "static",
+      "category": "tree",
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.treeTall",
+      "bounds": { "min": [-3.1789, 0, -2.858], "max": [3.1789, 10, 2.858] },
+      "slots": [],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/tree-tall.low.dff56cee.glb",
+          "sha256": "dff56cee726655f15fd3b1ba787d96b5c1e182075293ba1b115d05a8954755dc",
+          "bytes": 9124,
+          "gzBytes": 6516,
+          "triangles": 398
+        },
+        "mid": {
+          "file": "/models/tree-tall.high.1c2e232f.glb",
+          "sha256": "1c2e232fab7b40827bd03d0185fae1268d4daebfe0cad00e70012e67878a116c",
+          "bytes": 9184,
+          "gzBytes": 6548,
+          "triangles": 402
+        },
+        "high": {
+          "file": "/models/tree-tall.high.1c2e232f.glb",
+          "sha256": "1c2e232fab7b40827bd03d0185fae1268d4daebfe0cad00e70012e67878a116c",
+          "bytes": 9184,
+          "gzBytes": 6548,
+          "triangles": 402
+        }
+      }
+    },
+    {
+      "id": "block-a",
+      "kind": "static",
+      "category": "building",
+      "loadPhase": "playable",
+      "instanced": true,
+      "nameKey": "models.name.blockA",
+      "bounds": { "min": [-3, 0, -3], "max": [3, 24, 3] },
+      "slots": ["facade"],
+      "emissive": true,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/block-a.high.58b3ded8.glb",
+          "sha256": "58b3ded81fb9b5acd3f0660e510319dc7603766e2053eed733de3736f7b7ffe9",
+          "bytes": 6180,
+          "gzBytes": 2999,
+          "triangles": 188
+        },
+        "mid": {
+          "file": "/models/block-a.high.58b3ded8.glb",
+          "sha256": "58b3ded81fb9b5acd3f0660e510319dc7603766e2053eed733de3736f7b7ffe9",
+          "bytes": 6180,
+          "gzBytes": 2999,
+          "triangles": 188
+        },
+        "high": {
+          "file": "/models/block-a.high.58b3ded8.glb",
+          "sha256": "58b3ded81fb9b5acd3f0660e510319dc7603766e2053eed733de3736f7b7ffe9",
+          "bytes": 6180,
+          "gzBytes": 2999,
+          "triangles": 188
+        }
+      }
+    },
+    {
+      "id": "block-b",
+      "kind": "static",
+      "category": "building",
+      "loadPhase": "playable",
+      "instanced": true,
+      "nameKey": "models.name.blockB",
+      "bounds": { "min": [-3, 0, -3], "max": [3, 26.7, 3] },
+      "slots": ["facade"],
+      "emissive": true,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/block-b.high.8c8c18fa.glb",
+          "sha256": "8c8c18facd89441401ca2beec123cde003159a187034bbf732c9ae019a0b38f7",
+          "bytes": 6520,
+          "gzBytes": 3104,
+          "triangles": 200
+        },
+        "mid": {
+          "file": "/models/block-b.high.8c8c18fa.glb",
+          "sha256": "8c8c18facd89441401ca2beec123cde003159a187034bbf732c9ae019a0b38f7",
+          "bytes": 6520,
+          "gzBytes": 3104,
+          "triangles": 200
+        },
+        "high": {
+          "file": "/models/block-b.high.8c8c18fa.glb",
+          "sha256": "8c8c18facd89441401ca2beec123cde003159a187034bbf732c9ae019a0b38f7",
+          "bytes": 6520,
+          "gzBytes": 3104,
+          "triangles": 200
+        }
+      }
+    },
+    {
+      "id": "block-c",
+      "kind": "static",
+      "category": "building",
+      "loadPhase": "playable",
+      "instanced": true,
+      "nameKey": "models.name.blockC",
+      "bounds": { "min": [-3, 0, -3], "max": [3, 27, 3] },
+      "slots": ["facade"],
+      "emissive": true,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/block-c.high.a3c169e7.glb",
+          "sha256": "a3c169e7b1a79bff5083a0a3c39e5337fd1bf74c1294a1dbde85d94b9853f25f",
+          "bytes": 5404,
+          "gzBytes": 2561,
+          "triangles": 142
+        },
+        "mid": {
+          "file": "/models/block-c.high.a3c169e7.glb",
+          "sha256": "a3c169e7b1a79bff5083a0a3c39e5337fd1bf74c1294a1dbde85d94b9853f25f",
+          "bytes": 5404,
+          "gzBytes": 2561,
+          "triangles": 142
+        },
+        "high": {
+          "file": "/models/block-c.high.a3c169e7.glb",
+          "sha256": "a3c169e7b1a79bff5083a0a3c39e5337fd1bf74c1294a1dbde85d94b9853f25f",
+          "bytes": 5404,
+          "gzBytes": 2561,
+          "triangles": 142
+        }
+      }
+    },
+    {
+      "id": "block-d",
+      "kind": "static",
+      "category": "building",
+      "loadPhase": "playable",
+      "instanced": true,
+      "nameKey": "models.name.blockD",
+      "bounds": { "min": [-3, 0, -3], "max": [3, 21, 3] },
+      "slots": ["facade"],
+      "emissive": true,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/block-d.high.7613cf9b.glb",
+          "sha256": "7613cf9b6be85de264ae36bdcb02be72501c8c7412c314e46fd8eb42e0beb620",
+          "bytes": 4464,
+          "gzBytes": 1860,
+          "triangles": 106
+        },
+        "mid": {
+          "file": "/models/block-d.high.7613cf9b.glb",
+          "sha256": "7613cf9b6be85de264ae36bdcb02be72501c8c7412c314e46fd8eb42e0beb620",
+          "bytes": 4464,
+          "gzBytes": 1860,
+          "triangles": 106
+        },
+        "high": {
+          "file": "/models/block-d.high.7613cf9b.glb",
+          "sha256": "7613cf9b6be85de264ae36bdcb02be72501c8c7412c314e46fd8eb42e0beb620",
+          "bytes": 4464,
+          "gzBytes": 1860,
+          "triangles": 106
+        }
+      }
+    },
+    {
+      "id": "block-e",
+      "kind": "static",
+      "category": "building",
+      "loadPhase": "playable",
+      "instanced": true,
+      "nameKey": "models.name.blockE",
+      "bounds": { "min": [-3, 0, -3], "max": [3, 21.6, 3] },
+      "slots": ["facade"],
+      "emissive": true,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/block-e.high.1e9a6e5c.glb",
+          "sha256": "1e9a6e5c953c1541dc11ef77db6d841fc3eeef98e3ddef2d29f113485bff3523",
+          "bytes": 4932,
+          "gzBytes": 2214,
+          "triangles": 96
+        },
+        "mid": {
+          "file": "/models/block-e.high.1e9a6e5c.glb",
+          "sha256": "1e9a6e5c953c1541dc11ef77db6d841fc3eeef98e3ddef2d29f113485bff3523",
+          "bytes": 4932,
+          "gzBytes": 2214,
+          "triangles": 96
+        },
+        "high": {
+          "file": "/models/block-e.high.1e9a6e5c.glb",
+          "sha256": "1e9a6e5c953c1541dc11ef77db6d841fc3eeef98e3ddef2d29f113485bff3523",
+          "bytes": 4932,
+          "gzBytes": 2214,
+          "triangles": 96
+        }
+      }
+    },
+    {
+      "id": "block-f",
+      "kind": "static",
+      "category": "building",
+      "loadPhase": "playable",
+      "instanced": true,
+      "nameKey": "models.name.blockF",
+      "bounds": { "min": [-3, 0, -3], "max": [3, 24, 3] },
+      "slots": ["facade"],
+      "emissive": true,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/block-f.high.ff841b45.glb",
+          "sha256": "ff841b4579013e0c45e25768c77f2cff036ec3b832804949f723b5e9e19aebcd",
+          "bytes": 4220,
+          "gzBytes": 1770,
+          "triangles": 88
+        },
+        "mid": {
+          "file": "/models/block-f.high.ff841b45.glb",
+          "sha256": "ff841b4579013e0c45e25768c77f2cff036ec3b832804949f723b5e9e19aebcd",
+          "bytes": 4220,
+          "gzBytes": 1770,
+          "triangles": 88
+        },
+        "high": {
+          "file": "/models/block-f.high.ff841b45.glb",
+          "sha256": "ff841b4579013e0c45e25768c77f2cff036ec3b832804949f723b5e9e19aebcd",
+          "bytes": 4220,
+          "gzBytes": 1770,
+          "triangles": 88
+        }
+      }
+    },
+    {
+      "id": "building-a",
+      "kind": "static",
+      "category": "building",
+      "loadPhase": "after-playable",
+      "instanced": false,
+      "nameKey": "models.name.buildingA",
+      "bounds": { "min": [-5.3015, 0, -5.64], "max": [5.3015, 15.516, 5.64] },
+      "slots": ["facade"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/building-a.low.a9812087.glb",
+          "sha256": "a9812087a60ca59de74045fb38aa7b7c217fd11bdbf65bf6f6ef90568717b0a8",
+          "bytes": 19712,
+          "gzBytes": 10797,
+          "triangles": 877
+        },
+        "mid": {
+          "file": "/models/building-a.mid.e619c04c.glb",
+          "sha256": "e619c04cd5767eb87a3bebc05676d44b445bfcc4296df86e1c057bb7af20be3b",
+          "bytes": 20808,
+          "gzBytes": 12076,
+          "triangles": 938
+        },
+        "high": {
+          "file": "/models/building-a.high.f01b65f0.glb",
+          "sha256": "f01b65f09ae11901e341907feeeab18c4ac33c06f1a191626b6da9dd52162d70",
+          "bytes": 24588,
+          "gzBytes": 13681,
+          "triangles": 1252
+        }
+      }
+    },
+    {
+      "id": "building-b",
+      "kind": "static",
+      "category": "building",
+      "loadPhase": "after-playable",
+      "instanced": false,
+      "nameKey": "models.name.buildingB",
+      "bounds": { "min": [-5.82, 0, -5.64], "max": [5.82, 15.516, 5.64] },
+      "slots": ["facade"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/building-b.low.2567ba3b.glb",
+          "sha256": "2567ba3b42be81d9e6bb6f3f0294f4ea1e23e15785231312eb980fa1d75244d2",
+          "bytes": 22940,
+          "gzBytes": 13039,
+          "triangles": 991
+        },
+        "mid": {
+          "file": "/models/building-b.mid.3d58ca6e.glb",
+          "sha256": "3d58ca6e2557fdcb125e4526b8f587230693ae632e9449ce2cc3979fc307c288",
+          "bytes": 22964,
+          "gzBytes": 13086,
+          "triangles": 991
+        },
+        "high": {
+          "file": "/models/building-b.high.fb24e69d.glb",
+          "sha256": "fb24e69d74c93ae73d15b9a92f16b048f2bb9a00f5aa8d985b2852ac07f0f5a2",
+          "bytes": 26148,
+          "gzBytes": 14067,
+          "triangles": 1276
+        }
+      }
+    },
+    {
+      "id": "building-c",
+      "kind": "static",
+      "category": "building",
+      "loadPhase": "after-playable",
+      "instanced": false,
+      "nameKey": "models.name.buildingC",
+      "bounds": { "min": [-5.3015, 0, -6.54], "max": [5.3015, 10.716, 6.54] },
+      "slots": ["facade"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/building-c.low.55053605.glb",
+          "sha256": "55053605014d5fe980beaa258a6c9d699ec39b594583781879f9d14ead032134",
+          "bytes": 18676,
+          "gzBytes": 11097,
+          "triangles": 786
+        },
+        "mid": {
+          "file": "/models/building-c.mid.a47c8db5.glb",
+          "sha256": "a47c8db54fb7268d6307262ee4f66747beb3b7f165246cf6cdc9276dd128420b",
+          "bytes": 20516,
+          "gzBytes": 12547,
+          "triangles": 896
+        },
+        "high": {
+          "file": "/models/building-c.high.ddc043f4.glb",
+          "sha256": "ddc043f466dc1a6da1214862bbdf38a17397d4b54d056d7d310650f469148405",
+          "bytes": 24200,
+          "gzBytes": 14094,
+          "triangles": 1195
+        }
+      }
+    },
+    {
+      "id": "building-d",
+      "kind": "static",
+      "category": "building",
+      "loadPhase": "after-playable",
+      "instanced": false,
+      "nameKey": "models.name.buildingD",
+      "bounds": { "min": [-5.04, 0, -5.4], "max": [5.04, 15.516, 5.4] },
+      "slots": ["facade"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/building-d.low.f6aadfdd.glb",
+          "sha256": "f6aadfdd8528b046f42c03bb2c5e0eb8dbdd165126677eb74628f268bcbc765a",
+          "bytes": 17508,
+          "gzBytes": 11098,
+          "triangles": 786
+        },
+        "mid": {
+          "file": "/models/building-d.mid.257213d3.glb",
+          "sha256": "257213d39caccb281b0dd4f8e523edfa6b0fb035ff0e5cda1c094e67b7bc3b47",
+          "bytes": 18408,
+          "gzBytes": 11626,
+          "triangles": 824
+        },
+        "high": {
+          "file": "/models/building-d.high.ad7a0b8e.glb",
+          "sha256": "ad7a0b8e8bce6a1684781939fd3690389f651ab7f2c0fb7a3db5a3686371e139",
+          "bytes": 22212,
+          "gzBytes": 13428,
+          "triangles": 1100
+        }
+      }
+    },
+    {
+      "id": "awning",
+      "kind": "static",
+      "category": "building-detail",
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.awning",
+      "bounds": { "min": [-2.4, 0, -0.8873], "max": [2.4, 4.8, 0.8873] },
+      "slots": ["canvas"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/awning.high.486bf92e.glb",
+          "sha256": "486bf92e302bf7b10608b219d4eec640c564036137b506672d99bfdd50a7d5a1",
+          "bytes": 3544,
+          "gzBytes": 1557,
+          "triangles": 40
+        },
+        "mid": {
+          "file": "/models/awning.high.486bf92e.glb",
+          "sha256": "486bf92e302bf7b10608b219d4eec640c564036137b506672d99bfdd50a7d5a1",
+          "bytes": 3544,
+          "gzBytes": 1557,
+          "triangles": 40
+        },
+        "high": {
+          "file": "/models/awning.high.486bf92e.glb",
+          "sha256": "486bf92e302bf7b10608b219d4eec640c564036137b506672d99bfdd50a7d5a1",
+          "bytes": 3544,
+          "gzBytes": 1557,
+          "triangles": 40
+        }
+      }
+    },
+    {
+      "id": "awning-wide",
+      "kind": "static",
+      "category": "building-detail",
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.awningWide",
+      "bounds": { "min": [-4.8, 0, -0.8873], "max": [4.8, 4.8, 0.8873] },
+      "slots": ["canvas"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/awning-wide.high.ef4ae35b.glb",
+          "sha256": "ef4ae35b670a7db9175b8ad3b82ffa65b1268ec26a69bffd0541fe7151b308ef",
+          "bytes": 3544,
+          "gzBytes": 1572,
+          "triangles": 40
+        },
+        "mid": {
+          "file": "/models/awning-wide.high.ef4ae35b.glb",
+          "sha256": "ef4ae35b670a7db9175b8ad3b82ffa65b1268ec26a69bffd0541fe7151b308ef",
+          "bytes": 3544,
+          "gzBytes": 1572,
+          "triangles": 40
+        },
+        "high": {
+          "file": "/models/awning-wide.high.ef4ae35b.glb",
+          "sha256": "ef4ae35b670a7db9175b8ad3b82ffa65b1268ec26a69bffd0541fe7151b308ef",
+          "bytes": 3544,
+          "gzBytes": 1572,
+          "triangles": 40
+        }
+      }
+    },
+    {
+      "id": "bed",
+      "kind": "static",
+      "category": "furniture",
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.bed",
+      "bounds": { "min": [-1.05, 0, -1.0161], "max": [1.05, 0.6774, 1.0161] },
+      "slots": ["bedding"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/bed.low.3966f11a.glb",
+          "sha256": "3966f11a3a9a6e45add2e552d34d37c08d70192158a9ca7f670991e2bb01db0c",
+          "bytes": 10968,
+          "gzBytes": 6961,
+          "triangles": 324
+        },
+        "mid": {
+          "file": "/models/bed.high.dbab4cf0.glb",
+          "sha256": "dbab4cf02922e22957a5c7e9f7f00aa68666ec12d21c300e81ebe97a14b1f9e5",
+          "bytes": 14608,
+          "gzBytes": 9327,
+          "triangles": 540
+        },
+        "high": {
+          "file": "/models/bed.high.dbab4cf0.glb",
+          "sha256": "dbab4cf02922e22957a5c7e9f7f00aa68666ec12d21c300e81ebe97a14b1f9e5",
+          "bytes": 14608,
+          "gzBytes": 9327,
+          "triangles": 540
+        }
+      }
+    },
+    {
+      "id": "couch",
+      "kind": "static",
+      "category": "furniture",
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.couch",
+      "bounds": { "min": [-1.05, 0, -0.56], "max": [1.05, 0.8568, 0.56] },
+      "slots": ["upholstery"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/couch.low.7d6252ff.glb",
+          "sha256": "7d6252ff8013d48c97b5d775064fc15051c51f83b7a60057c3921cfe2da6d487",
+          "bytes": 12000,
+          "gzBytes": 8505,
+          "triangles": 380
+        },
+        "mid": {
+          "file": "/models/couch.high.654845a3.glb",
+          "sha256": "654845a38a59cd78b9ec3bdaed5cee6253c21406baa99f8f06550794f8a679ba",
+          "bytes": 15956,
+          "gzBytes": 11025,
+          "triangles": 636
+        },
+        "high": {
+          "file": "/models/couch.high.654845a3.glb",
+          "sha256": "654845a38a59cd78b9ec3bdaed5cee6253c21406baa99f8f06550794f8a679ba",
+          "bytes": 15956,
+          "gzBytes": 11025,
+          "triangles": 636
+        }
+      }
+    },
+    {
+      "id": "armchair",
+      "kind": "static",
+      "category": "furniture",
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.armchair",
+      "bounds": { "min": [-0.475, 0, -0.4222], "max": [0.475, 0.646, 0.4222] },
+      "slots": ["upholstery"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/armchair.low.2ba90805.glb",
+          "sha256": "2ba908057ca190e1f4955cd7ccf4715a6ba8ded3bcb83d9f1ed682293f4ba145",
+          "bytes": 9208,
+          "gzBytes": 6596,
+          "triangles": 316
+        },
+        "mid": {
+          "file": "/models/armchair.high.c61020e0.glb",
+          "sha256": "c61020e0a0c76c7ce800046b3b4751bf1ae7b6d4f563fab85328c4128a2839ec",
+          "bytes": 12168,
+          "gzBytes": 8643,
+          "triangles": 528
+        },
+        "high": {
+          "file": "/models/armchair.high.c61020e0.glb",
+          "sha256": "c61020e0a0c76c7ce800046b3b4751bf1ae7b6d4f563fab85328c4128a2839ec",
+          "bytes": 12168,
+          "gzBytes": 8643,
+          "triangles": 528
+        }
+      }
+    },
+    {
+      "id": "floor-lamp",
+      "kind": "static",
+      "category": "furniture",
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.floorLamp",
+      "bounds": { "min": [-0.3175, 0, -0.3175], "max": [0.3175, 1.6, 0.3175] },
+      "slots": [],
+      "emissive": true,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/floor-lamp.low.1ec3c9e0.glb",
+          "sha256": "1ec3c9e005ba19151493f1455aa439d818e36bd34a25d5adafab1e5402674a50",
+          "bytes": 6236,
+          "gzBytes": 3771,
+          "triangles": 192
+        },
+        "mid": {
+          "file": "/models/floor-lamp.high.a81637d1.glb",
+          "sha256": "a81637d17ededa81997d1313849728fbdb7a09b625981e938d3b6a7da1db5fae",
+          "bytes": 8796,
+          "gzBytes": 5091,
+          "triangles": 320
+        },
+        "high": {
+          "file": "/models/floor-lamp.high.a81637d1.glb",
+          "sha256": "a81637d17ededa81997d1313849728fbdb7a09b625981e938d3b6a7da1db5fae",
+          "bytes": 8796,
+          "gzBytes": 5091,
+          "triangles": 320
+        }
+      }
+    },
+    {
+      "id": "table-lamp",
+      "kind": "static",
+      "category": "furniture",
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.tableLamp",
+      "bounds": { "min": [-0.2692, 0, -0.2692], "max": [0.2692, 0.55, 0.2692] },
+      "slots": [],
+      "emissive": true,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/table-lamp.low.92058dc9.glb",
+          "sha256": "92058dc9d36ba01945592ca30065bfeca436d0a4ba3d8584fa76eb01c3281c46",
+          "bytes": 9088,
+          "gzBytes": 5248,
+          "triangles": 304
+        },
+        "mid": {
+          "file": "/models/table-lamp.high.68685c73.glb",
+          "sha256": "68685c734f6d9f7a336cc628e12f1c5a8cc0b778bebc20011561551bc77e6077",
+          "bytes": 10488,
+          "gzBytes": 5814,
+          "triangles": 392
+        },
+        "high": {
+          "file": "/models/table-lamp.high.68685c73.glb",
+          "sha256": "68685c734f6d9f7a336cc628e12f1c5a8cc0b778bebc20011561551bc77e6077",
+          "bytes": 10488,
+          "gzBytes": 5814,
+          "triangles": 392
+        }
+      }
+    },
+    {
+      "id": "rug",
+      "kind": "static",
+      "category": "furniture",
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.rug",
+      "bounds": { "min": [-1.2, 0, -0.8], "max": [1.2, 0.08, 0.8] },
+      "slots": ["pattern"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/rug.high.19722e14.glb",
+          "sha256": "19722e14db5a0980bc6ced6da574a8ce5c147382ffa1359736f3d4530badb140",
+          "bytes": 3472,
+          "gzBytes": 1538,
+          "triangles": 68
+        },
+        "mid": {
+          "file": "/models/rug.high.19722e14.glb",
+          "sha256": "19722e14db5a0980bc6ced6da574a8ce5c147382ffa1359736f3d4530badb140",
+          "bytes": 3472,
+          "gzBytes": 1538,
+          "triangles": 68
+        },
+        "high": {
+          "file": "/models/rug.high.19722e14.glb",
+          "sha256": "19722e14db5a0980bc6ced6da574a8ce5c147382ffa1359736f3d4530badb140",
+          "bytes": 3472,
+          "gzBytes": 1538,
+          "triangles": 68
+        }
+      }
+    },
+    {
+      "id": "shelf",
+      "kind": "static",
+      "category": "furniture",
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.shelf",
+      "bounds": { "min": [-0.6, 0, -0.15], "max": [0.6, 0.4905, 0.15] },
+      "slots": [],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/shelf.low.caeb0bc5.glb",
+          "sha256": "caeb0bc59ddde64af40cf0d8c8235916a7323cee5ba9c081eb622c9513be3ff0",
+          "bytes": 12896,
+          "gzBytes": 8716,
+          "triangles": 426
+        },
+        "mid": {
+          "file": "/models/shelf.high.93a32f7d.glb",
+          "sha256": "93a32f7d88bc426d1f662cbac674b2d653e870a7a730f7bb102a44fbf7d47907",
+          "bytes": 13684,
+          "gzBytes": 9155,
+          "triangles": 482
+        },
+        "high": {
+          "file": "/models/shelf.high.93a32f7d.glb",
+          "sha256": "93a32f7d88bc426d1f662cbac674b2d653e870a7a730f7bb102a44fbf7d47907",
+          "bytes": 13684,
+          "gzBytes": 9155,
+          "triangles": 482
+        }
+      }
+    },
+    {
+      "id": "fridge",
+      "kind": "static",
+      "category": "furniture",
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.fridge",
+      "bounds": { "min": [-0.72, 0, -0.8064], "max": [0.72, 1.8, 0.8064] },
+      "slots": [],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/fridge.low.383ae5e9.glb",
+          "sha256": "383ae5e9fdfc1e98c0210ee0d8c6f56e27ff5bfd3edb897473e0d2a01a117e9f",
+          "bytes": 12496,
+          "gzBytes": 8827,
+          "triangles": 388
+        },
+        "mid": {
+          "file": "/models/fridge.high.29f0797f.glb",
+          "sha256": "29f0797f5c0859e9b4e364b572d18ee92b9d50eb28ba56b9b35794ba7dd3b222",
+          "bytes": 17440,
+          "gzBytes": 12609,
+          "triangles": 614
+        },
+        "high": {
+          "file": "/models/fridge.high.29f0797f.glb",
+          "sha256": "29f0797f5c0859e9b4e364b572d18ee92b9d50eb28ba56b9b35794ba7dd3b222",
+          "bytes": 17440,
+          "gzBytes": 12609,
+          "triangles": 614
+        }
+      }
+    },
+    {
+      "id": "stove",
+      "kind": "static",
+      "category": "furniture",
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.stove",
+      "bounds": { "min": [-0.7618, 0, -0.8714], "max": [0.7618, 0.92, 0.8714] },
+      "slots": [],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/stove.low.96348215.glb",
+          "sha256": "96348215310ba4eb0b3bb0253571d501e217a8f14d4d1915be984f44cdc06d90",
+          "bytes": 15208,
+          "gzBytes": 9516,
+          "triangles": 513
+        },
+        "mid": {
+          "file": "/models/stove.high.33d2f192.glb",
+          "sha256": "33d2f1922a24965b0cdc20f4696e5221ea1fecd242e7649e799c99ec9e165ab3",
+          "bytes": 17892,
+          "gzBytes": 11744,
+          "triangles": 680
+        },
+        "high": {
+          "file": "/models/stove.high.33d2f192.glb",
+          "sha256": "33d2f1922a24965b0cdc20f4696e5221ea1fecd242e7649e799c99ec9e165ab3",
+          "bytes": 17892,
+          "gzBytes": 11744,
+          "triangles": 680
+        }
+      }
+    },
+    {
+      "id": "crate",
+      "kind": "static",
+      "category": "furniture",
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.crate",
+      "bounds": { "min": [-0.3, 0, -0.3], "max": [0.3, 0.24, 0.3] },
+      "slots": [],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/crate.high.efdacde4.glb",
+          "sha256": "efdacde4d77d16c663c7156770b05241e75837b3eabf3ec1b24e232080d9053a",
+          "bytes": 5232,
+          "gzBytes": 2947,
+          "triangles": 132
+        },
+        "mid": {
+          "file": "/models/crate.high.efdacde4.glb",
+          "sha256": "efdacde4d77d16c663c7156770b05241e75837b3eabf3ec1b24e232080d9053a",
+          "bytes": 5232,
+          "gzBytes": 2947,
+          "triangles": 132
+        },
+        "high": {
+          "file": "/models/crate.high.efdacde4.glb",
+          "sha256": "efdacde4d77d16c663c7156770b05241e75837b3eabf3ec1b24e232080d9053a",
+          "bytes": 5232,
+          "gzBytes": 2947,
+          "triangles": 132
+        }
+      }
+    },
+    {
+      "id": "plant",
+      "kind": "static",
+      "category": "furniture",
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.plant",
+      "bounds": { "min": [-0.1459, 0, -0.1661], "max": [0.1459, 0.9, 0.1661] },
+      "slots": ["pot"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/plant.high.0ea475ce.glb",
+          "sha256": "0ea475ce197c994bd050b7900600f4b05d9562293e47e250e50d8fc750fb0a69",
+          "bytes": 3664,
+          "gzBytes": 1748,
+          "triangles": 60
+        },
+        "mid": {
+          "file": "/models/plant.high.0ea475ce.glb",
+          "sha256": "0ea475ce197c994bd050b7900600f4b05d9562293e47e250e50d8fc750fb0a69",
+          "bytes": 3664,
+          "gzBytes": 1748,
+          "triangles": 60
+        },
+        "high": {
+          "file": "/models/plant.high.0ea475ce.glb",
+          "sha256": "0ea475ce197c994bd050b7900600f4b05d9562293e47e250e50d8fc750fb0a69",
+          "bytes": 3664,
+          "gzBytes": 1748,
+          "triangles": 60
+        }
+      }
+    },
+    {
+      "id": "desk",
+      "kind": "static",
+      "category": "furniture",
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.desk",
+      "bounds": { "min": [-0.7, 0, -0.3739], "max": [0.7, 0.7327, 0.3739] },
+      "slots": [],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/desk.high.d694fef2.glb",
+          "sha256": "d694fef2146e3595e9a0c8e67d902b058ebca7586d0d415187596dc5cf1fe45a",
+          "bytes": 4368,
+          "gzBytes": 2381,
+          "triangles": 198
+        },
+        "mid": {
+          "file": "/models/desk.high.d694fef2.glb",
+          "sha256": "d694fef2146e3595e9a0c8e67d902b058ebca7586d0d415187596dc5cf1fe45a",
+          "bytes": 4368,
+          "gzBytes": 2381,
+          "triangles": 198
+        },
+        "high": {
+          "file": "/models/desk.high.d694fef2.glb",
+          "sha256": "d694fef2146e3595e9a0c8e67d902b058ebca7586d0d415187596dc5cf1fe45a",
+          "bytes": 4368,
+          "gzBytes": 2381,
+          "triangles": 198
+        }
+      }
+    },
+    {
+      "id": "tv",
+      "kind": "static",
+      "category": "furniture",
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.tv",
+      "bounds": { "min": [-0.55, 0, -0.1031], "max": [0.55, 0.7305, 0.1031] },
+      "slots": [],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/tv.high.8e60c243.glb",
+          "sha256": "8e60c243acde0b257618eab8c1626e6d0ea999025915677d69be3b5c54c75361",
+          "bytes": 2972,
+          "gzBytes": 1449,
+          "triangles": 72
+        },
+        "mid": {
+          "file": "/models/tv.high.8e60c243.glb",
+          "sha256": "8e60c243acde0b257618eab8c1626e6d0ea999025915677d69be3b5c54c75361",
+          "bytes": 2972,
+          "gzBytes": 1449,
+          "triangles": 72
+        },
+        "high": {
+          "file": "/models/tv.high.8e60c243.glb",
+          "sha256": "8e60c243acde0b257618eab8c1626e6d0ea999025915677d69be3b5c54c75361",
+          "bytes": 2972,
+          "gzBytes": 1449,
+          "triangles": 72
+        }
+      }
+    },
+    {
+      "id": "speaker",
+      "kind": "static",
+      "category": "furniture",
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.speaker",
+      "bounds": { "min": [-0.1163, 0, -0.1163], "max": [0.1163, 1, 0.1163] },
+      "slots": [],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/speaker.high.fdc70275.glb",
+          "sha256": "fdc702757aa78a1d671774742a16546385423a0076a5dbd95fab81724a31a2ef",
+          "bytes": 4080,
+          "gzBytes": 2209,
+          "triangles": 228
+        },
+        "mid": {
+          "file": "/models/speaker.high.fdc70275.glb",
+          "sha256": "fdc702757aa78a1d671774742a16546385423a0076a5dbd95fab81724a31a2ef",
+          "bytes": 4080,
+          "gzBytes": 2209,
+          "triangles": 228
+        },
+        "high": {
+          "file": "/models/speaker.high.fdc70275.glb",
+          "sha256": "fdc702757aa78a1d671774742a16546385423a0076a5dbd95fab81724a31a2ef",
+          "bytes": 4080,
+          "gzBytes": 2209,
+          "triangles": 228
+        }
+      }
+    },
+    {
+      "id": "radio",
+      "kind": "static",
+      "category": "furniture",
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.radio",
+      "bounds": { "min": [-0.175, 0, -0.0542], "max": [0.175, 0.2535, 0.0542] },
+      "slots": [],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/radio.high.30bec296.glb",
+          "sha256": "30bec296123197c2ba46f72fc9f0e625dca9a1b499ef849451c1001da8d30641",
+          "bytes": 5680,
+          "gzBytes": 3340,
+          "triangles": 432
+        },
+        "mid": {
+          "file": "/models/radio.high.30bec296.glb",
+          "sha256": "30bec296123197c2ba46f72fc9f0e625dca9a1b499ef849451c1001da8d30641",
+          "bytes": 5680,
+          "gzBytes": 3340,
+          "triangles": 432
+        },
+        "high": {
+          "file": "/models/radio.high.30bec296.glb",
+          "sha256": "30bec296123197c2ba46f72fc9f0e625dca9a1b499ef849451c1001da8d30641",
+          "bytes": 5680,
+          "gzBytes": 3340,
+          "triangles": 432
+        }
+      }
+    },
+    {
+      "id": "wall",
+      "kind": "static",
+      "category": "room-shell",
+      "loadPhase": "apartment",
+      "instanced": true,
+      "nameKey": "models.name.wall",
+      "bounds": { "min": [-1.0469, 0, -0.0523], "max": [1.0469, 2.7, 0.0523] },
+      "slots": ["paint"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/wall.high.6a74e4d9.glb",
+          "sha256": "6a74e4d9256add0ff57652c8caaff885a8cdcec71cccff0a0acfc6682c570d7d",
+          "bytes": 2704,
+          "gzBytes": 901,
+          "triangles": 12
+        },
+        "mid": {
+          "file": "/models/wall.high.6a74e4d9.glb",
+          "sha256": "6a74e4d9256add0ff57652c8caaff885a8cdcec71cccff0a0acfc6682c570d7d",
+          "bytes": 2704,
+          "gzBytes": 901,
+          "triangles": 12
+        },
+        "high": {
+          "file": "/models/wall.high.6a74e4d9.glb",
+          "sha256": "6a74e4d9256add0ff57652c8caaff885a8cdcec71cccff0a0acfc6682c570d7d",
+          "bytes": 2704,
+          "gzBytes": 901,
+          "triangles": 12
+        }
+      }
+    },
+    {
+      "id": "wall-window",
+      "kind": "static",
+      "category": "room-shell",
+      "loadPhase": "apartment",
+      "instanced": true,
+      "nameKey": "models.name.wallWindow",
+      "bounds": { "min": [-1.0469, 0, -0.0933], "max": [1.0469, 2.7, 0.0933] },
+      "slots": ["paint"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/wall-window.high.dd4e0e5c.glb",
+          "sha256": "dd4e0e5c86c729f66458f1f19c9f1593b15ed2522e26f53cd5b7ede82067d839",
+          "bytes": 3784,
+          "gzBytes": 1622,
+          "triangles": 108
+        },
+        "mid": {
+          "file": "/models/wall-window.high.dd4e0e5c.glb",
+          "sha256": "dd4e0e5c86c729f66458f1f19c9f1593b15ed2522e26f53cd5b7ede82067d839",
+          "bytes": 3784,
+          "gzBytes": 1622,
+          "triangles": 108
+        },
+        "high": {
+          "file": "/models/wall-window.high.dd4e0e5c.glb",
+          "sha256": "dd4e0e5c86c729f66458f1f19c9f1593b15ed2522e26f53cd5b7ede82067d839",
+          "bytes": 3784,
+          "gzBytes": 1622,
+          "triangles": 108
+        }
+      }
+    },
+    {
+      "id": "wall-doorway",
+      "kind": "static",
+      "category": "room-shell",
+      "loadPhase": "apartment",
+      "instanced": true,
+      "nameKey": "models.name.wallDoorway",
+      "bounds": { "min": [-1.0469, 0, -0.0933], "max": [1.0469, 2.7, 0.0933] },
+      "slots": ["paint"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/wall-doorway.high.6531a1eb.glb",
+          "sha256": "6531a1ebf50022c65e0189705c2a3a3765573dadf79a7dadf8f50368b91691d7",
+          "bytes": 3240,
+          "gzBytes": 1311,
+          "triangles": 60
+        },
+        "mid": {
+          "file": "/models/wall-doorway.high.6531a1eb.glb",
+          "sha256": "6531a1ebf50022c65e0189705c2a3a3765573dadf79a7dadf8f50368b91691d7",
+          "bytes": 3240,
+          "gzBytes": 1311,
+          "triangles": 60
+        },
+        "high": {
+          "file": "/models/wall-doorway.high.6531a1eb.glb",
+          "sha256": "6531a1ebf50022c65e0189705c2a3a3765573dadf79a7dadf8f50368b91691d7",
+          "bytes": 3240,
+          "gzBytes": 1311,
+          "triangles": 60
+        }
+      }
+    },
+    {
+      "id": "floor",
+      "kind": "static",
+      "category": "room-shell",
+      "loadPhase": "apartment",
+      "instanced": true,
+      "nameKey": "models.name.floor",
+      "bounds": { "min": [-1.045, 0, -1.045], "max": [1.045, 0.1045, 1.045] },
+      "slots": ["boards"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/floor.high.5ccb01b6.glb",
+          "sha256": "5ccb01b66d872fceb9c826ec667c88b1aa13743d7a0f20292e42554093799652",
+          "bytes": 2676,
+          "gzBytes": 887,
+          "triangles": 12
+        },
+        "mid": {
+          "file": "/models/floor.high.5ccb01b6.glb",
+          "sha256": "5ccb01b66d872fceb9c826ec667c88b1aa13743d7a0f20292e42554093799652",
+          "bytes": 2676,
+          "gzBytes": 887,
+          "triangles": 12
+        },
+        "high": {
+          "file": "/models/floor.high.5ccb01b6.glb",
+          "sha256": "5ccb01b66d872fceb9c826ec667c88b1aa13743d7a0f20292e42554093799652",
+          "bytes": 2676,
+          "gzBytes": 887,
+          "triangles": 12
+        }
+      }
+    },
+    {
+      "id": "avatar-rig",
+      "kind": "rig",
+      "category": "avatar-rig",
+      "loadPhase": "playable",
+      "instanced": false,
+      "nameKey": "models.name.avatarRig",
+      "slots": [],
+      "emissive": false,
+      "clips": [
+        "idle",
+        "walk",
+        "sprint",
+        "sit",
+        "drive",
+        "pick-up",
+        "interact-right",
+        "emote-yes",
+        "emote-no",
+        "holding-right"
+      ],
+      "tiers": {
+        "low": {
+          "file": "/models/avatar-rig.high.dbf1201c.glb",
+          "sha256": "dbf1201c5121f393b2b153af73ff966f800d85415116926486974724fa5d8df4",
+          "bytes": 17852,
+          "gzBytes": 5493,
+          "triangles": 0
+        },
+        "mid": {
+          "file": "/models/avatar-rig.high.dbf1201c.glb",
+          "sha256": "dbf1201c5121f393b2b153af73ff966f800d85415116926486974724fa5d8df4",
+          "bytes": 17852,
+          "gzBytes": 5493,
+          "triangles": 0
+        },
+        "high": {
+          "file": "/models/avatar-rig.high.dbf1201c.glb",
+          "sha256": "dbf1201c5121f393b2b153af73ff966f800d85415116926486974724fa5d8df4",
+          "bytes": 17852,
+          "gzBytes": 5493,
+          "triangles": 0
+        }
+      }
+    },
+    {
+      "id": "head-female-a",
+      "kind": "skinned",
+      "category": "avatar-head",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.headFemaleA",
+      "bounds": { "min": [-0.4989, 0.7551, -0.6422], "max": [0.4989, 1.7062, 0.4568] },
+      "slots": ["skin", "hair"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/head-female-a.low.3206d5e9.glb",
+          "sha256": "3206d5e992074114d8c1effb99d7dabde70c70dcf5e6d6f61a5432f85f301f27",
+          "bytes": 9104,
+          "gzBytes": 5368,
+          "triangles": 256
+        },
+        "mid": {
+          "file": "/models/head-female-a.high.e7c06f36.glb",
+          "sha256": "e7c06f36f257b55ddc049476d777ba7a1dba88c4a8ff7a8148e676ab808168a9",
+          "bytes": 9556,
+          "gzBytes": 5769,
+          "triangles": 298
+        },
+        "high": {
+          "file": "/models/head-female-a.high.e7c06f36.glb",
+          "sha256": "e7c06f36f257b55ddc049476d777ba7a1dba88c4a8ff7a8148e676ab808168a9",
+          "bytes": 9556,
+          "gzBytes": 5769,
+          "triangles": 298
+        }
+      }
+    },
+    {
+      "id": "body-female-a",
+      "kind": "skinned",
+      "category": "avatar-body",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.bodyFemaleA",
+      "bounds": { "min": [-1.2087, 0, -0.3583], "max": [1.2087, 0.858, 0.3023] },
+      "slots": ["skin", "top", "bottom"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/body-female-a.low.537ef321.glb",
+          "sha256": "537ef3214c99a1b0512bb243e87cbcb69b304c3116e365f726fa5de3d606477c",
+          "bytes": 13552,
+          "gzBytes": 8675,
+          "triangles": 346
+        },
+        "mid": {
+          "file": "/models/body-female-a.high.79b08f26.glb",
+          "sha256": "79b08f265878d4c9ca4b43571c1837acc800b30a67988cf852dbc1a59ccc1c11",
+          "bytes": 18216,
+          "gzBytes": 11989,
+          "triangles": 578
+        },
+        "high": {
+          "file": "/models/body-female-a.high.79b08f26.glb",
+          "sha256": "79b08f265878d4c9ca4b43571c1837acc800b30a67988cf852dbc1a59ccc1c11",
+          "bytes": 18216,
+          "gzBytes": 11989,
+          "triangles": 578
+        }
+      }
+    },
+    {
+      "id": "head-female-b",
+      "kind": "skinned",
+      "category": "avatar-head",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.headFemaleB",
+      "bounds": { "min": [-0.5225, 0.7551, -0.4639], "max": [0.5225, 1.5914, 0.4568] },
+      "slots": ["skin", "hair"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/head-female-b.low.77794cda.glb",
+          "sha256": "77794cda3a45d01ba0f354bd5aab5255df713aaa9ff8ceb705897e2f2114fb9b",
+          "bytes": 12732,
+          "gzBytes": 8474,
+          "triangles": 314
+        },
+        "mid": {
+          "file": "/models/head-female-b.high.aba1bf29.glb",
+          "sha256": "aba1bf297d3575e6e3d025bf72ce0ff9662153db856e0ea50db7786aa90985ea",
+          "bytes": 12968,
+          "gzBytes": 8626,
+          "triangles": 340
+        },
+        "high": {
+          "file": "/models/head-female-b.high.aba1bf29.glb",
+          "sha256": "aba1bf297d3575e6e3d025bf72ce0ff9662153db856e0ea50db7786aa90985ea",
+          "bytes": 12968,
+          "gzBytes": 8626,
+          "triangles": 340
+        }
+      }
+    },
+    {
+      "id": "body-female-b",
+      "kind": "skinned",
+      "category": "avatar-body",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.bodyFemaleB",
+      "bounds": { "min": [-0.8439, 0, -0.3376], "max": [0.8439, 0.8102, 0.2354] },
+      "slots": ["skin", "top", "bottom"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/body-female-b.low.5a002959.glb",
+          "sha256": "5a002959d057d5b61dd68563a3e3179f8960755992f5c31a529351639c4f07e4",
+          "bytes": 10976,
+          "gzBytes": 6232,
+          "triangles": 270
+        },
+        "mid": {
+          "file": "/models/body-female-b.high.68bc0018.glb",
+          "sha256": "68bc00186eb632232080a56dc7dde152ea767af24273da92cca99a6eb2f62cc9",
+          "bytes": 13400,
+          "gzBytes": 7922,
+          "triangles": 402
+        },
+        "high": {
+          "file": "/models/body-female-b.high.68bc0018.glb",
+          "sha256": "68bc00186eb632232080a56dc7dde152ea767af24273da92cca99a6eb2f62cc9",
+          "bytes": 13400,
+          "gzBytes": 7922,
+          "triangles": 402
+        }
+      }
+    },
+    {
+      "id": "head-female-c",
+      "kind": "skinned",
+      "category": "avatar-head",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.headFemaleC",
+      "bounds": { "min": [-0.4989, 0.7551, -0.6422], "max": [0.4989, 1.7062, 0.4568] },
+      "slots": ["skin", "hair"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/head-female-c.low.a6d0ef4e.glb",
+          "sha256": "a6d0ef4e8d4ff4c22d88e7222d73ebd2d163c672cb11bd0a077aa0ba9cb446c3",
+          "bytes": 10996,
+          "gzBytes": 6861,
+          "triangles": 272
+        },
+        "mid": {
+          "file": "/models/head-female-c.high.961adfe4.glb",
+          "sha256": "961adfe46ee0df64338213ed0330fd96cf3c871ec72795bb7e44a345df33d8c6",
+          "bytes": 11636,
+          "gzBytes": 7423,
+          "triangles": 312
+        },
+        "high": {
+          "file": "/models/head-female-c.high.961adfe4.glb",
+          "sha256": "961adfe46ee0df64338213ed0330fd96cf3c871ec72795bb7e44a345df33d8c6",
+          "bytes": 11636,
+          "gzBytes": 7423,
+          "triangles": 312
+        }
+      }
+    },
+    {
+      "id": "body-female-c",
+      "kind": "skinned",
+      "category": "avatar-body",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.bodyFemaleC",
+      "bounds": { "min": [-0.8439, 0, -0.3952], "max": [0.8439, 0.8279, 0.2687] },
+      "slots": ["skin", "top", "bottom"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/body-female-c.low.0b3f9145.glb",
+          "sha256": "0b3f9145e0b00c29d9ec139acd344f5b33e5a74fc038c974a5398cb1981f378b",
+          "bytes": 11104,
+          "gzBytes": 6634,
+          "triangles": 272
+        },
+        "mid": {
+          "file": "/models/body-female-c.high.15081142.glb",
+          "sha256": "1508114272c2c01b087c95c630926e50f5593ee4d252e5ee027e4f66352faa70",
+          "bytes": 14220,
+          "gzBytes": 8848,
+          "triangles": 420
+        },
+        "high": {
+          "file": "/models/body-female-c.high.15081142.glb",
+          "sha256": "1508114272c2c01b087c95c630926e50f5593ee4d252e5ee027e4f66352faa70",
+          "bytes": 14220,
+          "gzBytes": 8848,
+          "triangles": 420
+        }
+      }
+    },
+    {
+      "id": "head-female-d",
+      "kind": "skinned",
+      "category": "avatar-head",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.headFemaleD",
+      "bounds": { "min": [-0.4989, 0.7551, -0.6422], "max": [0.4989, 1.7062, 0.4568] },
+      "slots": ["skin", "hair"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/head-female-d.low.394e04b7.glb",
+          "sha256": "394e04b7882b9fb2aead754d6b91936c4835385e8c6dca60768191d963391cca",
+          "bytes": 11340,
+          "gzBytes": 7062,
+          "triangles": 282
+        },
+        "mid": {
+          "file": "/models/head-female-d.high.96c10713.glb",
+          "sha256": "96c1071366b9798c5e5be25d6fc82e786d7cc1ab583aecdbc6847d16b499a66c",
+          "bytes": 11800,
+          "gzBytes": 7428,
+          "triangles": 322
+        },
+        "high": {
+          "file": "/models/head-female-d.high.96c10713.glb",
+          "sha256": "96c1071366b9798c5e5be25d6fc82e786d7cc1ab583aecdbc6847d16b499a66c",
+          "bytes": 11800,
+          "gzBytes": 7428,
+          "triangles": 322
+        }
+      }
+    },
+    {
+      "id": "body-female-d",
+      "kind": "skinned",
+      "category": "avatar-body",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.bodyFemaleD",
+      "bounds": { "min": [-0.8439, 0, -0.389], "max": [0.8439, 0.8102, 0.2625] },
+      "slots": ["skin", "top", "bottom"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/body-female-d.low.f4b21da2.glb",
+          "sha256": "f4b21da2ed36675eb90ac3233b2f2f48fb87f138116ef58eb4ed955a4e672ef0",
+          "bytes": 12384,
+          "gzBytes": 7857,
+          "triangles": 320
+        },
+        "mid": {
+          "file": "/models/body-female-d.high.16f4f540.glb",
+          "sha256": "16f4f540105fda69f85942d6ab605410a226754d02ed2dcc86ed38057cee3a7f",
+          "bytes": 15152,
+          "gzBytes": 9919,
+          "triangles": 475
+        },
+        "high": {
+          "file": "/models/body-female-d.high.16f4f540.glb",
+          "sha256": "16f4f540105fda69f85942d6ab605410a226754d02ed2dcc86ed38057cee3a7f",
+          "bytes": 15152,
+          "gzBytes": 9919,
+          "triangles": 475
+        }
+      }
+    },
+    {
+      "id": "head-female-e",
+      "kind": "skinned",
+      "category": "avatar-head",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.headFemaleE",
+      "bounds": { "min": [-0.4989, 0.6452, -0.7027], "max": [0.4989, 1.5762, 0.4568] },
+      "slots": ["skin", "hair"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/head-female-e.low.bb7e6115.glb",
+          "sha256": "bb7e6115ecdab5a32872f9287f58a8d002424cd42171a4fa2cf9e4a60a65c366",
+          "bytes": 9256,
+          "gzBytes": 5514,
+          "triangles": 274
+        },
+        "mid": {
+          "file": "/models/head-female-e.high.56752f3e.glb",
+          "sha256": "56752f3ec0b78148b26bf440928936536d21cda5bd3c8855168c47d65b57e56f",
+          "bytes": 9840,
+          "gzBytes": 5888,
+          "triangles": 322
+        },
+        "high": {
+          "file": "/models/head-female-e.high.56752f3e.glb",
+          "sha256": "56752f3ec0b78148b26bf440928936536d21cda5bd3c8855168c47d65b57e56f",
+          "bytes": 9840,
+          "gzBytes": 5888,
+          "triangles": 322
+        }
+      }
+    },
+    {
+      "id": "body-female-e",
+      "kind": "skinned",
+      "category": "avatar-body",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.bodyFemaleE",
+      "bounds": { "min": [-0.8439, 0, -0.3033], "max": [0.8439, 0.8102, 0.2455] },
+      "slots": ["skin", "top", "bottom"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/body-female-e.low.8fdf3bb3.glb",
+          "sha256": "8fdf3bb37ac6c82429921cc814a16d240c81840ffbc3d753f7726d84b0e18f54",
+          "bytes": 11172,
+          "gzBytes": 6486,
+          "triangles": 286
+        },
+        "mid": {
+          "file": "/models/body-female-e.high.a7cd7b96.glb",
+          "sha256": "a7cd7b968dfe85f7d69b2ec5936263cec336b85fdbba76a8ab4e73ceacd7db73",
+          "bytes": 14096,
+          "gzBytes": 8282,
+          "triangles": 434
+        },
+        "high": {
+          "file": "/models/body-female-e.high.a7cd7b96.glb",
+          "sha256": "a7cd7b968dfe85f7d69b2ec5936263cec336b85fdbba76a8ab4e73ceacd7db73",
+          "bytes": 14096,
+          "gzBytes": 8282,
+          "triangles": 434
+        }
+      }
+    },
+    {
+      "id": "head-female-f",
+      "kind": "skinned",
+      "category": "avatar-head",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.headFemaleF",
+      "bounds": { "min": [-0.649, 0.7551, -0.3792], "max": [0.649, 1.4769, 0.4568] },
+      "slots": ["skin", "hair"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/head-female-f.low.c86b62df.glb",
+          "sha256": "c86b62df96e89cd2058b8b79a4769e47e064e66b09dc1d697bca1185c4b6d4ad",
+          "bytes": 9924,
+          "gzBytes": 6032,
+          "triangles": 223
+        },
+        "mid": {
+          "file": "/models/head-female-f.high.df3a6c04.glb",
+          "sha256": "df3a6c04de6f3f1f18f591ed9c60a0b18b43fecccae0a4e25a4cba5c35407bda",
+          "bytes": 10876,
+          "gzBytes": 6687,
+          "triangles": 288
+        },
+        "high": {
+          "file": "/models/head-female-f.high.df3a6c04.glb",
+          "sha256": "df3a6c04de6f3f1f18f591ed9c60a0b18b43fecccae0a4e25a4cba5c35407bda",
+          "bytes": 10876,
+          "gzBytes": 6687,
+          "triangles": 288
+        }
+      }
+    },
+    {
+      "id": "body-female-f",
+      "kind": "skinned",
+      "category": "avatar-body",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.bodyFemaleF",
+      "bounds": { "min": [-0.8439, 0, -0.5136], "max": [0.8439, 0.8463, 0.2428] },
+      "slots": ["skin", "top", "bottom"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/body-female-f.low.54c9676b.glb",
+          "sha256": "54c9676bfce97d39a3168fb5e47ae88971c50b2a8829273a694e5f5ad3baaaeb",
+          "bytes": 12368,
+          "gzBytes": 7417,
+          "triangles": 332
+        },
+        "mid": {
+          "file": "/models/body-female-f.high.8ba2e8da.glb",
+          "sha256": "8ba2e8dab68e0eb019b6e40c4f30391ed9fbbacfea4273160ca523c2e6d9a826",
+          "bytes": 15864,
+          "gzBytes": 9998,
+          "triangles": 500
+        },
+        "high": {
+          "file": "/models/body-female-f.high.8ba2e8da.glb",
+          "sha256": "8ba2e8dab68e0eb019b6e40c4f30391ed9fbbacfea4273160ca523c2e6d9a826",
+          "bytes": 15864,
+          "gzBytes": 9998,
+          "triangles": 500
+        }
+      }
+    },
+    {
+      "id": "head-male-a",
+      "kind": "skinned",
+      "category": "avatar-head",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.headMaleA",
+      "bounds": { "min": [-0.4989, 0.7551, -0.3792], "max": [0.4989, 1.4769, 0.3688] },
+      "slots": ["skin", "hair"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/head-male-a.low.4e68a11c.glb",
+          "sha256": "4e68a11ce15cbc4747645066a9005735229bd31a37f79295325472df41c15d70",
+          "bytes": 9124,
+          "gzBytes": 5196,
+          "triangles": 232
+        },
+        "mid": {
+          "file": "/models/head-male-a.high.4bb7b1ba.glb",
+          "sha256": "4bb7b1ba951a3a93538280d1c06a5772718baf39d9b39e451c078ea4b99041f5",
+          "bytes": 9644,
+          "gzBytes": 5636,
+          "triangles": 273
+        },
+        "high": {
+          "file": "/models/head-male-a.high.4bb7b1ba.glb",
+          "sha256": "4bb7b1ba951a3a93538280d1c06a5772718baf39d9b39e451c078ea4b99041f5",
+          "bytes": 9644,
+          "gzBytes": 5636,
+          "triangles": 273
+        }
+      }
+    },
+    {
+      "id": "body-male-a",
+      "kind": "skinned",
+      "category": "avatar-body",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.bodyMaleA",
+      "bounds": { "min": [-0.8439, 0, -0.3583], "max": [0.8439, 0.8102, 0.2354] },
+      "slots": ["skin", "top", "bottom"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/body-male-a.low.63790596.glb",
+          "sha256": "6379059649afcc8b1e07543d33e4a20fba7c46d65b08baf2bb459b1898a29f94",
+          "bytes": 11436,
+          "gzBytes": 6941,
+          "triangles": 310
+        },
+        "mid": {
+          "file": "/models/body-male-a.high.3416b7c2.glb",
+          "sha256": "3416b7c273541623c6b37354a7dea454df7c3b99f45cceab2c379891c7072c3b",
+          "bytes": 14052,
+          "gzBytes": 8648,
+          "triangles": 450
+        },
+        "high": {
+          "file": "/models/body-male-a.high.3416b7c2.glb",
+          "sha256": "3416b7c273541623c6b37354a7dea454df7c3b99f45cceab2c379891c7072c3b",
+          "bytes": 14052,
+          "gzBytes": 8648,
+          "triangles": 450
+        }
+      }
+    },
+    {
+      "id": "head-male-b",
+      "kind": "skinned",
+      "category": "avatar-head",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.headMaleB",
+      "bounds": { "min": [-0.4989, 0.5791, -0.3572], "max": [0.4989, 1.4549, 0.4985] },
+      "slots": ["skin", "hair"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/head-male-b.low.77a1b9af.glb",
+          "sha256": "77a1b9afd56c7a06f27609a14b27007049234fb09c9321f821561ba15168cb5b",
+          "bytes": 10616,
+          "gzBytes": 6297,
+          "triangles": 245
+        },
+        "mid": {
+          "file": "/models/head-male-b.high.17faa50d.glb",
+          "sha256": "17faa50d91a0cac4ac218d947a738e573d59351274c75f83c9837d1722ab27c0",
+          "bytes": 10996,
+          "gzBytes": 6479,
+          "triangles": 288
+        },
+        "high": {
+          "file": "/models/head-male-b.high.17faa50d.glb",
+          "sha256": "17faa50d91a0cac4ac218d947a738e573d59351274c75f83c9837d1722ab27c0",
+          "bytes": 10996,
+          "gzBytes": 6479,
+          "triangles": 288
+        }
+      }
+    },
+    {
+      "id": "body-male-b",
+      "kind": "skinned",
+      "category": "avatar-body",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.bodyMaleB",
+      "bounds": { "min": [-0.8439, 0, -0.3583], "max": [0.8439, 0.8102, 0.2354] },
+      "slots": ["skin", "top", "bottom"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/body-male-b.low.7bb3ac58.glb",
+          "sha256": "7bb3ac58ae400c8f9717827093b25852cbfd598ee3261bab952087f9bbee6b45",
+          "bytes": 10772,
+          "gzBytes": 6246,
+          "triangles": 258
+        },
+        "mid": {
+          "file": "/models/body-male-b.high.2cb94609.glb",
+          "sha256": "2cb9460995542a0e888c5a31405cbc2e3e783ff49eb357b1316df5ec85935c3c",
+          "bytes": 13408,
+          "gzBytes": 8227,
+          "triangles": 402
+        },
+        "high": {
+          "file": "/models/body-male-b.high.2cb94609.glb",
+          "sha256": "2cb9460995542a0e888c5a31405cbc2e3e783ff49eb357b1316df5ec85935c3c",
+          "bytes": 13408,
+          "gzBytes": 8227,
+          "triangles": 402
+        }
+      }
+    },
+    {
+      "id": "head-male-c",
+      "kind": "skinned",
+      "category": "avatar-head",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.headMaleC",
+      "bounds": { "min": [-0.4989, 0.7551, -0.4136], "max": [0.4989, 1.7441, 0.5998] },
+      "slots": ["skin", "hair"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/head-male-c.low.6889b319.glb",
+          "sha256": "6889b3192e51de84ac043264f18fa7be7362042a9c808e9674e447c29c652a26",
+          "bytes": 11068,
+          "gzBytes": 6979,
+          "triangles": 261
+        },
+        "mid": {
+          "file": "/models/head-male-c.high.33a1efd9.glb",
+          "sha256": "33a1efd90e2576043ceb46a4ebb4ae086c40c9b26b67f99b2f662fffa6d0e0b0",
+          "bytes": 11588,
+          "gzBytes": 7343,
+          "triangles": 299
+        },
+        "high": {
+          "file": "/models/head-male-c.high.33a1efd9.glb",
+          "sha256": "33a1efd90e2576043ceb46a4ebb4ae086c40c9b26b67f99b2f662fffa6d0e0b0",
+          "bytes": 11588,
+          "gzBytes": 7343,
+          "triangles": 299
+        }
+      }
+    },
+    {
+      "id": "body-male-c",
+      "kind": "skinned",
+      "category": "avatar-body",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.bodyMaleC",
+      "bounds": { "min": [-0.8439, 0, -0.3583], "max": [0.8439, 0.8279, 0.2538] },
+      "slots": ["skin", "top", "bottom"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/body-male-c.low.06bc9a9c.glb",
+          "sha256": "06bc9a9c548785e4aeff5f9865f0572abe0eea57481a9a6aab2b93ddc6786839",
+          "bytes": 11600,
+          "gzBytes": 7026,
+          "triangles": 314
+        },
+        "mid": {
+          "file": "/models/body-male-c.high.a29049b4.glb",
+          "sha256": "a29049b4a32bae54289738327b8422d82675ad293754664c28c6401346650561",
+          "bytes": 14964,
+          "gzBytes": 9623,
+          "triangles": 494
+        },
+        "high": {
+          "file": "/models/body-male-c.high.a29049b4.glb",
+          "sha256": "a29049b4a32bae54289738327b8422d82675ad293754664c28c6401346650561",
+          "bytes": 14964,
+          "gzBytes": 9623,
+          "triangles": 494
+        }
+      }
+    },
+    {
+      "id": "head-male-d",
+      "kind": "skinned",
+      "category": "avatar-head",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.headMaleD",
+      "bounds": { "min": [-0.4989, 0.7551, -0.3792], "max": [0.4989, 1.5879, 0.3688] },
+      "slots": ["skin", "hair"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/head-male-d.low.00c4fbe8.glb",
+          "sha256": "00c4fbe89c6a975514f54891b16eba7a144f33a29ba869afc3cd7930145b683f",
+          "bytes": 8936,
+          "gzBytes": 5119,
+          "triangles": 193
+        },
+        "mid": {
+          "file": "/models/head-male-d.high.99409d92.glb",
+          "sha256": "99409d921ff691a735f89ffbbc6b80bb14413af56094d11fff764bbf6e0eb52d",
+          "bytes": 9344,
+          "gzBytes": 5389,
+          "triangles": 221
+        },
+        "high": {
+          "file": "/models/head-male-d.high.99409d92.glb",
+          "sha256": "99409d921ff691a735f89ffbbc6b80bb14413af56094d11fff764bbf6e0eb52d",
+          "bytes": 9344,
+          "gzBytes": 5389,
+          "triangles": 221
+        }
+      }
+    },
+    {
+      "id": "body-male-d",
+      "kind": "skinned",
+      "category": "avatar-body",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.bodyMaleD",
+      "bounds": { "min": [-0.8439, 0, -0.3347], "max": [0.8439, 0.8102, 0.2354] },
+      "slots": ["skin", "top", "bottom"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/body-male-d.low.1451caf3.glb",
+          "sha256": "1451caf3b115ac9c511cd86d38579856f5ab5e889d74663394a3f37031bec493",
+          "bytes": 11776,
+          "gzBytes": 7217,
+          "triangles": 323
+        },
+        "mid": {
+          "file": "/models/body-male-d.high.dd292187.glb",
+          "sha256": "dd2921873d26d0983a8df016f8ef4324145ba558876602a5df161e02dbdf6888",
+          "bytes": 14752,
+          "gzBytes": 9547,
+          "triangles": 490
+        },
+        "high": {
+          "file": "/models/body-male-d.high.dd292187.glb",
+          "sha256": "dd2921873d26d0983a8df016f8ef4324145ba558876602a5df161e02dbdf6888",
+          "bytes": 14752,
+          "gzBytes": 9547,
+          "triangles": 490
+        }
+      }
+    },
+    {
+      "id": "head-male-e",
+      "kind": "skinned",
+      "category": "avatar-head",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.headMaleE",
+      "bounds": { "min": [-0.4989, 0.7551, -0.3792], "max": [0.4989, 1.4871, 0.3731] },
+      "slots": ["skin", "hair"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/head-male-e.low.0c394814.glb",
+          "sha256": "0c39481418918cb85ced7c3e9e3e55fa49c53c63312329ffcadbe5adada5a12a",
+          "bytes": 10020,
+          "gzBytes": 5860,
+          "triangles": 237
+        },
+        "mid": {
+          "file": "/models/head-male-e.high.02bbcfe3.glb",
+          "sha256": "02bbcfe3e701d7638d083d69cd242ea97a72148fa72a7132f8bd9caea24a28a7",
+          "bytes": 10724,
+          "gzBytes": 6466,
+          "triangles": 288
+        },
+        "high": {
+          "file": "/models/head-male-e.high.02bbcfe3.glb",
+          "sha256": "02bbcfe3e701d7638d083d69cd242ea97a72148fa72a7132f8bd9caea24a28a7",
+          "bytes": 10724,
+          "gzBytes": 6466,
+          "triangles": 288
+        }
+      }
+    },
+    {
+      "id": "body-male-e",
+      "kind": "skinned",
+      "category": "avatar-body",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.bodyMaleE",
+      "bounds": { "min": [-0.8439, 0, -0.3583], "max": [0.8439, 0.8102, 0.2354] },
+      "slots": ["skin", "top", "bottom"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/body-male-e.low.3cd12f75.glb",
+          "sha256": "3cd12f7567e377238b2b2d6a500cf0cbc613b08b1b6a7769106c664652bf92f8",
+          "bytes": 11256,
+          "gzBytes": 6469,
+          "triangles": 278
+        },
+        "mid": {
+          "file": "/models/body-male-e.high.4234119e.glb",
+          "sha256": "4234119ed2e6dd475991d688a2e9ba2e108688058fba5de8ee94a36ca972fd5f",
+          "bytes": 13776,
+          "gzBytes": 8254,
+          "triangles": 422
+        },
+        "high": {
+          "file": "/models/body-male-e.high.4234119e.glb",
+          "sha256": "4234119ed2e6dd475991d688a2e9ba2e108688058fba5de8ee94a36ca972fd5f",
+          "bytes": 13776,
+          "gzBytes": 8254,
+          "triangles": 422
+        }
+      }
+    },
+    {
+      "id": "head-male-f",
+      "kind": "skinned",
+      "category": "avatar-head",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.headMaleF",
+      "bounds": { "min": [-0.4989, 0.7551, -0.3792], "max": [0.4989, 1.4769, 0.3688] },
+      "slots": ["skin", "hair"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/head-male-f.low.da184364.glb",
+          "sha256": "da1843648639dedd313574d527e87f17f06a14a2aaa296a8469bacbdc8907f2b",
+          "bytes": 8272,
+          "gzBytes": 4592,
+          "triangles": 189
+        },
+        "mid": {
+          "file": "/models/head-male-f.high.31e517ab.glb",
+          "sha256": "31e517abc48b1ddcd34299284951bc1585d688704981ac7078373a089742b51b",
+          "bytes": 8544,
+          "gzBytes": 4829,
+          "triangles": 213
+        },
+        "high": {
+          "file": "/models/head-male-f.high.31e517ab.glb",
+          "sha256": "31e517abc48b1ddcd34299284951bc1585d688704981ac7078373a089742b51b",
+          "bytes": 8544,
+          "gzBytes": 4829,
+          "triangles": 213
+        }
+      }
+    },
+    {
+      "id": "body-male-f",
+      "kind": "skinned",
+      "category": "avatar-body",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.bodyMaleF",
+      "bounds": { "min": [-0.8439, 0, -0.3583], "max": [0.8439, 0.8102, 0.2758] },
+      "slots": ["skin", "top", "bottom"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/body-male-f.low.22cf9748.glb",
+          "sha256": "22cf974891ee91eb2dca114e036f39999037678de86ce61239101c6de35fa9d9",
+          "bytes": 12320,
+          "gzBytes": 7326,
+          "triangles": 326
+        },
+        "mid": {
+          "file": "/models/body-male-f.high.b3ef5dc0.glb",
+          "sha256": "b3ef5dc0b304e6b19adef04a6ac79d85146144bdcd8cc622977d22946a65d948",
+          "bytes": 15588,
+          "gzBytes": 9754,
+          "triangles": 488
+        },
+        "high": {
+          "file": "/models/body-male-f.high.b3ef5dc0.glb",
+          "sha256": "b3ef5dc0b304e6b19adef04a6ac79d85146144bdcd8cc622977d22946a65d948",
+          "bytes": 15588,
+          "gzBytes": 9754,
+          "triangles": 488
+        }
+      }
+    },
+    {
+      "id": "glasses",
+      "kind": "static",
+      "category": "avatar-accessory",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.glasses",
+      "bounds": { "min": [-0.363, 0, -0.202], "max": [0.363, 0.2108, 0.202] },
+      "slots": [],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/glasses.high.7efd38b7.glb",
+          "sha256": "7efd38b7f33aa144bea3cdb1c88bb841245feebbffba7330e6a38ff8b1a9f0a9",
+          "bytes": 3340,
+          "gzBytes": 1736,
+          "triangles": 52
+        },
+        "mid": {
+          "file": "/models/glasses.high.7efd38b7.glb",
+          "sha256": "7efd38b7f33aa144bea3cdb1c88bb841245feebbffba7330e6a38ff8b1a9f0a9",
+          "bytes": 3340,
+          "gzBytes": 1736,
+          "triangles": 52
+        },
+        "high": {
+          "file": "/models/glasses.high.7efd38b7.glb",
+          "sha256": "7efd38b7f33aa144bea3cdb1c88bb841245feebbffba7330e6a38ff8b1a9f0a9",
+          "bytes": 3340,
+          "gzBytes": 1736,
+          "triangles": 52
+        }
+      }
+    },
+    {
+      "id": "sunglasses",
+      "kind": "static",
+      "category": "avatar-accessory",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.sunglasses",
+      "bounds": { "min": [-0.363, 0, -0.202], "max": [0.363, 0.2108, 0.202] },
+      "slots": [],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/sunglasses.high.ccdc6a07.glb",
+          "sha256": "ccdc6a07c7fb11e1827a904a0379acc5c5c40d2444deaf146632909c1f98a1aa",
+          "bytes": 3028,
+          "gzBytes": 1441,
+          "triangles": 62
+        },
+        "mid": {
+          "file": "/models/sunglasses.high.ccdc6a07.glb",
+          "sha256": "ccdc6a07c7fb11e1827a904a0379acc5c5c40d2444deaf146632909c1f98a1aa",
+          "bytes": 3028,
+          "gzBytes": 1441,
+          "triangles": 62
+        },
+        "high": {
+          "file": "/models/sunglasses.high.ccdc6a07.glb",
+          "sha256": "ccdc6a07c7fb11e1827a904a0379acc5c5c40d2444deaf146632909c1f98a1aa",
+          "bytes": 3028,
+          "gzBytes": 1441,
+          "triangles": 62
+        }
+      }
+    },
+    {
+      "id": "hearing-aid",
+      "kind": "static",
+      "category": "avatar-accessory",
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.hearingAid",
+      "bounds": { "min": [-0.055, 0, -0.1724], "max": [0.055, 0.2718, 0.1724] },
+      "slots": ["shell"],
+      "emissive": false,
+      "clips": [],
+      "tiers": {
+        "low": {
+          "file": "/models/hearing-aid.high.133e6460.glb",
+          "sha256": "133e6460d6a4d4440d2622ada60f6fe31d1b769a83a3aeba227aff5f06be1d86",
+          "bytes": 3724,
+          "gzBytes": 1672,
+          "triangles": 48
+        },
+        "mid": {
+          "file": "/models/hearing-aid.high.133e6460.glb",
+          "sha256": "133e6460d6a4d4440d2622ada60f6fe31d1b769a83a3aeba227aff5f06be1d86",
+          "bytes": 3724,
+          "gzBytes": 1672,
+          "triangles": 48
+        },
+        "high": {
+          "file": "/models/hearing-aid.high.133e6460.glb",
+          "sha256": "133e6460d6a4d4440d2622ada60f6fe31d1b769a83a3aeba227aff5f06be1d86",
+          "bytes": 3724,
+          "gzBytes": 1672,
+          "triangles": 48
+        }
+      }
+    }
+  ]
+}

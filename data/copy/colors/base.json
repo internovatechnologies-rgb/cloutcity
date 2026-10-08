@@ -1,0 +1,14 @@
+{
+  "strings": {
+    "colors.warmWhite.name": "Warm white",
+    "colors.pink.name": "Pink",
+    "colors.yellow.name": "Yellow",
+    "colors.terracotta.name": "Terracotta",
+    "colors.mint.name": "Mint green",
+    "colors.teal.name": "Teal",
+    "colors.lilac.name": "Lilac",
+    "colors.skyBlue.name": "Sky blue",
+    "colors.charcoal.name": "Charcoal",
+    "colors.oatmeal.name": "Oatmeal"
+  }
+}

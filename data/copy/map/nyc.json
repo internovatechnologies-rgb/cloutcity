@@ -1,0 +1,8 @@
+{
+  "id": "nyc",
+  "strings": {
+    "map.error.device": "This device can't run the 3D city. The map is sitting this one out.",
+    "map.error.load": "The city map didn't come through. Check your signal and reload.",
+    "map.lost": "The 3D map dipped for a sec. Use the Places list while it comes back."
+  }
+}

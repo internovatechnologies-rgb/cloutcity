@@ -1,0 +1,14 @@
+{
+  "strings": {
+    "voice.welcome": "Welcome to Clout City. Tap in. Blow up.",
+    "voice.bodega": "Bacon, egg and cheese. Breakfast is sorted.",
+    "voice.trainDelay": "The train is running late.",
+    "voice.rentDue": "Rent is due.",
+    "voice.cloutUp": "Your clout went up. People are noticing.",
+    "voice.landmarkFlex": "{landmark} looks great right now. Time for a photo.",
+    "voice.friendPrompt": "Nice win. Invite a friend?",
+    "voice.clubDoor": "Your clout is too low to get in tonight.",
+    "voice.lockedHome": "The Manhattan loft is locked. Earn more to move here.",
+    "voice.someoneNearby": "{count} people on this block."
+  }
+}

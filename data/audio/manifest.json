@@ -1,0 +1,166 @@
+{
+  "version": 2,
+  "channels": ["music", "sfx", "ambience", "voice"],
+  "tracks": [
+    {
+      "id": "lofi-loop",
+      "channel": "music",
+      "titleKey": "audio.track.lofiLoop",
+      "sources": [
+        {
+          "file": "/audio/music/lofi-loop.webm",
+          "type": "audio/webm; codecs=opus",
+          "bytes": 391838,
+          "sha256": "4aca793e900375bcd60c474edd3b8470487c46167d6ae4d57f671a88962f0e75"
+        },
+        {
+          "file": "/audio/music/lofi-loop.m4a",
+          "type": "audio/mp4; codecs=mp4a.40.2",
+          "bytes": 364135,
+          "sha256": "1175a7f50a28c381aae85152225248f158d882a677f4bb0fcef4e83325ba2991"
+        }
+      ],
+      "durationMs": 44000,
+      "loop": true,
+      "loopStartMs": 0,
+      "loopEndMs": 44000,
+      "gainDb": 0,
+      "license": "CC0-1.0",
+      "sourceUrl": "https://opengameart.org/content/lofi-hip-hop-loop",
+      "author": "omfgdude",
+      "retrievedAt": "2026-10-06"
+    },
+    {
+      "id": "lofi-again",
+      "channel": "music",
+      "titleKey": "audio.track.lofiAgain",
+      "sources": [
+        {
+          "file": "/audio/music/lofi-again.webm",
+          "type": "audio/webm; codecs=opus",
+          "bytes": 374611,
+          "sha256": "b17d10b7c496e4181b281b150828be7b764d33788d11c69d4fdd810dfc9a332f"
+        },
+        {
+          "file": "/audio/music/lofi-again.m4a",
+          "type": "audio/mp4; codecs=mp4a.40.2",
+          "bytes": 364013,
+          "sha256": "09e4a34a6bfa6c961280b2e89d81d45769cb4970e91a8565fc1613af95b05a1b"
+        }
+      ],
+      "durationMs": 44000,
+      "loop": true,
+      "loopStartMs": 0,
+      "loopEndMs": 44000,
+      "gainDb": 0,
+      "license": "CC0-1.0",
+      "sourceUrl": "https://opengameart.org/content/lofi-again",
+      "author": "Omfgdude",
+      "retrievedAt": "2026-10-06"
+    },
+    {
+      "id": "nyc-night",
+      "channel": "ambience",
+      "sources": [
+        {
+          "file": "/audio/ambience/nyc-night.webm",
+          "type": "audio/webm; codecs=opus",
+          "bytes": 164271,
+          "sha256": "2bb2adcd1af482dbaa6282c9312f7c32f9acb09c9057ada12b3677b49157812a"
+        },
+        {
+          "file": "/audio/ambience/nyc-night.m4a",
+          "type": "audio/mp4; codecs=mp4a.40.2",
+          "bytes": 212963,
+          "sha256": "fe861e4c7956158f73d4ba2560df4f43ef41584f84598d56a1873d50b6496bc3"
+        }
+      ],
+      "durationMs": 34000,
+      "loop": true,
+      "loopStartMs": 0,
+      "loopEndMs": 34000,
+      "gainDb": 0,
+      "license": "CC0-1.0",
+      "sourceUrl": "https://freesound.org/people/SpliceSound/sounds/369891/",
+      "author": "SpliceSound",
+      "retrievedAt": "2026-10-06"
+    },
+    {
+      "id": "ui-tap",
+      "channel": "sfx",
+      "sources": [
+        {
+          "file": "/audio/sfx/ui-tap.webm",
+          "type": "audio/webm; codecs=opus",
+          "bytes": 1139,
+          "sha256": "b9d54315629d788a1939b25f7da584fc15391b35ea458e1a9f712083929ac93a"
+        },
+        {
+          "file": "/audio/sfx/ui-tap.m4a",
+          "type": "audio/mp4; codecs=mp4a.40.2",
+          "bytes": 1908,
+          "sha256": "06f5ed797af498a2a40093534bc4435ff967b588aac56e27d7c21dd48c0e611f"
+        }
+      ],
+      "durationMs": 100,
+      "loop": false,
+      "gainDb": 0,
+      "license": "CC0-1.0",
+      "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+      "author": "Kenney",
+      "retrievedAt": "2026-10-06"
+    },
+    {
+      "id": "purchase",
+      "channel": "sfx",
+      "sources": [
+        {
+          "file": "/audio/sfx/purchase.webm",
+          "type": "audio/webm; codecs=opus",
+          "bytes": 3981,
+          "sha256": "a10cf89058660f48b0491a70061a8130aea36564125f39479e55b3cc593487d3"
+        },
+        {
+          "file": "/audio/sfx/purchase.m4a",
+          "type": "audio/mp4; codecs=mp4a.40.2",
+          "bytes": 5628,
+          "sha256": "55fb514ee54eb519ec8d875875341808832743a6fce36e09ec58ba62b14fd2ed"
+        }
+      ],
+      "durationMs": 539,
+      "loop": false,
+      "gainDb": 0,
+      "license": "CC0-1.0",
+      "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+      "author": "Kenney",
+      "retrievedAt": "2026-10-06"
+    },
+    {
+      "id": "clout-up",
+      "channel": "sfx",
+      "sources": [
+        {
+          "file": "/audio/sfx/clout-up.webm",
+          "type": "audio/webm; codecs=opus",
+          "bytes": 9089,
+          "sha256": "10ed45f8ea7af1703839e9bfef97da2ba796254d97fde7b1cbd966eb3202aeec"
+        },
+        {
+          "file": "/audio/sfx/clout-up.m4a",
+          "type": "audio/mp4; codecs=mp4a.40.2",
+          "bytes": 11322,
+          "sha256": "fa108d70fa50f53fec851beda468a6b5fc39ac788b8926fafdb9bffc73ec8697"
+        }
+      ],
+      "durationMs": 1256,
+      "loop": false,
+      "gainDb": 0,
+      "license": "CC0-1.0",
+      "sourceUrl": "https://kenney.nl/assets/music-jingles",
+      "author": "Kenney",
+      "retrievedAt": "2026-10-06"
+    }
+  ],
+  "playlists": { "music": ["lofi-loop", "lofi-again"], "ambience": ["nyc-night"] },
+  "sfx": { "ui-tap": "ui-tap", "purchase": "purchase", "clout-up": "clout-up" }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "nyc",
+  "strings": {
+    "items.bodegaGraphicTee.description": "Bodega cat on the front. The block respects it.",
+    "items.thriftedDenimJacket.description": "Found it on a rack in Williamsburg. Already broken in, already iconic.",
+    "items.designerPuffer.description": "January on the L platform? Not your problem anymore.",
+    "items.cargoPants.description": "Pockets for your subway card, your keys and your whole personality.",
+    "items.pleatedTrousers.description": "Pleats this sharp get you past the velvet rope talk.",
+    "items.canvasSneakers.description": "Built for walking all five boroughs. Mostly Manhattan.",
+    "items.limitedDropSneakers.description": "Waited in line on Bowery for these. Worth it.",
+    "items.subwayTote.description": "Holds a laptop, a snack and a spare umbrella. Very New York.",
+    "items.goldHoops.description": "Bigger hoops, bigger energy. That's science.",
+    "items.tintedLipBalm.description": "Just enough tint for a bodega run.",
+    "items.glitterLiner.description": "Catches the light at every club door downtown.",
+    "items.editorialGlamKit.description": "Fashion-week glam without the fashion-week invite.",
+    "items.bodegaFlowers.description": "Corner-store flowers. Sweet for someone else, sweet for you.",
+    "items.cheesecakeBox.description": "New York cheesecake. Nobody has ever said no to this box.",
+    "items.courtsideTickets.description": "Courtside seats. The whole block will hear about this.",
+    "items.fairyStringLights.description": "Instant golden hour, even in a room with one window.",
+    "items.windowsillMonstera.description": "The only roommate who never eats your leftovers.",
+    "items.thriftFlatweaveRug.description": "Pulled it from a Bushwick thrift pile. It ties the whole room together.",
+    "items.crateRecordPlayer.description": "Vinyl on a milk crate. Very downtown, very you.",
+    "items.customNeonSign.description": "Your name in lights before the city even knows it.",
+    "items.cloudLoungeChair.description": "Sit down once and cancel your plans. Worth it."
+  }
+}

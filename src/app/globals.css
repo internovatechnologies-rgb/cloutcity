@@ -1,0 +1,248 @@
+@import 'tailwindcss';
+
+/* Interface colours (S04g, DEC-26): light frosted cards by day, dark glass by night, taxi yellow
+   as the one accent. The stock Tailwind palette is removed, so only these semantic colours exist
+   (`bg-surface`, `text-fg`, `outline-focus`, ...). Values live in data/config/theme.json `ui`;
+   the root layout writes both themes as `--ui-day-<token>` and `--ui-night-<token>` on <html>, and
+   the root's `data-theme` (day until the HUD island knows the game clock) picks one set below.
+   src/lib/theme.test.ts keeps these lists in sync with theme.json. */
+@theme {
+  --color-*: initial;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+@theme inline {
+  --color-canvas: var(--ui-canvas);
+  --color-glass: var(--ui-glass);
+  --color-surface: var(--ui-surface);
+  --color-raised: var(--ui-raised);
+  --color-pressed: var(--ui-pressed);
+  --color-track: var(--ui-track);
+  --color-scrim: var(--ui-scrim);
+  --color-line: var(--ui-line);
+  --color-line-strong: var(--ui-line-strong);
+  --color-fg: var(--ui-fg);
+  --color-muted: var(--ui-muted);
+  --color-taxi: var(--ui-taxi);
+  --color-on-taxi: var(--ui-on-taxi);
+  --color-taxi-ink: var(--ui-taxi-ink);
+  --color-danger: var(--ui-danger);
+  --color-success: var(--ui-success);
+  --color-focus: var(--ui-focus);
+  --color-meter: var(--ui-meter);
+}
+
+:root {
+  color-scheme: light;
+  --ui-canvas: var(--ui-day-canvas);
+  --ui-glass: var(--ui-day-glass);
+  --ui-surface: var(--ui-day-surface);
+  --ui-raised: var(--ui-day-raised);
+  --ui-pressed: var(--ui-day-pressed);
+  --ui-track: var(--ui-day-track);
+  --ui-scrim: var(--ui-day-scrim);
+  --ui-line: var(--ui-day-line);
+  --ui-line-strong: var(--ui-day-line-strong);
+  --ui-fg: var(--ui-day-fg);
+  --ui-muted: var(--ui-day-muted);
+  --ui-taxi: var(--ui-day-taxi);
+  --ui-on-taxi: var(--ui-day-on-taxi);
+  --ui-taxi-ink: var(--ui-day-taxi-ink);
+  --ui-danger: var(--ui-day-danger);
+  --ui-success: var(--ui-day-success);
+  --ui-focus: var(--ui-day-focus);
+  --ui-meter: var(--ui-day-meter);
+  --ui-glass-alpha: var(--ui-day-glass-alpha);
+}
+
+:root[data-theme='night'] {
+  color-scheme: dark;
+  --ui-canvas: var(--ui-night-canvas);
+  --ui-glass: var(--ui-night-glass);
+  --ui-surface: var(--ui-night-surface);
+  --ui-raised: var(--ui-night-raised);
+  --ui-pressed: var(--ui-night-pressed);
+  --ui-track: var(--ui-night-track);
+  --ui-scrim: var(--ui-night-scrim);
+  --ui-line: var(--ui-night-line);
+  --ui-line-strong: var(--ui-night-line-strong);
+  --ui-fg: var(--ui-night-fg);
+  --ui-muted: var(--ui-night-muted);
+  --ui-taxi: var(--ui-night-taxi);
+  --ui-on-taxi: var(--ui-night-on-taxi);
+  --ui-taxi-ink: var(--ui-night-taxi-ink);
+  --ui-danger: var(--ui-night-danger);
+  --ui-success: var(--ui-night-success);
+  --ui-focus: var(--ui-night-focus);
+  --ui-meter: var(--ui-night-meter);
+  --ui-glass-alpha: var(--ui-night-glass-alpha);
+}
+
+/* Bars, sheets and cards over the map. Solid by default; frosted (translucent, with a backdrop
+   blur) only where the HUD island sets data-glass="blur": mid and high tiers, no data saver, no
+   reduced transparency (PERF-2: a backdrop blur over the WebGL canvas costs frames). */
+@utility glass {
+  background-color: var(--color-surface);
+
+  :root[data-glass='blur'] & {
+    background-color: color-mix(in srgb, var(--color-glass) var(--ui-glass-alpha), transparent);
+    backdrop-filter: blur(var(--ui-glass-blur));
+  }
+}
+
+/* A theme switch cross-fades colours only (no layout shift) while the HUD island holds
+   data-theme-fading on the root. Zero specificity, so a component's own transition still wins;
+   under reduced motion the island never sets it, and the rule further down makes any transition
+   instant anyway. */
+:where(:root[data-theme-fading]) :where(*, *::before, *::after) {
+  transition-property:
+    color, background-color, border-color, outline-color, fill, stroke, box-shadow;
+  transition-duration: var(--ui-fade-ms);
+  transition-timing-function: ease-in-out;
+}
+
+/* HUD layouts (S05). The thresholds are data/config/layout.json `hudWideMinWidthPx` and
+   `hudCompactMaxHeightPx` (src/app/layout-css.test.ts keeps them equal). `hud-wide`: room for
+   labels and every action. `hud-short`: a landscape phone, where the HUD is one row of
+   `hudCompactHeightPx` and must win over `hud-wide` (it is defined after it, so its utilities
+   come later). `hud-tiny` (`hudTinyMaxWidthPx`): a phone too narrow for the sound control's
+   text beside Places and More, where it turns icon-only and the clout column may shrink. */
+@custom-variant hud-wide (@media (min-width: 640px));
+@custom-variant hud-short (@media (min-width: 640px) and (max-height: 479px));
+@custom-variant hud-tiny (@media (max-width: 341px));
+
+/* The overlay layout writes both HUD heights on its root (src/components/overlay/layers.ts);
+   the HUD grid row follows `--overlay-hud-h`. `!important` because the root writes the
+   two-row height inline. */
+@media (min-width: 640px) and (max-height: 479px) {
+  .cc-overlay {
+    --overlay-hud-h: var(--overlay-hud-compact-h) !important;
+  }
+}
+
+/* A banner notice with buttons (the tour, the update notice) keeps the banner row at its full
+   height on a short screen, so its 44 px targets are not clipped (UI-8; src/components/overlay/
+   layers.ts BANNER_MIN_VAR). Set on the root so every grid repeating the rows inherits it. */
+.cc-overlay:has([data-overlay-zone='banner'] [data-cc-notice]) {
+  --overlay-banner-min: var(--overlay-banner-h);
+}
+
+/* Lock the app shell to the visual viewport: no page scroll, rubber-band bounce or double-tap
+   zoom. Pinch zoom stays available (WCAG 1.4.4); the 3D canvas claims its own gestures: the camera
+   controls set touch-action: none on it (src/scene/camera/CameraRig.tsx). */
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: manipulation;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Map attribution (src/scene/MapAttribution.tsx): the free scene row is a size container, and
+   when it is too short for the two-line attribution (landscape phones) the one-line form shows
+   instead, so the chip never spills over the HUD or other zones. 5.5rem fits the two-line form
+   with its padding at 11 px text; the row's minimum (layout.json) fits the one-line form. */
+.map-attribution-row {
+  container-type: size;
+}
+
+.map-attribution-compact {
+  display: none;
+}
+
+@container (max-height: 5.5rem) {
+  .map-attribution-full {
+    display: none;
+  }
+
+  .map-attribution-compact {
+    display: block;
+  }
+}
+
+/* The attribution credits the map's data, so it leaves with the map: while the apartment has the
+   screen (its slot in src/scene/CityScene.tsx is not empty) the chip is hidden, and it is back on
+   the map as soon as the room closes (UI-16). CSS only: the attribution stays out of the shell JS. */
+[data-scene-slot='room']:not(:empty) ~ [data-map-attribution-layer] {
+  display: none;
+}
+
+/* A lazy feature's loading skeleton (src/components/overlay/ZoneLoading.tsx) stays invisible for
+   the reveal delay (data/config/layout.json, written to --overlay-loading-delay by the overlay
+   layout), so a fast load never flashes a placeholder. Under reduced motion the rule below turns
+   the fade into an instant reveal after the same delay. */
+@keyframes cc-reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.cc-reveal {
+  opacity: 0;
+  animation: cc-reveal 150ms ease-out var(--overlay-loading-delay, 0ms) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* The level-up toast's single pop (src/components/hud/LevelUpToast.tsx). Only when motion is
+   welcome: under reduced motion the toast simply appears. */
+@media (prefers-reduced-motion: no-preference) {
+  .level-up-pop {
+    animation: level-up-pop 320ms ease-out 1;
+  }
+}
+
+/* The Icon moment's celebration (src/components/goals/IconMoment.tsx): a few slow pulses of taxi
+   yellow behind the text, decorative only. Off under reduced motion. */
+.icon-moment-burst {
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at 20% 15%, var(--color-taxi) 0, transparent 40%),
+    radial-gradient(circle at 85% 30%, var(--color-taxi) 0, transparent 35%);
+  opacity: 0.18;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .icon-moment-burst {
+    animation: icon-moment-burst 1600ms ease-in-out 3;
+  }
+}
+
+@keyframes icon-moment-burst {
+  0%,
+  100% {
+    opacity: 0.12;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@keyframes level-up-pop {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

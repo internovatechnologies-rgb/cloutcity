@@ -1,0 +1,12 @@
+{
+  "id": "nyc",
+  "strings": {
+    "clout.flex.normal": "{place} {time}. The algorithm is about to eat. +{count} clout",
+    "clout.flex.viral": "Gone viral. The whole city's reposting. +{count} clout",
+    "clout.levelUp.local": "Your name's starting to ring. Brooklyn noticed.",
+    "clout.levelUp.sceneRegular": "Scene Regular. The doors know your face, and Manhattan's calling.",
+    "clout.levelUp.known": "Known. People say your name before you walk in.",
+    "clout.levelUp.famous": "Famous. Strangers are filming you on the subway.",
+    "clout.levelUp.icon": "Icon. You made it in New York. The skyline's got competition."
+  }
+}

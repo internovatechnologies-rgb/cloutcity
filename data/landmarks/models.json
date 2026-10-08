@@ -1,0 +1,459 @@
+{
+  "models": [
+    {
+      "id": "brooklyn-bridge",
+      "archetype": "suspensionBridge",
+      "depiction": "stylised",
+      "heightSource": {
+        "kind": "wikidata",
+        "qid": "Q125006",
+        "property": "P2048",
+        "valueM": 84
+      },
+      "params": {
+        "deck": {
+          "widthM": 26,
+          "clearanceM": 41,
+          "thicknessM": 4
+        },
+        "towers": {
+          "offsetsM": [-92, 394],
+          "heightM": 84,
+          "widthM": 40,
+          "depthM": 18,
+          "legWidthM": 8,
+          "openings": 2,
+          "pierHeightM": 12
+        },
+        "cables": {
+          "perSide": 2,
+          "hangerSpacingM": 24
+        },
+        "roles": {
+          "deck": "steel",
+          "tower": "stone",
+          "cable": "accent"
+        }
+      },
+      "frame": {
+        "kind": "lion-bridge",
+        "street": "BROOKLYN BRIDGE",
+        "segmentTypes": ["B", "G", "U"],
+        "roadwayTypes": ["3"]
+      }
+    },
+    {
+      "id": "manhattan-bridge",
+      "archetype": "suspensionBridge",
+      "depiction": "stylised",
+      "heightSource": {
+        "kind": "wikidata",
+        "qid": "Q125050",
+        "property": "P2048",
+        "valueM": 102
+      },
+      "params": {
+        "deck": {
+          "widthM": 37,
+          "clearanceM": 41,
+          "thicknessM": 7
+        },
+        "towers": {
+          "offsetsM": [-180, 271],
+          "heightM": 102,
+          "widthM": 44,
+          "depthM": 10,
+          "legWidthM": 6,
+          "openings": 1,
+          "pierHeightM": 12
+        },
+        "cables": {
+          "perSide": 2,
+          "hangerSpacingM": 24
+        },
+        "roles": {
+          "deck": "steel",
+          "tower": "steel",
+          "cable": "accent"
+        }
+      },
+      "frame": {
+        "kind": "lion-bridge",
+        "street": "MANHATTAN BRIDGE",
+        "segmentTypes": ["B", "G", "U"],
+        "roadwayTypes": ["3"]
+      }
+    },
+    {
+      "id": "queensboro-bridge",
+      "archetype": "cantileverBridge",
+      "depiction": "stylised",
+      "heightSource": {
+        "kind": "wikidata",
+        "qid": "Q125157",
+        "property": "P2048",
+        "valueM": 105
+      },
+      "params": {
+        "deck": {
+          "widthM": 30,
+          "clearanceM": 40,
+          "thicknessM": 6
+        },
+        "piers": {
+          "offsetsM": [-640, -320, -130, 140],
+          "heightM": 105,
+          "widthM": 36,
+          "depthM": 14,
+          "finialM": 12
+        },
+        "truss": {
+          "heightM": 45,
+          "midHeightM": 14,
+          "panelM": 40
+        },
+        "roles": {
+          "deck": "steel",
+          "truss": "steel",
+          "pier": "stone"
+        }
+      },
+      "frame": {
+        "kind": "lion-bridge",
+        "street": "ED KOCH QUEENSBORO BRIDGE",
+        "segmentTypes": ["B", "G", "U"],
+        "roadwayTypes": ["3"]
+      }
+    },
+    {
+      "id": "wedge-building",
+      "archetype": "wedgeTower",
+      "depiction": "massing",
+      "heightSource": {
+        "kind": "wikidata",
+        "qid": "Q220728",
+        "property": "P2048",
+        "valueM": 94
+      },
+      "params": {
+        "lengthM": 58,
+        "baseWidthM": 26,
+        "prowWidthM": 2,
+        "heightM": 94,
+        "podiumHeightM": 8,
+        "podiumOutsetM": 0.6,
+        "floors": 10,
+        "windowColumns": 6,
+        "roles": {
+          "body": "stone",
+          "podium": "stone"
+        }
+      },
+      "frame": {
+        "kind": "lion-front",
+        "street": "5 AVENUE",
+        "faceDeg": 0
+      }
+    },
+    {
+      "id": "deco-spire",
+      "archetype": "setbackSpire",
+      "depiction": "stylised",
+      "heightSource": {
+        "kind": "wikidata",
+        "qid": "Q11274",
+        "property": "P2048",
+        "valueM": 318.9
+      },
+      "params": {
+        "widthM": 62,
+        "depthM": 56,
+        "tiers": [
+          {
+            "heightM": 75,
+            "insetM": 0
+          },
+          {
+            "heightM": 80,
+            "insetM": 7
+          },
+          {
+            "heightM": 60,
+            "insetM": 6
+          },
+          {
+            "heightM": 25,
+            "insetM": 5
+          }
+        ],
+        "windowRows": 6,
+        "windowColumns": 5,
+        "spire": {
+          "baseWidthM": 12,
+          "heightM": 78.9
+        },
+        "roles": {
+          "body": "stone",
+          "trim": "steel",
+          "spire": "steel"
+        }
+      },
+      "frame": {
+        "kind": "lion-front",
+        "street": "LEXINGTON AVENUE",
+        "faceDeg": 270
+      }
+    },
+    {
+      "id": "midtown-terminal",
+      "archetype": "terminalHall",
+      "depiction": "massing",
+      "params": {
+        "widthM": 90,
+        "depthM": 60,
+        "heightM": 30,
+        "floors": 3,
+        "windowColumns": 6,
+        "arches": {
+          "count": 3,
+          "widthM": 10,
+          "heightM": 20
+        },
+        "wings": {
+          "widthM": 25,
+          "depthM": 50,
+          "heightM": 20
+        },
+        "roof": {
+          "heightM": 6
+        },
+        "roles": {
+          "body": "stone",
+          "trim": "accent",
+          "roof": "roof"
+        }
+      },
+      "frame": {
+        "kind": "lion-front",
+        "street": "VANDERBILT AVENUE",
+        "faceDeg": 180
+      }
+    },
+    {
+      "id": "penn-station",
+      "archetype": "stationConcourse",
+      "depiction": "stylised",
+      "params": {
+        "canopy": {
+          "lengthM": 110,
+          "widthM": 24,
+          "heightM": 10,
+          "thicknessM": 1.5,
+          "supports": 4
+        },
+        "pavilions": {
+          "count": 2,
+          "widthM": 18,
+          "depthM": 14,
+          "heightM": 13,
+          "spacingM": 140
+        },
+        "roles": {
+          "body": "stone",
+          "canopy": "steel",
+          "glass": "glass",
+          "trim": "accent"
+        }
+      },
+      "frame": {
+        "kind": "lion-front",
+        "street": "8 AVENUE",
+        "faceDeg": 270
+      }
+    },
+    {
+      "id": "jamaica-station",
+      "archetype": "stationConcourse",
+      "depiction": "stylised",
+      "params": {
+        "hall": {
+          "widthM": 60,
+          "depthM": 32,
+          "heightM": 22,
+          "floors": 4,
+          "windowColumns": 10
+        },
+        "canopy": {
+          "lengthM": 70,
+          "widthM": 16,
+          "heightM": 9,
+          "thicknessM": 1.2,
+          "supports": 4
+        },
+        "pavilions": {
+          "count": 2,
+          "widthM": 12,
+          "depthM": 12,
+          "heightM": 11,
+          "spacingM": 72
+        },
+        "roles": {
+          "body": "brick",
+          "canopy": "steel",
+          "glass": "glass",
+          "trim": "stone"
+        }
+      },
+      "frame": {
+        "kind": "lion-front",
+        "street": "SUTPHIN BOULEVARD",
+        "faceDeg": 270
+      }
+    },
+    {
+      "id": "staten-island-ferry",
+      "archetype": "stationConcourse",
+      "depiction": "stylised",
+      "params": {
+        "hall": {
+          "widthM": 110,
+          "depthM": 60,
+          "heightM": 20,
+          "floors": 3,
+          "windowColumns": 16
+        },
+        "canopy": {
+          "lengthM": 100,
+          "widthM": 18,
+          "heightM": 9,
+          "thicknessM": 1.5,
+          "supports": 6
+        },
+        "pavilions": {
+          "count": 3,
+          "widthM": 14,
+          "depthM": 12,
+          "heightM": 12,
+          "spacingM": 42
+        },
+        "roles": {
+          "body": "stone",
+          "canopy": "steel",
+          "glass": "glass",
+          "trim": "accent"
+        }
+      },
+      "frame": {
+        "kind": "lion-front",
+        "street": "FERRY TERMINAL VIADUCT",
+        "faceDeg": 0
+      }
+    },
+    {
+      "id": "city-hall",
+      "archetype": "civicHall",
+      "depiction": "stylised",
+      "params": {
+        "widthM": 30,
+        "depthM": 30,
+        "heightM": 18,
+        "floors": 2,
+        "windowColumns": 5,
+        "wings": {
+          "widthM": 18,
+          "depthM": 26,
+          "heightM": 16,
+          "floors": 2,
+          "windowColumns": 4
+        },
+        "portico": {
+          "columns": 6,
+          "widthM": 16,
+          "depthM": 5,
+          "heightM": 12
+        },
+        "cupola": {
+          "radiusM": 5,
+          "drumHeightM": 10,
+          "domeHeightM": 6,
+          "sides": 8
+        },
+        "roles": {
+          "body": "stone",
+          "trim": "accent",
+          "roof": "roof"
+        }
+      },
+      "frame": {
+        "kind": "lion-front",
+        "street": "CITY HALL PARK GREENWAY",
+        "faceDeg": 90
+      }
+    },
+    {
+      "id": "brooklyn-borough-hall",
+      "archetype": "civicHall",
+      "depiction": "stylised",
+      "params": {
+        "widthM": 40,
+        "depthM": 26,
+        "heightM": 18,
+        "floors": 2,
+        "windowColumns": 7,
+        "portico": {
+          "columns": 6,
+          "widthM": 22,
+          "depthM": 6,
+          "heightM": 15
+        },
+        "pediment": {
+          "heightM": 5
+        },
+        "cupola": {
+          "radiusM": 5,
+          "drumHeightM": 9,
+          "domeHeightM": 6,
+          "sides": 8
+        },
+        "roles": {
+          "body": "stone",
+          "trim": "accent",
+          "roof": "roof"
+        }
+      },
+      "frame": {
+        "kind": "lion-front",
+        "street": "JORALEMON STREET",
+        "faceDeg": 270
+      }
+    },
+    {
+      "id": "queens-borough-hall",
+      "archetype": "civicHall",
+      "depiction": "stylised",
+      "params": {
+        "widthM": 96,
+        "depthM": 22,
+        "heightM": 20,
+        "floors": 4,
+        "windowColumns": 14,
+        "portico": {
+          "columns": 6,
+          "widthM": 24,
+          "depthM": 5,
+          "heightM": 16
+        },
+        "roles": {
+          "body": "brick",
+          "trim": "stone",
+          "roof": "roof"
+        }
+      },
+      "frame": {
+        "kind": "lion-front",
+        "street": "QUEENS BOULEVARD",
+        "faceDeg": 90
+      }
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "goals": [
+    {
+      "id": "first-paycheck",
+      "fact": "first-paycheck",
+      "reward": {
+        "cash": 25,
+        "clout": 5
+      }
+    },
+    {
+      "id": "first-outfit",
+      "fact": "first-outfit",
+      "reward": {
+        "cash": 20,
+        "clout": 5
+      }
+    },
+    {
+      "id": "first-landmark-visit",
+      "fact": "first-landmark-visit",
+      "reward": {
+        "cash": 15,
+        "clout": 5
+      }
+    },
+    {
+      "id": "first-club-night",
+      "fact": "first-club-night",
+      "reward": {
+        "cash": 20,
+        "clout": 10
+      }
+    },
+    {
+      "id": "first-friend",
+      "fact": "first-friend",
+      "available": false,
+      "reward": {
+        "cash": 25,
+        "clout": 10
+      }
+    },
+    {
+      "id": "reach-local",
+      "fact": "clout-level",
+      "level": "local",
+      "reward": {
+        "cash": 50,
+        "clout": 15
+      }
+    },
+    {
+      "id": "reach-scene-regular",
+      "fact": "clout-level",
+      "level": "scene-regular",
+      "reward": {
+        "cash": 75,
+        "clout": 20
+      }
+    },
+    {
+      "id": "reach-known",
+      "fact": "clout-level",
+      "level": "known",
+      "reward": {
+        "cash": 100,
+        "clout": 25
+      }
+    },
+    {
+      "id": "reach-famous",
+      "fact": "clout-level",
+      "level": "famous",
+      "reward": {
+        "cash": 100,
+        "clout": 25
+      }
+    },
+    {
+      "id": "reach-icon",
+      "fact": "clout-level",
+      "level": "icon",
+      "victory": true,
+      "reward": {
+        "badge": true
+      }
+    }
+  ],
+  "grants": {
+    "capPctOfGap": {
+      "cash": 25,
+      "clout": 25
+    },
+    "maxPerGrant": {
+      "cash": 100,
+      "clout": 25
+    },
+    "log": {
+      "maxEntries": 200
+    }
+  },
+  "prestige": {
+    "requiresGoal": "reach-icon",
+    "badgeIds": ["prestige-1", "prestige-2", "prestige-3"],
+    "rewardsRepeat": true,
+    "resets": [
+      "cash",
+      "stats",
+      "home",
+      "rent",
+      "clout",
+      "flex",
+      "clubNights",
+      "visited",
+      "events",
+      "goals"
+    ],
+    "keeps": ["clock", "speed", "grants", "prestige", "inventory", "premium"]
+  }
+}

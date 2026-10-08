@@ -1,0 +1,13 @@
+{
+  "strings": {
+    "settings.graphics.title": "Graphics",
+    "settings.graphics.auto": "Auto",
+    "settings.graphics.autoDetected": "Auto (detected: {tier})",
+    "settings.graphics.low": "Low",
+    "settings.graphics.mid": "Mid",
+    "settings.graphics.high": "High",
+    "settings.graphics.nextTime": "Some changes apply next time you open the game.",
+    "settings.graphics.dataSaver": "Data saver is on, so graphics stay on Low.",
+    "settings.graphics.lockedDataSaver": "{tier}, off while data saver is on"
+  }
+}

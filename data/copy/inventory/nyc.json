@@ -1,0 +1,8 @@
+{
+  "id": "nyc",
+  "strings": {
+    "inventory.gift.usedOnSelf": "Treated yourself to {item}. Self-care is a lifestyle.",
+    "inventory.equipped": "Fit check: {item} is on. It's giving.",
+    "inventory.unequipped": "{item} is off. Back in the closet."
+  }
+}

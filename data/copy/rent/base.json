@@ -1,0 +1,19 @@
+{
+  "strings": {
+    "rent.nextDue": "Rent of {rent} is due on day {day}.",
+    "rent.paid": "Rent paid: {rent}.",
+    "rent.paidWithArrears": "Rent paid: {rent}, plus {arrears} in back rent and fees.",
+    "rent.arrearsPaid": "Back rent paid: {amount}. You're all caught up.",
+    "rent.missed": "Rent missed. You owe {owed}, collected at midnight once you have it. Miss {left} more and you're evicted.",
+    "rent.missedWithFee": "Rent missed again, plus a {fee} late fee. You owe {owed}. Miss {left} more and you're evicted.",
+    "rent.evicted": "You were evicted for unpaid rent and moved to the {home}, at {rent} a week.",
+    "rent.heading": "Rent",
+    "rent.home": "You live in the {home}.",
+    "rent.owed": "Back rent and fees owed: {owed}.",
+    "rent.square": "You owe nothing right now.",
+    "rent.lastNotice.heading": "Last rent notice",
+    "rent.lastNotice.none": "No rent has come due this session.",
+    "rent.toast.close": "Close",
+    "rent.toast.closeLabel": "Close the rent notice"
+  }
+}

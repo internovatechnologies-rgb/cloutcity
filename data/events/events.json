@@ -1,0 +1,822 @@
+{
+  "events": [
+    {
+      "id": "mta-delay",
+      "titleKey": "events.mtaDelay.title",
+      "bodyKey": "events.mtaDelay.body",
+      "tags": ["transit"],
+      "weight": 10,
+      "conditions": {
+        "hours": {
+          "from": 6,
+          "to": 23
+        },
+        "locationCategories": ["station", "subway-station"]
+      },
+      "choices": [
+        {
+          "id": "wait",
+          "labelKey": "events.mtaDelay.wait.label",
+          "resultKey": "events.mtaDelay.wait.result",
+          "effects": [
+            {
+              "kind": "time",
+              "minutes": 25
+            },
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": -4
+            }
+          ]
+        },
+        {
+          "id": "walk",
+          "labelKey": "events.mtaDelay.walk.label",
+          "resultKey": "events.mtaDelay.walk.result",
+          "effects": [
+            {
+              "kind": "time",
+              "minutes": 40
+            },
+            {
+              "kind": "stat",
+              "stat": "energy",
+              "amount": -8
+            },
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": 3
+            }
+          ]
+        },
+        {
+          "id": "slice",
+          "labelKey": "events.mtaDelay.slice.label",
+          "resultKey": "events.mtaDelay.slice.result",
+          "effects": [
+            {
+              "kind": "cash",
+              "amount": -4
+            },
+            {
+              "kind": "time",
+              "minutes": 25
+            },
+            {
+              "kind": "stat",
+              "stat": "hunger",
+              "amount": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rent-hike",
+      "titleKey": "events.rentHike.title",
+      "bodyKey": "events.rentHike.body",
+      "tags": ["money", "home"],
+      "weight": 4,
+      "cooldownMin": 10080,
+      "conditions": {
+        "minDay": 3
+      },
+      "choices": [
+        {
+          "id": "pay",
+          "labelKey": "events.rentHike.pay.label",
+          "resultKey": "events.rentHike.pay.result",
+          "effects": [
+            {
+              "kind": "cash",
+              "amount": -25
+            },
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": -3
+            }
+          ]
+        },
+        {
+          "id": "haggle",
+          "labelKey": "events.rentHike.haggle.label",
+          "resultKey": "events.rentHike.haggle.result",
+          "effects": [
+            {
+              "kind": "time",
+              "minutes": 30
+            },
+            {
+              "kind": "stat",
+              "stat": "energy",
+              "amount": -6
+            },
+            {
+              "kind": "cash",
+              "amount": -10
+            }
+          ]
+        },
+        {
+          "id": "ignore",
+          "labelKey": "events.rentHike.ignore.label",
+          "resultKey": "events.rentHike.ignore.result",
+          "effects": [
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": -8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "free-pizza",
+      "titleKey": "events.freePizza.title",
+      "bodyKey": "events.freePizza.body",
+      "tags": ["food", "social"],
+      "weight": 8,
+      "conditions": {
+        "hours": {
+          "from": 11,
+          "to": 23
+        },
+        "stats": {
+          "hunger": {
+            "max": 70
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "grab",
+          "labelKey": "events.freePizza.grab.label",
+          "resultKey": "events.freePizza.grab.result",
+          "effects": [
+            {
+              "kind": "time",
+              "minutes": 10
+            },
+            {
+              "kind": "stat",
+              "stat": "hunger",
+              "amount": 30
+            },
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": 4
+            }
+          ]
+        },
+        {
+          "id": "pass",
+          "labelKey": "events.freePizza.pass.label",
+          "resultKey": "events.freePizza.pass.result",
+          "effects": []
+        }
+      ]
+    },
+    {
+      "id": "club-promoter",
+      "titleKey": "events.clubPromoter.title",
+      "bodyKey": "events.clubPromoter.body",
+      "tags": ["nightlife", "social"],
+      "weight": 6,
+      "conditions": {
+        "hours": {
+          "from": 20,
+          "to": 3
+        },
+        "locationCategories": ["club"]
+      },
+      "choices": [
+        {
+          "id": "flyers",
+          "labelKey": "events.clubPromoter.flyers.label",
+          "resultKey": "events.clubPromoter.flyers.result",
+          "effects": [
+            {
+              "kind": "cash",
+              "amount": 30
+            },
+            {
+              "kind": "time",
+              "minutes": 120
+            },
+            {
+              "kind": "stat",
+              "stat": "energy",
+              "amount": -15
+            },
+            {
+              "kind": "clout",
+              "amount": 2
+            }
+          ]
+        },
+        {
+          "id": "list",
+          "labelKey": "events.clubPromoter.list.label",
+          "resultKey": "events.clubPromoter.list.result",
+          "effects": [
+            {
+              "kind": "time",
+              "minutes": 180
+            },
+            {
+              "kind": "stat",
+              "stat": "energy",
+              "amount": -20
+            },
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": 12
+            },
+            {
+              "kind": "clout",
+              "amount": 3
+            }
+          ]
+        },
+        {
+          "id": "pass",
+          "labelKey": "events.clubPromoter.pass.label",
+          "resultKey": "events.clubPromoter.pass.result",
+          "effects": []
+        }
+      ]
+    },
+    {
+      "id": "viral-moment",
+      "titleKey": "events.viralMoment.title",
+      "bodyKey": "events.viralMoment.body",
+      "tags": ["social"],
+      "weight": 3,
+      "cooldownMin": 4320,
+      "conditions": {
+        "stats": {
+          "mood": {
+            "min": 60
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "post",
+          "labelKey": "events.viralMoment.post.label",
+          "resultKey": "events.viralMoment.post.result",
+          "effects": [
+            {
+              "kind": "time",
+              "minutes": 10
+            },
+            {
+              "kind": "clout",
+              "amount": 6
+            },
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": 8
+            }
+          ]
+        },
+        {
+          "id": "keep",
+          "labelKey": "events.viralMoment.keep.label",
+          "resultKey": "events.viralMoment.keep.result",
+          "effects": [
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "phone-grab",
+      "titleKey": "events.phoneGrab.title",
+      "bodyKey": "events.phoneGrab.body",
+      "tags": ["crime"],
+      "weight": 3,
+      "conditions": {
+        "hours": {
+          "from": 18,
+          "to": 2
+        },
+        "boroughs": ["manhattan", "brooklyn"]
+      },
+      "choices": [
+        {
+          "id": "hold",
+          "labelKey": "events.phoneGrab.hold.label",
+          "resultKey": "events.phoneGrab.hold.result",
+          "effects": [
+            {
+              "kind": "stat",
+              "stat": "energy",
+              "amount": -3
+            },
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": -4
+            }
+          ]
+        },
+        {
+          "id": "yell",
+          "labelKey": "events.phoneGrab.yell.label",
+          "resultKey": "events.phoneGrab.yell.result",
+          "effects": [
+            {
+              "kind": "stat",
+              "stat": "energy",
+              "amount": -2
+            },
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pickpocket",
+      "titleKey": "events.pickpocket.title",
+      "bodyKey": "events.pickpocket.body",
+      "tags": ["crime", "transit"],
+      "weight": 3,
+      "conditions": {
+        "locationCategories": ["station", "subway-station"],
+        "cash": {
+          "min": 20
+        }
+      },
+      "choices": [
+        {
+          "id": "shrug",
+          "labelKey": "events.pickpocket.shrug.label",
+          "resultKey": "events.pickpocket.shrug.result",
+          "effects": [
+            {
+              "kind": "cash",
+              "amount": -10
+            },
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": -6
+            }
+          ]
+        },
+        {
+          "id": "chase",
+          "labelKey": "events.pickpocket.chase.label",
+          "resultKey": "events.pickpocket.chase.result",
+          "effects": [
+            {
+              "kind": "time",
+              "minutes": 15
+            },
+            {
+              "kind": "stat",
+              "stat": "energy",
+              "amount": -12
+            },
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bridge-golden-hour",
+      "titleKey": "events.bridgeGoldenHour.title",
+      "bodyKey": "events.bridgeGoldenHour.body",
+      "tags": ["landmark", "social"],
+      "weight": 8,
+      "conditions": {
+        "hours": {
+          "from": 16,
+          "to": 20
+        },
+        "locationIds": ["brooklyn-bridge"]
+      },
+      "choices": [
+        {
+          "id": "photo",
+          "labelKey": "events.bridgeGoldenHour.photo.label",
+          "resultKey": "events.bridgeGoldenHour.photo.result",
+          "effects": [
+            {
+              "kind": "time",
+              "minutes": 15
+            },
+            {
+              "kind": "clout",
+              "amount": 3
+            },
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": 6
+            }
+          ]
+        },
+        {
+          "id": "view",
+          "labelKey": "events.bridgeGoldenHour.view.label",
+          "resultKey": "events.bridgeGoldenHour.view.result",
+          "effects": [
+            {
+              "kind": "time",
+              "minutes": 20
+            },
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "park-busker",
+      "titleKey": "events.parkBusker.title",
+      "bodyKey": "events.parkBusker.body",
+      "tags": ["landmark", "social"],
+      "weight": 6,
+      "conditions": {
+        "hours": {
+          "from": 10,
+          "to": 21
+        },
+        "locationCategories": ["park"]
+      },
+      "choices": [
+        {
+          "id": "sing",
+          "labelKey": "events.parkBusker.sing.label",
+          "resultKey": "events.parkBusker.sing.result",
+          "effects": [
+            {
+              "kind": "time",
+              "minutes": 20
+            },
+            {
+              "kind": "stat",
+              "stat": "energy",
+              "amount": -5
+            },
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": 8
+            },
+            {
+              "kind": "clout",
+              "amount": 2
+            }
+          ]
+        },
+        {
+          "id": "tip",
+          "labelKey": "events.parkBusker.tip.label",
+          "resultKey": "events.parkBusker.tip.result",
+          "effects": [
+            {
+              "kind": "cash",
+              "amount": -2
+            },
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": 4
+            }
+          ]
+        },
+        {
+          "id": "walk",
+          "labelKey": "events.parkBusker.walk.label",
+          "resultKey": "events.parkBusker.walk.result",
+          "effects": []
+        }
+      ]
+    },
+    {
+      "id": "tourist-photo",
+      "titleKey": "events.touristPhoto.title",
+      "bodyKey": "events.touristPhoto.body",
+      "tags": ["landmark", "social"],
+      "weight": 6,
+      "conditions": {
+        "hours": {
+          "from": 8,
+          "to": 22
+        },
+        "locationCategories": ["bridge", "building", "monument", "neighborhood", "stadium"]
+      },
+      "choices": [
+        {
+          "id": "help",
+          "labelKey": "events.touristPhoto.help.label",
+          "resultKey": "events.touristPhoto.help.result",
+          "effects": [
+            {
+              "kind": "time",
+              "minutes": 10
+            },
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": 5
+            },
+            {
+              "kind": "clout",
+              "amount": 1
+            }
+          ]
+        },
+        {
+          "id": "point",
+          "labelKey": "events.touristPhoto.point.label",
+          "resultKey": "events.touristPhoto.point.result",
+          "effects": []
+        }
+      ]
+    },
+    {
+      "id": "bodega-cat",
+      "titleKey": "events.bodegaCat.title",
+      "bodyKey": "events.bodegaCat.body",
+      "tags": ["food"],
+      "weight": 7,
+      "conditions": {
+        "locationCategories": ["bodega"]
+      },
+      "choices": [
+        {
+          "id": "scratch",
+          "labelKey": "events.bodegaCat.scratch.label",
+          "resultKey": "events.bodegaCat.scratch.result",
+          "effects": [
+            {
+              "kind": "time",
+              "minutes": 5
+            },
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": 8
+            }
+          ]
+        },
+        {
+          "id": "treat",
+          "labelKey": "events.bodegaCat.treat.label",
+          "resultKey": "events.bodegaCat.treat.result",
+          "effects": [
+            {
+              "kind": "cash",
+              "amount": -2
+            },
+            {
+              "kind": "time",
+              "minutes": 5
+            },
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "block-party",
+      "titleKey": "events.blockParty.title",
+      "bodyKey": "events.blockParty.body",
+      "tags": ["social", "food"],
+      "weight": 5,
+      "conditions": {
+        "hours": {
+          "from": 12,
+          "to": 20
+        },
+        "boroughs": ["brooklyn", "queens", "bronx"]
+      },
+      "choices": [
+        {
+          "id": "join",
+          "labelKey": "events.blockParty.join.label",
+          "resultKey": "events.blockParty.join.result",
+          "effects": [
+            {
+              "kind": "cash",
+              "amount": -6
+            },
+            {
+              "kind": "time",
+              "minutes": 90
+            },
+            {
+              "kind": "stat",
+              "stat": "energy",
+              "amount": -10
+            },
+            {
+              "kind": "stat",
+              "stat": "hunger",
+              "amount": 25
+            },
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": 12
+            }
+          ]
+        },
+        {
+          "id": "skip",
+          "labelKey": "events.blockParty.skip.label",
+          "resultKey": "events.blockParty.skip.result",
+          "effects": []
+        }
+      ]
+    },
+    {
+      "id": "downpour",
+      "titleKey": "events.downpour.title",
+      "bodyKey": "events.downpour.body",
+      "tags": ["weather"],
+      "weight": 5,
+      "conditions": {},
+      "choices": [
+        {
+          "id": "umbrella",
+          "labelKey": "events.downpour.umbrella.label",
+          "resultKey": "events.downpour.umbrella.result",
+          "effects": [
+            {
+              "kind": "cash",
+              "amount": -8
+            },
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": 1
+            }
+          ]
+        },
+        {
+          "id": "run",
+          "labelKey": "events.downpour.run.label",
+          "resultKey": "events.downpour.run.result",
+          "effects": [
+            {
+              "kind": "stat",
+              "stat": "energy",
+              "amount": -6
+            },
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": -5
+            }
+          ]
+        },
+        {
+          "id": "wait",
+          "labelKey": "events.downpour.wait.label",
+          "resultKey": "events.downpour.wait.result",
+          "effects": [
+            {
+              "kind": "time",
+              "minutes": 30
+            },
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": -2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "name-misspelled",
+      "titleKey": "events.nameMisspelled.title",
+      "bodyKey": "events.nameMisspelled.body",
+      "tags": ["food", "social"],
+      "weight": 6,
+      "conditions": {
+        "hours": {
+          "from": 6,
+          "to": 18
+        },
+        "locationCategories": ["coffee-shop"]
+      },
+      "choices": [
+        {
+          "id": "post",
+          "labelKey": "events.nameMisspelled.post.label",
+          "resultKey": "events.nameMisspelled.post.result",
+          "effects": [
+            {
+              "kind": "time",
+              "minutes": 5
+            },
+            {
+              "kind": "clout",
+              "amount": 1
+            },
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": 3
+            }
+          ]
+        },
+        {
+          "id": "laugh",
+          "labelKey": "events.nameMisspelled.laugh.label",
+          "resultKey": "events.nameMisspelled.laugh.result",
+          "effects": [
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "late-night-cart",
+      "titleKey": "events.lateNightCart.title",
+      "bodyKey": "events.lateNightCart.body",
+      "tags": ["food"],
+      "weight": 6,
+      "conditions": {
+        "hours": {
+          "from": 22,
+          "to": 4
+        },
+        "stats": {
+          "hunger": {
+            "max": 60
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "plate",
+          "labelKey": "events.lateNightCart.plate.label",
+          "resultKey": "events.lateNightCart.plate.result",
+          "effects": [
+            {
+              "kind": "cash",
+              "amount": -8
+            },
+            {
+              "kind": "time",
+              "minutes": 15
+            },
+            {
+              "kind": "stat",
+              "stat": "hunger",
+              "amount": 40
+            },
+            {
+              "kind": "stat",
+              "stat": "mood",
+              "amount": 4
+            }
+          ]
+        },
+        {
+          "id": "skip",
+          "labelKey": "events.lateNightCart.skip.label",
+          "resultKey": "events.lateNightCart.skip.result",
+          "effects": []
+        }
+      ]
+    }
+  ]
+}

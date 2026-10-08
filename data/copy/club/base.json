@@ -1,0 +1,6 @@
+{
+  "strings": {
+    "club.door.refused": "The door is closed to you tonight: reach {level} clout to get in. You're at {current}.",
+    "club.door.refusedVip": "This door is for {level} clout and up. You're at {current}."
+  }
+}

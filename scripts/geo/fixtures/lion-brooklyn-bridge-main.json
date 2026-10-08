@@ -1,0 +1,550 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-73.9946374792712, 40.7043426575665],
+          [-73.9933912977346, 40.7033401335622]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0023909",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-74.0014728499259, 40.70975481033],
+          [-74.0013458461085, 40.7096545489693]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0162386",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-74.0002671132272, 40.7088012051211],
+          [-74.0001924777568, 40.7087421675966]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0162387",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-74.0033332950242, 40.711250339151],
+          [-74.003288311082, 40.7112155050118]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0162416",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-74.0026777928579, 40.7107240819945],
+          [-74.0017383368567, 40.7099684255247]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0162417",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-74.0017383368567, 40.7099684255247],
+          [-74.0015605286236, 40.7098253638678]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0162418",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-74.003288311082, 40.7112155050118],
+          [-74.0027691757688, 40.7107975576892]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0162419",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-74.0027691757688, 40.7107975576892],
+          [-74.0026777928579, 40.7107240819945]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0162420",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-74.0015605286236, 40.7098253638678],
+          [-74.0014728499259, 40.70975481033]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0162421",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-74.0001924777568, 40.7087421675966],
+          [-74.0001250375265, 40.7086927745669]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0162475",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-74.0001250375265, 40.7086927745669],
+          [-74.0000091023434, 40.7086078746974]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0162476",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-74.0000091023434, 40.7086078746974],
+          [-73.9999308106309, 40.7085450728327]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0162489",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-73.9999308106309, 40.7085450728327],
+          [-73.9998133856023, 40.7084508702095]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0162490",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-73.9998133856023, 40.7084508702095],
+          [-73.9995641797515, 40.7082447388606]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0162491",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-73.9995641797515, 40.7082447388606],
+          [-73.9994442605683, 40.7081448124655]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0162492",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-73.9994442605683, 40.7081448124655],
+          [-73.9994009969257, 40.7081085934402]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0162493",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-73.9994009969257, 40.7081085934402],
+          [-73.99936340184, 40.708080542299]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0162498",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-73.9912991406664, 40.7016660417592],
+          [-73.9912356180988, 40.7016206426216]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0162630",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-73.9933912977346, 40.7033401335622],
+          [-73.9926476875479, 40.7027338547751]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0162647",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-73.9926476875479, 40.7027338547751],
+          [-73.9925082164795, 40.7026201383611]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0162648",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-73.992479891989, 40.7025986323703],
+          [-73.9922403018992, 40.7024167669339]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0162661",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-73.99936340184, 40.708080542299],
+          [-73.9992887895824, 40.7080248829878],
+          [-73.9992887571206, 40.7080248588336]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0240525",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-73.9992887571206, 40.7080248588336],
+          [-73.9991959577986, 40.7079556314302]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0240526",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-74.0060369153171, 40.7119144446534],
+          [-74.0059443933523, 40.7119639364446]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0273595",
+        "SegmentTyp": "U",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-73.996213496685, 40.705591845809],
+          [-73.9949787424647, 40.7046131564088]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0306892",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-73.9949787424647, 40.7046131564088],
+          [-73.9946374792712, 40.7043426575665]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0306893",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-73.9980913098941, 40.7070801544473],
+          [-73.9965453853528, 40.7058548996938]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0308292",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-73.9965453853528, 40.7058548996938],
+          [-73.996213496685, 40.705591845809]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0308293",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-74.0041944141993, 40.7116791884154],
+          [-74.0040796391938, 40.711636458781]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "0342288",
+        "SegmentTyp": "U",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-74.0013458461085, 40.7096545489693],
+          [-74.0005514962055, 40.7090261726321]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "9012869",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-74.0005514962055, 40.7090261726321],
+          [-74.0002671132272, 40.7088012051211]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "9012870",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-73.9991959577986, 40.7079556314302],
+          [-73.9980913098941, 40.7070801544473]
+        ]
+      },
+      "properties": {
+        "Street": "BROOKLYN BRIDGE",
+        "SegmentID": "9014213",
+        "SegmentTyp": "G",
+        "RW_TYPE": " 3",
+        "FeatureTyp": "0"
+      }
+    }
+  ]
+}

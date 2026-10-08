@@ -1,0 +1,27 @@
+{
+  "strings": {
+    "hud.cash": "Cash",
+    "hud.day": "Day {day}",
+    "hud.clockLabel": "Day {day}, {time}",
+    "hud.speed.value": "{speed}x",
+    "hud.speed.label": "Game speed {speed}x, tap to change",
+    "hud.stats.energy": "Energy",
+    "hud.stats.hunger": "Fullness",
+    "hud.stats.mood": "Mood",
+    "hud.stats.value": "{value} of {max}",
+    "hud.goalLine": "Make it in New York",
+    "hud.clout.progress": "{count} / {target}",
+    "hud.clout.max": "{count}",
+    "hud.clout.progressLabel": "Clout: {level}, {count} of {target} to {next}",
+    "hud.clout.maxLabel": "Clout: {level}, {count}. Top level reached.",
+    "hud.inventory": "Inventory",
+    "hud.rent": "Rent",
+    "hud.home": "Home",
+    "hud.more": "More",
+    "hud.soundSettings": "Settings",
+    "hud.goals": "Goals: {goal}",
+    "hud.goalsReady": "Goals: {goal}, {count} rewards ready",
+    "hud.goalsReadyOne": "Goals: {goal}, 1 reward ready",
+    "hud.help": "Help: take the tour"
+  }
+}

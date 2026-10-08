@@ -1,0 +1,11 @@
+{
+  "strings": {
+    "jobs.barista.name": "Barista",
+    "jobs.retail.name": "Retail",
+    "jobs.delivery.name": "Delivery",
+    "jobs.juniorDev.name": "Junior dev",
+    "jobs.shift.label": "Work a {job} shift: {hours} hours for {pay}",
+    "jobs.shift.done": "Shift done: {pay} earned.",
+    "jobs.locked.label": "{job} is locked: reach {level} clout to unlock it. You're at {current}."
+  }
+}

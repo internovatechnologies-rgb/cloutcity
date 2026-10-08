@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#0d0a24"/>
+  <circle cx="256" cy="256" r="176" fill="#221a55"/>
+  <path d="M150 330 L150 250 L190 250 L190 210 L230 210 L230 170 L270 170 L270 230 L310 230 L310 190 L350 190 L350 330 Z" fill="#31277a"/>
+  <text x="256" y="300" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="150" fill="#ff4fa3">CC</text>
+  <rect x="186" y="324" width="140" height="18" rx="9" fill="#ffd23f"/>
+</svg>

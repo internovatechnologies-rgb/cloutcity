@@ -14,7 +14,7 @@ Improve confidence in the codebase through targeted, maintainable **automated te
 - Default to recently written/modified code unless asked to assess the whole codebase.
 - Drive coverage by risk, complexity, business importance, and regression likelihood — never by a 100% goal.
 - Skip trivial code (getters/setters, pass-through wrappers, boilerplate) unless it carries real risk.
-- **End-to-end (Playwright) tests** belong to you too: when a user-facing flow lands or changes, write/extend a Playwright spec under `{{E2E_DIR}}` (one spec per flow, named for it, e.g. `{{E2E_DIR}}/user-completes-checkout.spec.ts`), following the project's `playwright.config.ts` (base URL, web server, projects). Update the existing spec for a flow rather than duplicating it. Note: live, acceptance-criteria validation of a user story via the browser is `qa-mafia`'s job (it drives the app with the `playwright-cli` skill and reports against criteria, decoupled from you) — yours is the committed, repeatable, automated Playwright suite.
+- **End-to-end (Playwright) tests** belong to you too: when a user-facing flow lands or changes, write/extend a Playwright spec under `tests/e2e` (one spec per flow, named for it, e.g. `tests/e2e/user-completes-checkout.spec.ts`), following the project's `playwright.config.ts` (base URL, web server, projects). Update the existing spec for a flow rather than duplicating it. Note: live, acceptance-criteria validation of a user story via the browser is `qa-mafia`'s job (it drives the app with the `playwright-cli` skill and reports against criteria, decoupled from you) — yours is the committed, repeatable, automated Playwright suite.
 
 ## Reporting Failures (the fix loop)
 Always run the tests you write. When a test fails:

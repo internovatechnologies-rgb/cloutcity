@@ -1,0 +1,17 @@
+{
+  "strings": {
+    "shop.buy.label": "Buy {item} for {price}",
+    "shop.buy.locked": "{item} costs {price}. You have {cash}, so you need {short} more.",
+    "shop.buy.owned": "{item}: you already own it.",
+    "shop.buy.done": "Bought {item} for {price}.",
+    "shop.sell.label": "Sell {item} for {price}",
+    "shop.sell.done": "Sold {item} for {price}.",
+    "shop.heading": "Shop",
+    "shop.item.details": "{kind}, {rarity}, {price}",
+    "shop.item.gift": "Gift",
+    "shop.item.decor": "Decor",
+    "shop.buy.button": "Buy",
+    "shop.buy.stackFull": "{item}: you are carrying the maximum of {count}.",
+    "shop.error.failed": "That didn't go through. Check your cash and inventory, then try again."
+  }
+}

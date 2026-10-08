@@ -1,0 +1,7 @@
+{
+  "id": "nyc",
+  "strings": {
+    "offline.body": "No signal on this page. The city's still yours: your game is saved on this device and plays offline.",
+    "offline.update.message": "Fresh drop just landed. Update to get it."
+  }
+}

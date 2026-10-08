@@ -1,0 +1,31 @@
+{
+  "strings": {
+    "clout.levels.nobody.name": "Nobody",
+    "clout.levels.local.name": "Local",
+    "clout.levels.sceneRegular.name": "Scene Regular",
+    "clout.levels.known.name": "Known",
+    "clout.levels.famous.name": "Famous",
+    "clout.levels.icon.name": "Icon",
+    "clout.flex.name": "Flex",
+    "clout.flex.details": "{duration}, {energy} energy, +{count} clout",
+    "clout.flex.normal": "You flexed at {place} {time}: +{count} clout.",
+    "clout.flex.viral": "Your flex went viral: +{count} clout.",
+    "clout.flex.blocked.here": "You already flexed here today. Try another spot.",
+    "clout.flex.blocked.daily": "You've flexed {count} times today, the daily limit. Come back tomorrow.",
+    "clout.levelUp.title": "New level: {level}",
+    "clout.levelUp.local": "You reached Local. People around town know your name.",
+    "clout.levelUp.sceneRegular": "You reached Scene Regular. The scene knows your face.",
+    "clout.levelUp.known": "You reached Known. People recognize you.",
+    "clout.levelUp.famous": "You reached Famous. The whole city is watching.",
+    "clout.levelUp.icon": "You reached Icon. You made it in New York.",
+    "clout.levelUp.unlocked": "Unlocked: {list}",
+    "clout.levelUp.close": "Close",
+    "clout.levelUp.closeLabel": "Close the {level} message",
+    "clout.flex.time.dawn": "at sunrise",
+    "clout.flex.time.morning": "in the morning light",
+    "clout.flex.time.day": "in broad daylight",
+    "clout.flex.time.golden": "at golden hour",
+    "clout.flex.time.dusk": "at dusk",
+    "clout.flex.time.night": "after dark"
+  }
+}

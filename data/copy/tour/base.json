@@ -1,0 +1,18 @@
+{
+  "strings": {
+    "tour.label": "Tour",
+    "tour.progress": "{step}/{total}",
+    "tour.progressLabel": "Step {step} of {total}",
+    "tour.step.hud": "Up top: your cash, clock and energy. Breakfast first?",
+    "tour.step.find": "Tap Places to see the spots near you.",
+    "tour.step.pick": "Pick {place} from the list.",
+    "tour.step.buy": "Tap {action}. Breakfast of champions.",
+    "tour.step.buyAway": "{walk}, then tap {action}. Breakfast of champions.",
+    "tour.step.cash": "Paid. Your cash went from {before} to {after}.",
+    "tour.step.done": "That's the loop: earn, spend, blow up. Replay me from More, then Help.",
+    "tour.next": "Next",
+    "tour.done": "Done",
+    "tour.skip": "Skip",
+    "tour.skipLabel": "Skip the tour"
+  }
+}

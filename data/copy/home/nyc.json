@@ -1,0 +1,12 @@
+{
+  "id": "nyc",
+  "strings": {
+    "home.storage.none": "No decor yet. Bare walls are not the vibe. Shops around the city sell it.",
+    "home.placed": "{item} is on the {slot}. The place is coming together.",
+    "home.move.done": "Keys in hand. Welcome to {home}. Rent is {rent}/wk now.",
+    "home.lock.borough": "{borough}? Get your name ringing first. Reach {level} clout; you're at {current}.",
+    "home.lock.funds": "Landlord wants {required} in hand with rent covered. Your wallet says {available}.",
+    "home.lock.brooklyn1br": "Brooklyn 1BR? Get your name ringing first. Reach {level} clout; you're at {current}.",
+    "home.lock.manhattanLoft": "Manhattan loft? On bodega money? Work your way here: reach {level} clout. You're at {current}."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "autoHideReports": 3,
+  "autoHideMinReporterAgeHours": 24,
+  "falseReportThreshold": 3,
+  "reportsPerDay": 20,
+  "noteMaxChars": 280,
+  "appealMaxChars": 500,
+  "blockUndoSeconds": 10,
+  "blockMax": 1000,
+  "muteMax": 1000,
+  "retention": {
+    "evidenceDays": 180,
+    "reportRowDays": 730,
+    "auditDays": 730,
+    "appealDays": 180
+  },
+  "console": {
+    "signInMaxPerWindow": 5,
+    "signInWindowMs": 900000,
+    "queueLimit": 50
+  }
+}

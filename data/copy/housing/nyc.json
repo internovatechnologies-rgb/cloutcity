@@ -1,0 +1,6 @@
+{
+  "id": "nyc",
+  "strings": {
+    "housing.rent.ranked": "{home}: {rent} a week. The {rank} rent in the five boroughs."
+  }
+}

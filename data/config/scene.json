@@ -1,0 +1,372 @@
+{
+  "camera": {
+    "fovDeg": 45,
+    "distanceM": 4500,
+    "minDistanceM": 250,
+    "maxDistanceM": 40000,
+    "polarDeg": {
+      "default": 48,
+      "min": 12,
+      "max": 60
+    },
+    "azimuthDeg": {
+      "default": 0,
+      "min": -40,
+      "max": 40
+    },
+    "nearPerDistance": 0.01,
+    "nearMinM": 1,
+    "nearMaxM": 500,
+    "farPerMaxDistance": 2.5
+  },
+  "land": {
+    "heightM": 60,
+    "baseM": 30
+  },
+  "water": {
+    "extraM": 20000
+  },
+  "parks": {
+    "liftM": 1
+  },
+  "subway": {
+    "liftM": 4,
+    "lineWidthPx": 3,
+    "casing": true,
+    "casingWidthPx": 6
+  },
+  "stations": {
+    "radialSegments": 8,
+    "heightM": 10,
+    "radiusPerDistance": 0.004,
+    "minRadiusM": 6,
+    "maxRadiusM": 120,
+    "rescaleRatio": 1.15
+  },
+  "avatar": {
+    "heightPerDistance": 0.012,
+    "minHeightM": 3,
+    "maxHeightM": 400,
+    "radiusRatio": 0.22,
+    "ringOuterRatio": 0.6,
+    "ringInnerRatio": 0.42,
+    "ringLiftRatio": 0.02,
+    "capSegments": 4,
+    "radialSegments": 12,
+    "ringSegments": 24
+  },
+  "labels": {
+    "maxDistanceM": 12000,
+    "chipSizeM": 150,
+    "chipGapM": 20,
+    "offsetM": 160,
+    "liftM": 6,
+    "atlasCellPx": 64,
+    "alphaTest": 0.5,
+    "chipFill": 0.9,
+    "cornerRadius": 0.22,
+    "fontScale": 0.58,
+    "textMaxWidth": 0.78
+  },
+  "lights": {
+    "shadow": {
+      "extentPerDistance": 0.9,
+      "lightPerDistance": 2,
+      "depthPerDistance": 4,
+      "bias": -0.0005,
+      "normalBias": 0.02
+    }
+  },
+  "dayNight": {
+    "quantizeMinutes": 5,
+    "minSunElevationDeg": 25,
+    "unknownMinute": 480,
+    "fog": {
+      "nearPerDistance": 2.5,
+      "farPerDistance": 8
+    },
+    "room": {
+      "sunScale": 0.552,
+      "ambientScale": 0.821,
+      "lampMix": 0.6
+    },
+    "keyframes": [
+      {
+        "id": "dawn",
+        "atMinute": 345,
+        "holdMinutes": 0,
+        "ui": "day",
+        "sun": {
+          "azimuthDeg": 75,
+          "elevationDeg": 4
+        },
+        "sunIntensity": 1.0,
+        "shadowIntensity": 0.5,
+        "ambientIntensity": 1.1,
+        "hemisphereIntensity": 1.0,
+        "nightGlow": 0.4
+      },
+      {
+        "id": "morning",
+        "atMinute": 420,
+        "holdMinutes": 60,
+        "ui": "day",
+        "sun": {
+          "azimuthDeg": 110,
+          "elevationDeg": 30
+        },
+        "sunIntensity": 1.4,
+        "shadowIntensity": 0.8,
+        "ambientIntensity": 0.8,
+        "hemisphereIntensity": 0.75,
+        "nightGlow": 0
+      },
+      {
+        "id": "day",
+        "atMinute": 600,
+        "holdMinutes": 330,
+        "ui": "day",
+        "sun": {
+          "azimuthDeg": 180,
+          "elevationDeg": 62
+        },
+        "sunIntensity": 1.55,
+        "shadowIntensity": 0.9,
+        "ambientIntensity": 0.85,
+        "hemisphereIntensity": 0.8,
+        "nightGlow": 0
+      },
+      {
+        "id": "golden",
+        "atMinute": 1050,
+        "holdMinutes": 30,
+        "ui": "day",
+        "sun": {
+          "azimuthDeg": 250,
+          "elevationDeg": 14
+        },
+        "sunIntensity": 1.5,
+        "shadowIntensity": 0.8,
+        "ambientIntensity": 0.8,
+        "hemisphereIntensity": 0.75,
+        "nightGlow": 0.1
+      },
+      {
+        "id": "dusk",
+        "atMinute": 1140,
+        "holdMinutes": 0,
+        "ui": "night",
+        "sun": {
+          "azimuthDeg": 285,
+          "elevationDeg": 3
+        },
+        "sunIntensity": 0.45,
+        "shadowIntensity": 0.5,
+        "ambientIntensity": 0.95,
+        "hemisphereIntensity": 0.85,
+        "nightGlow": 0.7
+      },
+      {
+        "id": "night",
+        "atMinute": 1230,
+        "holdMinutes": 435,
+        "ui": "night",
+        "sun": {
+          "azimuthDeg": 330,
+          "elevationDeg": 35
+        },
+        "sunIntensity": 0.35,
+        "shadowIntensity": 0.35,
+        "ambientIntensity": 0.4,
+        "hemisphereIntensity": 0.45,
+        "nightGlow": 1
+      }
+    ]
+  },
+  "startup": {
+    "idleTimeoutMs": 300
+  },
+  "dimmed": {
+    "towardBackground": 0.55
+  },
+  "pins": {
+    "liftM": 2,
+    "heightPerDistance": 0.02,
+    "minHeightM": 10,
+    "maxHeightM": 420,
+    "rescaleRatio": 1.15,
+    "radialSegments": 6,
+    "hitRadiusPx": 24,
+    "ambiguityPx": 6,
+    "tapSlopPx": 8,
+    "tapMaxMs": 400,
+    "ringRadius": 0.55,
+    "ringSegments": 24,
+    "nightGlow": 0.35
+  },
+  "focus": {
+    "tweenMs": 350,
+    "maxDistanceM": 3000
+  },
+  "travel": {
+    "taxiLengthRatio": 1.2,
+    "trainLengthRatio": 2.6,
+    "vehicleWidthRatio": 0.45,
+    "vehicleHeightRatio": 0.4,
+    "trailMaxPoints": 64,
+    "trailWidthPx": 3,
+    "trailStepRatio": 0.5,
+    "trailLiftRatio": 0.05,
+    "trailOnLow": false
+  },
+  "chips": {
+    "widthM": 2400,
+    "heightM": 600,
+    "liftM": 8,
+    "atlasWidthPx": 512,
+    "atlasHeightPx": 128,
+    "fontScale": 0.42,
+    "textMaxWidth": 0.9,
+    "cornerRadius": 0.3,
+    "alphaTest": 0.5
+  },
+  "models": {
+    "shading": "lit",
+    "litMaterial": {
+      "low": "lambert",
+      "mid": "standard",
+      "high": "standard"
+    },
+    "roughness": 0.9,
+    "metalness": 0,
+    "emissive": {
+      "dayIntensity": 0,
+      "nightIntensity": 1.2
+    },
+    "cacheMaxEntries": 48,
+    "player": {
+      "head": "head-female-c",
+      "body": "body-female-c",
+      "clip": "idle",
+      "minDeviceMemoryGB": 2,
+      "capsuleTiers": ["low"]
+    },
+    "decor": {
+      "thrift-flatweave-rug": {
+        "model": "rug",
+        "slot": "pattern"
+      },
+      "cloud-lounge-chair": {
+        "model": "armchair",
+        "slot": "upholstery"
+      },
+      "windowsill-monstera": {
+        "model": "plant",
+        "slot": "pot"
+      }
+    }
+  },
+  "fallback": {
+    "metresPerUnit": 20,
+    "toleranceM": 50,
+    "minLandAreaM2": 150000,
+    "minParkAreaM2": 600000,
+    "dotRadiusM": 320,
+    "labelSizeM": 1500,
+    "labelOpacity": 0.85,
+    "dimmedLabelOpacity": 0.5
+  },
+  "apartment": {
+    "floorThicknessM": 0.12,
+    "insetM": 0.006,
+    "trimHeightM": 0.1,
+    "ledgeDepthM": 0.32,
+    "ledgeThicknessM": 0.05,
+    "tableSizeM": 0.5,
+    "marker": {
+      "radiusM": 0.17,
+      "segments": 16,
+      "liftM": 0.02,
+      "selectedScale": 1.35
+    },
+    "hitRadiusPx": 26,
+    "ambiguityPx": 6,
+    "fitMargin": 1.06,
+    "lights": {
+      "sunDirection": {
+        "x": -0.6,
+        "y": 1,
+        "z": 0.5
+      },
+      "shadowMapSizePx": 1024
+    },
+    "blob": {
+      "radiusM": 0.36,
+      "opacity": 0.35,
+      "liftM": 0.004
+    }
+  },
+  "landmarks": {
+    "heightScale": 1,
+    "lod": {
+      "low": {
+        "distancesM": [0, 2000],
+        "cullM": 6000
+      },
+      "mid": {
+        "distancesM": [0, 1200, 3500],
+        "cullM": 9000
+      },
+      "high": {
+        "distancesM": [0, 1800, 5000],
+        "cullM": 12000
+      }
+    },
+    "bridgeDistanceMultiplier": 2,
+    "hysteresis": 0.1,
+    "outline": {
+      "low": false,
+      "mid": true,
+      "high": true
+    },
+    "windows": {
+      "low": false,
+      "mid": true,
+      "high": true
+    },
+    "labelMaxDistanceM": 6000,
+    "outlineWidthM": 1.5
+  },
+  "buildings": {
+    "floorM": 3.3,
+    "windowSpacingM": 4,
+    "windowWidth": 0.5,
+    "windowHeight": 0.45,
+    "litShare": 0.55,
+    "windows": {
+      "low": false,
+      "mid": true,
+      "high": true
+    },
+    "wallJitter": 0.12,
+    "viewM": {
+      "districts": 9000,
+      "blocks": 9000
+    },
+    "loadMarginM": 1500,
+    "buildSliceMs": 8,
+    "windowTileCells": 4
+  },
+  "landmarkChips": {
+    "widthM": 1000,
+    "heightM": 200,
+    "offsetM": 260,
+    "liftM": 12,
+    "atlasWidthPx": 512,
+    "cellHeightPx": 96,
+    "fontScale": 0.5,
+    "textMaxWidth": 0.9,
+    "cornerRadius": 0.3,
+    "alphaTest": 0.5
+  }
+}

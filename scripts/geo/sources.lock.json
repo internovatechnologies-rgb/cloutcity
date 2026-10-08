@@ -1,0 +1,443 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "dcp-borough-boundaries",
+      "title": "Borough Boundaries (clipped to shoreline)",
+      "publisher": "NYC Department of City Planning",
+      "catalogUrl": "https://data.cityofnewyork.us/d/gthc-hcne",
+      "url": "https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/NYC_Borough_Boundary/FeatureServer/0/query?where=1%3D1&outFields=BoroCode,BoroName&outSR=4326&orderByFields=BoroCode&f=geojson",
+      "file": "dcp-borough-boundaries.geojson",
+      "terms": {
+        "name": "NYC Open Data Terms of Use",
+        "url": "https://www.nyc.gov/html/data/terms.html"
+      },
+      "retrieved": "2026-10-06",
+      "sha256": "172a76054f2cd84cadf57ccb848e4fac013b542501ae78df1dcf77ba105c965f",
+      "bytes": 2982509
+    },
+    {
+      "id": "dcp-nta-2020",
+      "title": "2020 Neighborhood Tabulation Areas (NTAs)",
+      "publisher": "NYC Department of City Planning",
+      "catalogUrl": "https://data.cityofnewyork.us/d/9nt8-h7nd",
+      "url": "https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/NYC_Neighborhood_Tabulation_Areas_2020/FeatureServer/0/query?where=1%3D1&outFields=BoroCode,BoroName,NTA2020,NTAName,NTAType,CDTA2020,CDTAName&outSR=4326&orderByFields=NTA2020&f=geojson",
+      "file": "dcp-nta-2020.geojson",
+      "terms": {
+        "name": "NYC Open Data Terms of Use",
+        "url": "https://www.nyc.gov/html/data/terms.html"
+      },
+      "retrieved": "2026-10-06",
+      "sha256": "b7cb58bcbaf4609f6ce8f184f03e19040382a70cbdfb0d6cac194811b42f7d4c",
+      "bytes": 4323362
+    },
+    {
+      "id": "mta-gtfs-subway",
+      "title": "MTA New York City Transit subway static GTFS",
+      "publisher": "Metropolitan Transportation Authority (MTA)",
+      "catalogUrl": "https://www.mta.info/developers",
+      "url": "https://rrgtfsfeeds.s3.amazonaws.com/gtfs_subway.zip",
+      "file": "mta-gtfs-subway.zip",
+      "terms": {
+        "name": "MTA Developer Terms and Conditions (updated 2024-03-13)",
+        "url": "https://www.mta.info/developers/terms-and-conditions"
+      },
+      "retrieved": "2026-10-06",
+      "sha256": "2c9e69b82ac596a2fe660b56656509570cfba3c2e4c50be75eaf624eee1bc6f8",
+      "bytes": 5615228
+    },
+    {
+      "id": "dcp-mappluto-density",
+      "title": "MapPLUTO: building density by community district",
+      "publisher": "NYC Department of City Planning",
+      "catalogUrl": "https://www.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page",
+      "url": "https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/MAPPLUTO/FeatureServer/0/query?where=1%3D1&outStatistics=%5B%7B%22statisticType%22%3A%22count%22%2C%22onStatisticField%22%3A%22CD%22%2C%22outStatisticFieldName%22%3A%22lots%22%7D%2C%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22BldgArea%22%2C%22outStatisticFieldName%22%3A%22bldgArea%22%7D%2C%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22LotArea%22%2C%22outStatisticFieldName%22%3A%22lotArea%22%7D%2C%7B%22statisticType%22%3A%22avg%22%2C%22onStatisticField%22%3A%22NumFloors%22%2C%22outStatisticFieldName%22%3A%22avgFloors%22%7D%5D&groupByFieldsForStatistics=CD&orderByFields=CD&f=json",
+      "file": "dcp-mappluto-density.json",
+      "terms": {
+        "name": "NYC Open Data Terms of Use",
+        "url": "https://www.nyc.gov/html/data/terms.html"
+      },
+      "retrieved": "2026-10-07",
+      "sha256": "4a5d6e01f5df7a6a0e9c423a6ecec98bd4634bc0b858bc9b941bd44fdcd2a4b0",
+      "bytes": 8597
+    },
+    {
+      "id": "dcp-lion-5-avenue",
+      "title": "LION street centerline: 5 AVENUE",
+      "publisher": "NYC Department of City Planning",
+      "catalogUrl": "https://www.arcgis.com/home/item.html?id=db6fdacfc5ff44e7a244e2f798d98a7d",
+      "url": "https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/LION/FeatureServer/0/query?where=Street%3D%275+AVENUE%27&outFields=Street%2CSegmentID%2CSegmentTyp%2CRW_TYPE%2CFeatureTyp&outSR=4326&orderByFields=SegmentID%2COBJECTID&f=geojson",
+      "file": "dcp-lion-5-avenue.geojson",
+      "terms": {
+        "name": "NYC Open Data Terms of Use",
+        "url": "https://www.nyc.gov/html/data/terms.html"
+      },
+      "retrieved": "2026-10-07",
+      "sha256": "f388bc673fd9f39fca44e015cd4c706e23138590cd2a2d8358e3a06930161f41",
+      "bytes": 138332
+    },
+    {
+      "id": "dcp-lion-8-avenue",
+      "title": "LION street centerline: 8 AVENUE",
+      "publisher": "NYC Department of City Planning",
+      "catalogUrl": "https://www.arcgis.com/home/item.html?id=db6fdacfc5ff44e7a244e2f798d98a7d",
+      "url": "https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/LION/FeatureServer/0/query?where=Street%3D%278+AVENUE%27&outFields=Street%2CSegmentID%2CSegmentTyp%2CRW_TYPE%2CFeatureTyp&outSR=4326&orderByFields=SegmentID%2COBJECTID&f=geojson",
+      "file": "dcp-lion-8-avenue.geojson",
+      "terms": {
+        "name": "NYC Open Data Terms of Use",
+        "url": "https://www.nyc.gov/html/data/terms.html"
+      },
+      "retrieved": "2026-10-07",
+      "sha256": "882dc43027174539e8fe01ab0453644b77d98329c3d7eca03d086522374fa97d",
+      "bytes": 48631
+    },
+    {
+      "id": "dcp-lion-brooklyn-bridge",
+      "title": "LION street centerline: BROOKLYN BRIDGE",
+      "publisher": "NYC Department of City Planning",
+      "catalogUrl": "https://www.arcgis.com/home/item.html?id=db6fdacfc5ff44e7a244e2f798d98a7d",
+      "url": "https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/LION/FeatureServer/0/query?where=Street%3D%27BROOKLYN+BRIDGE%27&outFields=Street%2CSegmentID%2CSegmentTyp%2CRW_TYPE%2CFeatureTyp&outSR=4326&orderByFields=SegmentID%2COBJECTID&f=geojson",
+      "file": "dcp-lion-brooklyn-bridge.geojson",
+      "terms": {
+        "name": "NYC Open Data Terms of Use",
+        "url": "https://www.nyc.gov/html/data/terms.html"
+      },
+      "retrieved": "2026-10-07",
+      "sha256": "ec7b4784e782fa3c9bd3ea0c5162ae6cd0f363bc7900ab702be19124a0af62a2",
+      "bytes": 44983
+    },
+    {
+      "id": "dcp-lion-city-hall-park-greenway",
+      "title": "LION street centerline: CITY HALL PARK GREENWAY",
+      "publisher": "NYC Department of City Planning",
+      "catalogUrl": "https://www.arcgis.com/home/item.html?id=db6fdacfc5ff44e7a244e2f798d98a7d",
+      "url": "https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/LION/FeatureServer/0/query?where=Street%3D%27CITY+HALL+PARK+GREENWAY%27&outFields=Street%2CSegmentID%2CSegmentTyp%2CRW_TYPE%2CFeatureTyp&outSR=4326&orderByFields=SegmentID%2COBJECTID&f=geojson",
+      "file": "dcp-lion-city-hall-park-greenway.geojson",
+      "terms": {
+        "name": "NYC Open Data Terms of Use",
+        "url": "https://www.nyc.gov/html/data/terms.html"
+      },
+      "retrieved": "2026-10-07",
+      "sha256": "3053a0e71dd6ebaf197d6ede87330aaec1f8af98b1f66ea039ab3429accfdb02",
+      "bytes": 845
+    },
+    {
+      "id": "dcp-lion-ed-koch-queensboro-bridge",
+      "title": "LION street centerline: ED KOCH QUEENSBORO BRIDGE",
+      "publisher": "NYC Department of City Planning",
+      "catalogUrl": "https://www.arcgis.com/home/item.html?id=db6fdacfc5ff44e7a244e2f798d98a7d",
+      "url": "https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/LION/FeatureServer/0/query?where=Street%3D%27ED+KOCH+QUEENSBORO+BRIDGE%27&outFields=Street%2CSegmentID%2CSegmentTyp%2CRW_TYPE%2CFeatureTyp&outSR=4326&orderByFields=SegmentID%2COBJECTID&f=geojson",
+      "file": "dcp-lion-ed-koch-queensboro-bridge.geojson",
+      "terms": {
+        "name": "NYC Open Data Terms of Use",
+        "url": "https://www.nyc.gov/html/data/terms.html"
+      },
+      "retrieved": "2026-10-07",
+      "sha256": "e2c60bddd1e8aa1e53ecdda7ee6ccf0b118666e191d9b3f97d11acf479a7997c",
+      "bytes": 57516
+    },
+    {
+      "id": "dcp-lion-ferry-terminal-viaduct",
+      "title": "LION street centerline: FERRY TERMINAL VIADUCT",
+      "publisher": "NYC Department of City Planning",
+      "catalogUrl": "https://www.arcgis.com/home/item.html?id=db6fdacfc5ff44e7a244e2f798d98a7d",
+      "url": "https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/LION/FeatureServer/0/query?where=Street%3D%27FERRY+TERMINAL+VIADUCT%27&outFields=Street%2CSegmentID%2CSegmentTyp%2CRW_TYPE%2CFeatureTyp&outSR=4326&orderByFields=SegmentID%2COBJECTID&f=geojson",
+      "file": "dcp-lion-ferry-terminal-viaduct.geojson",
+      "terms": {
+        "name": "NYC Open Data Terms of Use",
+        "url": "https://www.nyc.gov/html/data/terms.html"
+      },
+      "retrieved": "2026-10-07",
+      "sha256": "412dab6ef730681710d51fd3eb26601ee0425f3b81decb983fc1761c223e54af",
+      "bytes": 10531
+    },
+    {
+      "id": "dcp-lion-joralemon-street",
+      "title": "LION street centerline: JORALEMON STREET",
+      "publisher": "NYC Department of City Planning",
+      "catalogUrl": "https://www.arcgis.com/home/item.html?id=db6fdacfc5ff44e7a244e2f798d98a7d",
+      "url": "https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/LION/FeatureServer/0/query?where=Street%3D%27JORALEMON+STREET%27&outFields=Street%2CSegmentID%2CSegmentTyp%2CRW_TYPE%2CFeatureTyp&outSR=4326&orderByFields=SegmentID%2COBJECTID&f=geojson",
+      "file": "dcp-lion-joralemon-street.geojson",
+      "terms": {
+        "name": "NYC Open Data Terms of Use",
+        "url": "https://www.nyc.gov/html/data/terms.html"
+      },
+      "retrieved": "2026-10-07",
+      "sha256": "740fd36a42a22b89c3f28039f79863c8e539abdc5271eb4d00248438bcf21f40",
+      "bytes": 4951
+    },
+    {
+      "id": "dcp-lion-lexington-avenue",
+      "title": "LION street centerline: LEXINGTON AVENUE",
+      "publisher": "NYC Department of City Planning",
+      "catalogUrl": "https://www.arcgis.com/home/item.html?id=db6fdacfc5ff44e7a244e2f798d98a7d",
+      "url": "https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/LION/FeatureServer/0/query?where=Street%3D%27LEXINGTON+AVENUE%27&outFields=Street%2CSegmentID%2CSegmentTyp%2CRW_TYPE%2CFeatureTyp&outSR=4326&orderByFields=SegmentID%2COBJECTID&f=geojson",
+      "file": "dcp-lion-lexington-avenue.geojson",
+      "terms": {
+        "name": "NYC Open Data Terms of Use",
+        "url": "https://www.nyc.gov/html/data/terms.html"
+      },
+      "retrieved": "2026-10-07",
+      "sha256": "7d7ed6ac9c7fe13d2fd87896641dda688b5e2f7258e2a2ceb6bab3683c52ee53",
+      "bytes": 63440
+    },
+    {
+      "id": "dcp-lion-manhattan-bridge",
+      "title": "LION street centerline: MANHATTAN BRIDGE",
+      "publisher": "NYC Department of City Planning",
+      "catalogUrl": "https://www.arcgis.com/home/item.html?id=db6fdacfc5ff44e7a244e2f798d98a7d",
+      "url": "https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/LION/FeatureServer/0/query?where=Street%3D%27MANHATTAN+BRIDGE%27&outFields=Street%2CSegmentID%2CSegmentTyp%2CRW_TYPE%2CFeatureTyp&outSR=4326&orderByFields=SegmentID%2COBJECTID&f=geojson",
+      "file": "dcp-lion-manhattan-bridge.geojson",
+      "terms": {
+        "name": "NYC Open Data Terms of Use",
+        "url": "https://www.nyc.gov/html/data/terms.html"
+      },
+      "retrieved": "2026-10-07",
+      "sha256": "4c555e93c88a1c20aded461fe2cefc6629c773398d5dee172def06232c763513",
+      "bytes": 49792
+    },
+    {
+      "id": "dcp-lion-queens-boulevard",
+      "title": "LION street centerline: QUEENS BOULEVARD",
+      "publisher": "NYC Department of City Planning",
+      "catalogUrl": "https://www.arcgis.com/home/item.html?id=db6fdacfc5ff44e7a244e2f798d98a7d",
+      "url": "https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/LION/FeatureServer/0/query?where=Street%3D%27QUEENS+BOULEVARD%27&outFields=Street%2CSegmentID%2CSegmentTyp%2CRW_TYPE%2CFeatureTyp&outSR=4326&orderByFields=SegmentID%2COBJECTID&f=geojson",
+      "file": "dcp-lion-queens-boulevard.geojson",
+      "terms": {
+        "name": "NYC Open Data Terms of Use",
+        "url": "https://www.nyc.gov/html/data/terms.html"
+      },
+      "retrieved": "2026-10-07",
+      "sha256": "d7cf312a0c26144a5e7e625e43b70b89f40e4859683794416c6bd8cd977703c6",
+      "bytes": 296024
+    },
+    {
+      "id": "dcp-lion-sutphin-boulevard",
+      "title": "LION street centerline: SUTPHIN BOULEVARD",
+      "publisher": "NYC Department of City Planning",
+      "catalogUrl": "https://www.arcgis.com/home/item.html?id=db6fdacfc5ff44e7a244e2f798d98a7d",
+      "url": "https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/LION/FeatureServer/0/query?where=Street%3D%27SUTPHIN+BOULEVARD%27&outFields=Street%2CSegmentID%2CSegmentTyp%2CRW_TYPE%2CFeatureTyp&outSR=4326&orderByFields=SegmentID%2COBJECTID&f=geojson",
+      "file": "dcp-lion-sutphin-boulevard.geojson",
+      "terms": {
+        "name": "NYC Open Data Terms of Use",
+        "url": "https://www.nyc.gov/html/data/terms.html"
+      },
+      "retrieved": "2026-10-07",
+      "sha256": "d371e5bc0c6ba7b47367779c2152bbddf8fd46c73f97ae69dc91576dc0744722",
+      "bytes": 20407
+    },
+    {
+      "id": "dcp-lion-vanderbilt-avenue",
+      "title": "LION street centerline: VANDERBILT AVENUE",
+      "publisher": "NYC Department of City Planning",
+      "catalogUrl": "https://www.arcgis.com/home/item.html?id=db6fdacfc5ff44e7a244e2f798d98a7d",
+      "url": "https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/LION/FeatureServer/0/query?where=Street%3D%27VANDERBILT+AVENUE%27&outFields=Street%2CSegmentID%2CSegmentTyp%2CRW_TYPE%2CFeatureTyp&outSR=4326&orderByFields=SegmentID%2COBJECTID&f=geojson",
+      "file": "dcp-lion-vanderbilt-avenue.geojson",
+      "terms": {
+        "name": "NYC Open Data Terms of Use",
+        "url": "https://www.nyc.gov/html/data/terms.html"
+      },
+      "retrieved": "2026-10-07",
+      "sha256": "24a1c143a0d8925f97ce04894472ca57dda0777507c76fffac93d55290063ec6",
+      "bytes": 17610
+    }
+  ],
+  "pagedSources": [
+    {
+      "id": "oti-buildings-midtown",
+      "title": "Building Footprints (Midtown)",
+      "publisher": "NYC Office of Technology and Innovation (OTI)",
+      "catalogUrl": "https://data.cityofnewyork.us/d/5zhs-2jue",
+      "url": "https://services6.arcgis.com/yG5s3afENB5iO9fj/arcgis/rest/services/BUILDING_view/FeatureServer/0/query?where=FEATURE_CODE%20IN%20(2100%2C5100%2C1006)%20AND%20Shape__Area%3E%3D40&geometry=-73.999382%2C40.743193%2C-73.968618%2C40.766607&geometryType=esriGeometryEnvelope&inSR=4326&outFields=HEIGHT_ROOF&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&f=geojson",
+      "countUrl": "https://services6.arcgis.com/yG5s3afENB5iO9fj/arcgis/rest/services/BUILDING_view/FeatureServer/0/query?where=FEATURE_CODE%20IN%20(2100%2C5100%2C1006)%20AND%20Shape__Area%3E%3D40&geometry=-73.999382%2C40.743193%2C-73.968618%2C40.766607&geometryType=esriGeometryEnvelope&inSR=4326&returnCountOnly=true&f=json",
+      "pageSize": 2000,
+      "terms": {
+        "name": "NYC Open Data Terms of Use",
+        "url": "https://www.nyc.gov/html/data/terms.html"
+      },
+      "retrieved": "2026-10-07",
+      "count": 5731,
+      "pages": [
+        {
+          "sha256": "fe31f02d69d9b248ba128f64b529beafc53636acfa327f044f5391769cde3b11",
+          "bytes": 773921
+        },
+        {
+          "sha256": "8458854ea5559008ecbfe83255102f23b9e0693b99e59b91b9e1e9fbfadbbe5b",
+          "bytes": 755791
+        },
+        {
+          "sha256": "3f6a2f3bcae327c790432f5f1ae1565eb900a3a7e69f123c21eebaab5423b472",
+          "bytes": 670455
+        }
+      ]
+    },
+    {
+      "id": "oti-buildings-lower-manhattan",
+      "title": "Building Footprints (Lower Manhattan)",
+      "publisher": "NYC Office of Technology and Innovation (OTI)",
+      "catalogUrl": "https://data.cityofnewyork.us/d/5zhs-2jue",
+      "url": "https://services6.arcgis.com/yG5s3afENB5iO9fj/arcgis/rest/services/BUILDING_view/FeatureServer/0/query?where=FEATURE_CODE%20IN%20(2100%2C5100%2C1006)%20AND%20Shape__Area%3E%3D40&geometry=-74.020833%2C40.698494%2C-73.997167%2C40.716506&geometryType=esriGeometryEnvelope&inSR=4326&outFields=HEIGHT_ROOF&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&f=geojson",
+      "countUrl": "https://services6.arcgis.com/yG5s3afENB5iO9fj/arcgis/rest/services/BUILDING_view/FeatureServer/0/query?where=FEATURE_CODE%20IN%20(2100%2C5100%2C1006)%20AND%20Shape__Area%3E%3D40&geometry=-74.020833%2C40.698494%2C-73.997167%2C40.716506&geometryType=esriGeometryEnvelope&inSR=4326&returnCountOnly=true&f=json",
+      "pageSize": 2000,
+      "terms": {
+        "name": "NYC Open Data Terms of Use",
+        "url": "https://www.nyc.gov/html/data/terms.html"
+      },
+      "retrieved": "2026-10-07",
+      "count": 1166,
+      "pages": [
+        {
+          "sha256": "c030e7ff8664c8a887c5abd5bbff126491c88a5ecef92b0a872b7b8f84e7f71d",
+          "bytes": 518487
+        }
+      ]
+    },
+    {
+      "id": "oti-buildings-downtown-brooklyn-dumbo",
+      "title": "Building Footprints (Downtown Brooklyn and DUMBO)",
+      "publisher": "NYC Office of Technology and Innovation (OTI)",
+      "catalogUrl": "https://data.cityofnewyork.us/d/5zhs-2jue",
+      "url": "https://services6.arcgis.com/yG5s3afENB5iO9fj/arcgis/rest/services/BUILDING_view/FeatureServer/0/query?where=FEATURE_CODE%20IN%20(2100%2C5100%2C1006)%20AND%20Shape__Area%3E%3D40&geometry=-73.998649%2C40.688895%2C-73.977351%2C40.705105&geometryType=esriGeometryEnvelope&inSR=4326&outFields=HEIGHT_ROOF&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&f=geojson",
+      "countUrl": "https://services6.arcgis.com/yG5s3afENB5iO9fj/arcgis/rest/services/BUILDING_view/FeatureServer/0/query?where=FEATURE_CODE%20IN%20(2100%2C5100%2C1006)%20AND%20Shape__Area%3E%3D40&geometry=-73.998649%2C40.688895%2C-73.977351%2C40.705105&geometryType=esriGeometryEnvelope&inSR=4326&returnCountOnly=true&f=json",
+      "pageSize": 2000,
+      "terms": {
+        "name": "NYC Open Data Terms of Use",
+        "url": "https://www.nyc.gov/html/data/terms.html"
+      },
+      "retrieved": "2026-10-07",
+      "count": 2426,
+      "pages": [
+        {
+          "sha256": "0e4100ddd322be3754d954636d634e970b7a3baddd0d51e71e0016e9209e3f79",
+          "bytes": 778358
+        },
+        {
+          "sha256": "7510cd6afb1d8c4c45009984d2f6a2a450f456b3df4c60e2cf74d62b1bba684d",
+          "bytes": 146016
+        }
+      ]
+    },
+    {
+      "id": "oti-buildings-williamsburg",
+      "title": "Building Footprints (Williamsburg)",
+      "publisher": "NYC Office of Technology and Innovation (OTI)",
+      "catalogUrl": "https://data.cityofnewyork.us/d/5zhs-2jue",
+      "url": "https://services6.arcgis.com/yG5s3afENB5iO9fj/arcgis/rest/services/BUILDING_view/FeatureServer/0/query?where=FEATURE_CODE%20IN%20(2100%2C5100%2C1006)%20AND%20Shape__Area%3E%3D40&geometry=-73.968649%2C40.705895%2C-73.947351%2C40.722105&geometryType=esriGeometryEnvelope&inSR=4326&outFields=HEIGHT_ROOF&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&f=geojson",
+      "countUrl": "https://services6.arcgis.com/yG5s3afENB5iO9fj/arcgis/rest/services/BUILDING_view/FeatureServer/0/query?where=FEATURE_CODE%20IN%20(2100%2C5100%2C1006)%20AND%20Shape__Area%3E%3D40&geometry=-73.968649%2C40.705895%2C-73.947351%2C40.722105&geometryType=esriGeometryEnvelope&inSR=4326&returnCountOnly=true&f=json",
+      "pageSize": 2000,
+      "terms": {
+        "name": "NYC Open Data Terms of Use",
+        "url": "https://www.nyc.gov/html/data/terms.html"
+      },
+      "retrieved": "2026-10-07",
+      "count": 4695,
+      "pages": [
+        {
+          "sha256": "8b8871100b6464f789588a25597b43bef2413925881113d491d47cc8155598ac",
+          "bytes": 630618
+        },
+        {
+          "sha256": "b1bf74e20ee32b1eb278c581cc9de9dd9fbf3086fc7763a18ca313c6ac452b95",
+          "bytes": 633898
+        },
+        {
+          "sha256": "87d1e4ca5f97fe58414f426dfbe9dc836379dc6953dcab0bec80fb317b86fe80",
+          "bytes": 205760
+        }
+      ]
+    },
+    {
+      "id": "oti-buildings-long-island-city",
+      "title": "Building Footprints (Long Island City)",
+      "publisher": "NYC Office of Technology and Innovation (OTI)",
+      "catalogUrl": "https://data.cityofnewyork.us/d/5zhs-2jue",
+      "url": "https://services6.arcgis.com/yG5s3afENB5iO9fj/arcgis/rest/services/BUILDING_view/FeatureServer/0/query?where=FEATURE_CODE%20IN%20(2100%2C5100%2C1006)%20AND%20Shape__Area%3E%3D40&geometry=-73.955833%2C40.737994%2C-73.932167%2C40.756006&geometryType=esriGeometryEnvelope&inSR=4326&outFields=HEIGHT_ROOF&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&f=geojson",
+      "countUrl": "https://services6.arcgis.com/yG5s3afENB5iO9fj/arcgis/rest/services/BUILDING_view/FeatureServer/0/query?where=FEATURE_CODE%20IN%20(2100%2C5100%2C1006)%20AND%20Shape__Area%3E%3D40&geometry=-73.955833%2C40.737994%2C-73.932167%2C40.756006&geometryType=esriGeometryEnvelope&inSR=4326&returnCountOnly=true&f=json",
+      "pageSize": 2000,
+      "terms": {
+        "name": "NYC Open Data Terms of Use",
+        "url": "https://www.nyc.gov/html/data/terms.html"
+      },
+      "retrieved": "2026-10-07",
+      "count": 1978,
+      "pages": [
+        {
+          "sha256": "fb19dd7c1a6586139babbbc4af330d5e36c647e55009aeb58d5cf6314260fecc",
+          "bytes": 692172
+        }
+      ]
+    },
+    {
+      "id": "oti-buildings-astoria",
+      "title": "Building Footprints (Astoria)",
+      "publisher": "NYC Office of Technology and Innovation (OTI)",
+      "catalogUrl": "https://data.cityofnewyork.us/d/5zhs-2jue",
+      "url": "https://services6.arcgis.com/yG5s3afENB5iO9fj/arcgis/rest/services/BUILDING_view/FeatureServer/0/query?where=FEATURE_CODE%20IN%20(2100%2C5100%2C1006)%20AND%20Shape__Area%3E%3D40&geometry=-73.931283%2C40.757696%2C-73.914717%2C40.770304&geometryType=esriGeometryEnvelope&inSR=4326&outFields=HEIGHT_ROOF&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&f=geojson",
+      "countUrl": "https://services6.arcgis.com/yG5s3afENB5iO9fj/arcgis/rest/services/BUILDING_view/FeatureServer/0/query?where=FEATURE_CODE%20IN%20(2100%2C5100%2C1006)%20AND%20Shape__Area%3E%3D40&geometry=-73.931283%2C40.757696%2C-73.914717%2C40.770304&geometryType=esriGeometryEnvelope&inSR=4326&returnCountOnly=true&f=json",
+      "pageSize": 2000,
+      "terms": {
+        "name": "NYC Open Data Terms of Use",
+        "url": "https://www.nyc.gov/html/data/terms.html"
+      },
+      "retrieved": "2026-10-07",
+      "count": 4454,
+      "pages": [
+        {
+          "sha256": "f6f4aebbd0fcb5371fda45a050b0db7a3b2fe1c3d68f95a92da037248321d333",
+          "bytes": 645660
+        },
+        {
+          "sha256": "6484beaeeab621dcf2416443c67dc0a9b54333f0cafab08cd3776696379d27dc",
+          "bytes": 638370
+        },
+        {
+          "sha256": "7a9bca95b78ff2a967f409cbeb49204b6d9af9601e6e5a7922ce89b8e34afc9a",
+          "bytes": 139116
+        }
+      ]
+    },
+    {
+      "id": "oti-buildings-flushing",
+      "title": "Building Footprints (Flushing)",
+      "publisher": "NYC Office of Technology and Innovation (OTI)",
+      "catalogUrl": "https://data.cityofnewyork.us/d/5zhs-2jue",
+      "url": "https://services6.arcgis.com/yG5s3afENB5iO9fj/arcgis/rest/services/BUILDING_view/FeatureServer/0/query?where=FEATURE_CODE%20IN%20(2100%2C5100%2C1006)%20AND%20Shape__Area%3E%3D40&geometry=-73.8371%2C40.753596%2C-73.8229%2C40.764404&geometryType=esriGeometryEnvelope&inSR=4326&outFields=HEIGHT_ROOF&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&f=geojson",
+      "countUrl": "https://services6.arcgis.com/yG5s3afENB5iO9fj/arcgis/rest/services/BUILDING_view/FeatureServer/0/query?where=FEATURE_CODE%20IN%20(2100%2C5100%2C1006)%20AND%20Shape__Area%3E%3D40&geometry=-73.8371%2C40.753596%2C-73.8229%2C40.764404&geometryType=esriGeometryEnvelope&inSR=4326&returnCountOnly=true&f=json",
+      "pageSize": 2000,
+      "terms": {
+        "name": "NYC Open Data Terms of Use",
+        "url": "https://www.nyc.gov/html/data/terms.html"
+      },
+      "retrieved": "2026-10-07",
+      "count": 1168,
+      "pages": [
+        {
+          "sha256": "fcbb1f88eb72a55cdd47b71472287023f4adfd97a87a09578dc3fc9df8a9dc8c",
+          "bytes": 447271
+        }
+      ]
+    },
+    {
+      "id": "oti-buildings-jamaica",
+      "title": "Building Footprints (Jamaica)",
+      "publisher": "NYC Office of Technology and Innovation (OTI)",
+      "catalogUrl": "https://data.cityofnewyork.us/d/5zhs-2jue",
+      "url": "https://services6.arcgis.com/yG5s3afENB5iO9fj/arcgis/rest/services/BUILDING_view/FeatureServer/0/query?where=FEATURE_CODE%20IN%20(2100%2C5100%2C1006)%20AND%20Shape__Area%3E%3D40&geometry=-73.8071%2C40.696596%2C-73.7929%2C40.707404&geometryType=esriGeometryEnvelope&inSR=4326&outFields=HEIGHT_ROOF&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID&f=geojson",
+      "countUrl": "https://services6.arcgis.com/yG5s3afENB5iO9fj/arcgis/rest/services/BUILDING_view/FeatureServer/0/query?where=FEATURE_CODE%20IN%20(2100%2C5100%2C1006)%20AND%20Shape__Area%3E%3D40&geometry=-73.8071%2C40.696596%2C-73.7929%2C40.707404&geometryType=esriGeometryEnvelope&inSR=4326&returnCountOnly=true&f=json",
+      "pageSize": 2000,
+      "terms": {
+        "name": "NYC Open Data Terms of Use",
+        "url": "https://www.nyc.gov/html/data/terms.html"
+      },
+      "retrieved": "2026-10-07",
+      "count": 953,
+      "pages": [
+        {
+          "sha256": "064257bb9ed258187d4c03177dd778902700851848d86674c99472ef8d67f510",
+          "bytes": 339253
+        }
+      ]
+    }
+  ]
+}

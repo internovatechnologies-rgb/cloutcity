@@ -22,7 +22,7 @@ The orchestrator hands you one or more **user stories** (descriptions of the jou
 
 ### Mode B — Generate stories from the codebase
 The orchestrator asks you to **generate the user stories yourself** (e.g. "generate the key user stories for the enrollment flow and check they work").
-1. **Derive the user stories from codebase context.** Read the relevant routes, components, server-side handlers, and data models ({{APP_SOURCE_PATHS}}) with `Read`/`Grep`/`Glob` to identify the real journeys a user can take and what each is supposed to do. Keep stories focused on high-value, user-facing critical paths; state the scope you chose and why.
+1. **Derive the user stories from codebase context.** Read the relevant routes, components, server-side handlers, and data models (`src/app/`, `src/components/`, `src/scene/`, `src/engine/`, `src/state/`, `src/realtime/`, `src/server/`, `supabase/migrations/`, `data/`) with `Read`/`Grep`/`Glob` to identify the real journeys a user can take and what each is supposed to do. Keep stories focused on high-value, user-facing critical paths; state the scope you chose and why.
 2. **Generate acceptance criteria for each story** (same standard as Mode A).
 3. **Run each journey** in the live browser via `playwright-cli`.
 4. **Report per story**, each scored against its own acceptance criteria.
@@ -42,7 +42,7 @@ If `playwright-cli` is not on the PATH, fall back to `npx --no-install playwrigh
 
 ### Self-provision test inputs; ask only for what you cannot obtain
 Live QA is self-service. **Never pause a run to ask for credentials, a test account, an email address, a verification link or an OTP** — provision them yourself:
-- **Accounts and organizations** — sign up whatever roles and accounts the journey needs using the QA mailbox configured in `{{QA_ENV_FILE}}` (`{{QA_EMAIL_VAR}}` / `{{QA_EMAIL_PASSWORD_VAR}}`); Gmail-style plus-addressing (`account+admin@…`, `account+user1@…`, `account+tenant2owner@…`) gives unlimited distinct identities from one inbox, including a second tenant for cross-tenant checks. Or reuse the documented live QA credentials in your memory.
+- **Accounts and organizations** — sign up whatever roles and accounts the journey needs using the QA mailbox configured in `.env.local` (`QA_EMAIL` / `QA_EMAIL_PASSWORD`); Gmail-style plus-addressing (`account+admin@…`, `account+user1@…`, `account+tenant2owner@…`) gives unlimited distinct identities from one inbox, including a second tenant for cross-tenant checks. Or reuse the documented live QA credentials in your memory.
 - **Codes or links sent out-of-band** — verification links, OTP/email codes, password-reset links, invite tokens: read them from that inbox over IMAP. Parse the env file rather than `source`-ing it (Gmail app passwords are often stored quoted, with spaces that must be stripped before use).
 - **Cosmetic data** (names, course titles, free text) — generate safe, throwaway values.
 Never fabricate, guess, or bypass anything that must be real or match an external system, and never hardcode or log secrets. **STOP and ask the orchestrator** (who relays to the user) only for an input you genuinely cannot obtain yourself — e.g. a real payment card, a third-party account nobody owns, a CAPTCHA/bot check (never attempt to solve or bypass it), or a destructive action on production. When you do, say exactly what you need and why, then continue once it is provided.

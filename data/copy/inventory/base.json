@@ -1,0 +1,27 @@
+{
+  "strings": {
+    "inventory.equip.label": "Wear {item} ({slot})",
+    "inventory.unequip.label": "Take off {item} ({slot})",
+    "inventory.gift.useOnSelf.label": "Use {item} on yourself",
+    "inventory.gift.usedOnSelf": "You used {item} on yourself.",
+    "inventory.gift.count": "{item}: {count} left",
+    "inventory.heading": "Inventory",
+    "inventory.empty": "Nothing here yet. Boutiques and thrift stores sell clothes, makeup, gifts and decor.",
+    "inventory.wearables.heading": "Clothes and makeup",
+    "inventory.gifts.heading": "Gifts",
+    "inventory.decor.heading": "Decor",
+    "inventory.decor.placed": "In your home: {slot}",
+    "inventory.decor.stored": "In storage",
+    "inventory.item.details": "{slot}, {rarity}",
+    "inventory.wearing": "Wearing",
+    "inventory.resale": "Sells for {price}",
+    "inventory.equip.button": "Wear",
+    "inventory.unequip.button": "Take off",
+    "inventory.sell.button": "Sell",
+    "inventory.gift.useButton": "Use",
+    "inventory.equipped": "You are wearing {item}.",
+    "inventory.unequipped": "You took off {item}.",
+    "inventory.kept": "Kept from a past run: a look only",
+    "inventory.sell.keptLabel": "Sell {item}: kept from a past run, so the shop won't buy it"
+  }
+}

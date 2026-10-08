@@ -1,0 +1,150 @@
+{
+  "quantumM": 1,
+  "landMinWeightM2": 20,
+  "landMinRingAreaM2": 2000,
+  "zoneMinWeightM2": 150,
+  "zoneMinRingAreaM2": 5000,
+  "parkMinRingAreaM2": 2000,
+  "subwayToleranceM": 3,
+  "subwayDedupCoverM": 5,
+  "stationOnLineToleranceM": 10,
+  "terminalGapMaxM": 150,
+  "stationAreaFallbackM": 300,
+  "waterMarginM": 2000,
+  "districts": [
+    {
+      "id": "midtown",
+      "label": "Midtown",
+      "borough": "manhattan",
+      "center": {
+        "lat": 40.7549,
+        "lng": -73.984
+      },
+      "radiusM": 1300
+    },
+    {
+      "id": "lower-manhattan",
+      "label": "Lower Manhattan",
+      "borough": "manhattan",
+      "center": {
+        "lat": 40.7075,
+        "lng": -74.009
+      },
+      "radiusM": 1000
+    },
+    {
+      "id": "downtown-brooklyn-dumbo",
+      "label": "Downtown Brooklyn and DUMBO",
+      "borough": "brooklyn",
+      "center": {
+        "lat": 40.697,
+        "lng": -73.988
+      },
+      "radiusM": 900
+    },
+    {
+      "id": "williamsburg",
+      "label": "Williamsburg",
+      "borough": "brooklyn",
+      "center": {
+        "lat": 40.714,
+        "lng": -73.958
+      },
+      "radiusM": 900
+    },
+    {
+      "id": "long-island-city",
+      "label": "Long Island City",
+      "borough": "queens",
+      "center": {
+        "lat": 40.747,
+        "lng": -73.944
+      },
+      "radiusM": 1000
+    },
+    {
+      "id": "astoria",
+      "label": "Astoria",
+      "borough": "queens",
+      "center": {
+        "lat": 40.764,
+        "lng": -73.923
+      },
+      "radiusM": 700
+    },
+    {
+      "id": "flushing",
+      "label": "Flushing",
+      "borough": "queens",
+      "center": {
+        "lat": 40.759,
+        "lng": -73.83
+      },
+      "radiusM": 600
+    },
+    {
+      "id": "jamaica",
+      "label": "Jamaica",
+      "borough": "queens",
+      "center": {
+        "lat": 40.702,
+        "lng": -73.8
+      },
+      "radiusM": 600
+    }
+  ],
+  "buildingTiers": {
+    "defaultHeightM": 9,
+    "quantumM": 1,
+    "tiers": {
+      "low": {
+        "simplifyM": 4,
+        "minAreaM2": 150,
+        "minHeightM": 8,
+        "heightBinM": 6,
+        "merge": true
+      },
+      "mid": {
+        "simplifyM": 2,
+        "minAreaM2": 60,
+        "minHeightM": 0,
+        "heightBinM": 3,
+        "merge": true
+      },
+      "high": {
+        "simplifyM": 1,
+        "minAreaM2": 40,
+        "minHeightM": 0,
+        "heightBinM": 1,
+        "merge": false
+      }
+    }
+  },
+  "blocks": {
+    "seed": 4104,
+    "floorM": 3.3,
+    "jitter": 0.25,
+    "heightJitter": 0.4,
+    "fullFar": 3,
+    "footprintFraction": 0.55,
+    "spacingM": {
+      "low": 250,
+      "mid": 160,
+      "high": 110
+    },
+    "maxInstances": {
+      "low": 8000,
+      "mid": 20000,
+      "high": 40000
+    },
+    "gridAngleDeg": {
+      "manhattan": 29,
+      "bronx": 0,
+      "brooklyn": 0,
+      "queens": 0,
+      "staten-island": 0
+    }
+  },
+  "landmarkFrontMaxM": 80,
+  "landmarkExclusionMarginM": 10
+}

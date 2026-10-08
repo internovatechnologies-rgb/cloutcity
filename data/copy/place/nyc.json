@@ -1,0 +1,15 @@
+{
+  "id": "nyc",
+  "strings": {
+    "place.hours.closed": "Closed right now. Doors open at {time}.",
+    "place.actions.none": "Nothing popping here yet.",
+    "place.blocked.funds": "That's {required}. Your wallet says {available}.",
+    "place.blocked.energy": "You're running on empty: {required} energy needed, you've got {available}.",
+    "place.done.consume": "Done. {effects}.",
+    "place.done.visit": "{place}: checked. {effects}.",
+    "place.done.clubNight": "You're in. The room clocked your fit. {effects}.",
+    "place.done.clubNightRepeat": "Back again? You already made your name here tonight, so no extra clout. {effects}.",
+    "place.blocked.energyShift": "You're running on empty: {required} energy needed, you've got {available}. Head home and sleep it off.",
+    "place.blocked.energyAtHome": "You're running on empty: {required} energy needed, you've got {available}. Hit the bed first."
+  }
+}

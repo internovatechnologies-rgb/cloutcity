@@ -1,0 +1,1 @@
+-- Local seed data. Intentionally empty: tests create their own users, and live_stats keys are seeded by migration.

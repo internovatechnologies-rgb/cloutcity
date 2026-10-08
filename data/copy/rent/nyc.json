@@ -1,0 +1,11 @@
+{
+  "id": "nyc",
+  "strings": {
+    "rent.paid": "Rent's paid. {rent} gone, roof still yours.",
+    "rent.arrearsPaid": "Back rent cleared: {amount}. Landlord's off your back.",
+    "rent.missed": "Landlord said 'rent' and your wallet said 'not today.' You owe {owed}. Miss {left} more and you're out.",
+    "rent.missedWithFee": "Landlord's adding a {fee} late fee. You owe {owed}. Miss {left} more and the locks change.",
+    "rent.evicted": "Landlord changed the locks. New address: the {home}, {rent} a week. Fresh start.",
+    "rent.square": "You're square with the landlord. For now."
+  }
+}

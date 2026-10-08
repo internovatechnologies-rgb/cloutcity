@@ -1,0 +1,7 @@
+{
+  "id": "nyc",
+  "strings": {
+    "jobs.shift.done": "Shift done. {pay} in the bag.",
+    "jobs.locked.label": "{job} is locked. At {current} clout? Get your name ringing to {level} first."
+  }
+}

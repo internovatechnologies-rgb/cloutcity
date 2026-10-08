@@ -1,0 +1,19 @@
+{
+  "strings": {
+    "welcome.title": "Welcome to Clout City",
+    "welcome.intro": "Tap in. Blow up. Three quick things and the city is yours.",
+    "welcome.birthYear.label": "Year you were born",
+    "welcome.birthYear.placeholder": "Select a year",
+    "welcome.birthYear.error": "Pick the year you were born to continue.",
+    "welcome.consent.label": "I agree to the {terms} and the {privacy}.",
+    "welcome.consent.terms": "Terms",
+    "welcome.consent.privacy": "Privacy Policy",
+    "welcome.consent.error": "Tick the box to agree to the Terms and the Privacy Policy.",
+    "welcome.newTab": "(opens in a new tab)",
+    "welcome.audio.legend": "Sound",
+    "welcome.audio.ours": "Play our music",
+    "welcome.audio.own": "I'll bring my own",
+    "welcome.audio.error": "Choose a sound option: Play our music or I'll bring my own.",
+    "welcome.submit": "Start playing"
+  }
+}

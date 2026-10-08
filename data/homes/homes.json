@@ -1,0 +1,19 @@
+{
+  "homes": {
+    "queens-room": {
+      "borough": "queens",
+      "zoneId": "qn01",
+      "location": { "lat": 40.7651, "lng": -73.9247 }
+    },
+    "brooklyn-1br": {
+      "borough": "brooklyn",
+      "zoneId": "bk03",
+      "location": { "lat": 40.6872, "lng": -73.9418 }
+    },
+    "manhattan-loft": {
+      "borough": "manhattan",
+      "zoneId": "mn03",
+      "location": { "lat": 40.718, "lng": -73.986 }
+    }
+  }
+}

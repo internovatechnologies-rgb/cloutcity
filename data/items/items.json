@@ -1,0 +1,451 @@
+{
+  "items": [
+    {
+      "id": "bodega-graphic-tee",
+      "nameKey": "items.bodegaGraphicTee.name",
+      "descriptionKey": "items.bodegaGraphicTee.description",
+      "category": "clothing",
+      "slot": "top",
+      "rarity": "common",
+      "currency": "cash",
+      "price": 18,
+      "sellValue": 7,
+      "cloutValue": 2,
+      "styleValue": 2,
+      "statEffects": {
+        "mood": 3
+      }
+    },
+    {
+      "id": "thrifted-denim-jacket",
+      "nameKey": "items.thriftedDenimJacket.name",
+      "descriptionKey": "items.thriftedDenimJacket.description",
+      "category": "clothing",
+      "slot": "top",
+      "rarity": "medium",
+      "currency": "cash",
+      "price": 85,
+      "sellValue": 42,
+      "cloutValue": 8,
+      "styleValue": 5,
+      "statEffects": {
+        "mood": 5
+      }
+    },
+    {
+      "id": "designer-puffer",
+      "nameKey": "items.designerPuffer.name",
+      "descriptionKey": "items.designerPuffer.description",
+      "category": "clothing",
+      "slot": "top",
+      "rarity": "rare",
+      "currency": "cash",
+      "price": 320,
+      "sellValue": 192,
+      "cloutValue": 25,
+      "styleValue": 10,
+      "statEffects": {
+        "mood": 8
+      }
+    },
+    {
+      "id": "cargo-pants",
+      "nameKey": "items.cargoPants.name",
+      "descriptionKey": "items.cargoPants.description",
+      "category": "clothing",
+      "slot": "bottom",
+      "rarity": "common",
+      "currency": "cash",
+      "price": 28,
+      "sellValue": 11,
+      "cloutValue": 2,
+      "styleValue": 1,
+      "statEffects": {
+        "mood": 2
+      }
+    },
+    {
+      "id": "pleated-trousers",
+      "nameKey": "items.pleatedTrousers.name",
+      "descriptionKey": "items.pleatedTrousers.description",
+      "category": "clothing",
+      "slot": "bottom",
+      "rarity": "medium",
+      "currency": "cash",
+      "price": 70,
+      "sellValue": 35,
+      "cloutValue": 7,
+      "styleValue": 4,
+      "statEffects": {
+        "mood": 4
+      }
+    },
+    {
+      "id": "canvas-sneakers",
+      "nameKey": "items.canvasSneakers.name",
+      "descriptionKey": "items.canvasSneakers.description",
+      "category": "clothing",
+      "slot": "shoes",
+      "rarity": "common",
+      "currency": "cash",
+      "price": 35,
+      "sellValue": 14,
+      "cloutValue": 3,
+      "styleValue": 2,
+      "statEffects": {
+        "mood": 2
+      }
+    },
+    {
+      "id": "limited-drop-sneakers",
+      "nameKey": "items.limitedDropSneakers.name",
+      "descriptionKey": "items.limitedDropSneakers.description",
+      "category": "clothing",
+      "slot": "shoes",
+      "rarity": "rare",
+      "currency": "cash",
+      "price": 260,
+      "sellValue": 156,
+      "cloutValue": 20,
+      "styleValue": 9,
+      "statEffects": {
+        "mood": 7
+      }
+    },
+    {
+      "id": "subway-tote",
+      "nameKey": "items.subwayTote.name",
+      "descriptionKey": "items.subwayTote.description",
+      "category": "clothing",
+      "slot": "accessory",
+      "rarity": "common",
+      "currency": "cash",
+      "price": 15,
+      "sellValue": 6,
+      "cloutValue": 1,
+      "styleValue": 1,
+      "statEffects": {
+        "mood": 2
+      }
+    },
+    {
+      "id": "gold-hoops",
+      "nameKey": "items.goldHoops.name",
+      "descriptionKey": "items.goldHoops.description",
+      "category": "clothing",
+      "slot": "accessory",
+      "rarity": "medium",
+      "currency": "cash",
+      "price": 60,
+      "sellValue": 30,
+      "cloutValue": 6,
+      "styleValue": 4,
+      "statEffects": {
+        "mood": 4
+      }
+    },
+    {
+      "id": "tinted-lip-balm",
+      "nameKey": "items.tintedLipBalm.name",
+      "descriptionKey": "items.tintedLipBalm.description",
+      "category": "makeup",
+      "slot": "face",
+      "rarity": "common",
+      "currency": "cash",
+      "price": 12,
+      "sellValue": 4,
+      "cloutValue": 1,
+      "styleValue": 1,
+      "statEffects": {
+        "mood": 2
+      }
+    },
+    {
+      "id": "glitter-liner",
+      "nameKey": "items.glitterLiner.name",
+      "descriptionKey": "items.glitterLiner.description",
+      "category": "makeup",
+      "slot": "face",
+      "rarity": "medium",
+      "currency": "cash",
+      "price": 45,
+      "sellValue": 22,
+      "cloutValue": 5,
+      "styleValue": 3,
+      "statEffects": {
+        "mood": 4
+      }
+    },
+    {
+      "id": "editorial-glam-kit",
+      "nameKey": "items.editorialGlamKit.name",
+      "descriptionKey": "items.editorialGlamKit.description",
+      "category": "makeup",
+      "slot": "face",
+      "rarity": "rare",
+      "currency": "cash",
+      "price": 180,
+      "sellValue": 108,
+      "cloutValue": 15,
+      "styleValue": 8,
+      "statEffects": {
+        "mood": 6
+      }
+    },
+    {
+      "id": "bodega-flowers",
+      "nameKey": "items.bodegaFlowers.name",
+      "descriptionKey": "items.bodegaFlowers.description",
+      "category": "gift",
+      "rarity": "common",
+      "currency": "cash",
+      "price": 12,
+      "sellValue": 4,
+      "cloutValue": 0,
+      "styleValue": 0,
+      "statEffects": {
+        "mood": 8
+      }
+    },
+    {
+      "id": "cheesecake-box",
+      "nameKey": "items.cheesecakeBox.name",
+      "descriptionKey": "items.cheesecakeBox.description",
+      "category": "gift",
+      "rarity": "medium",
+      "currency": "cash",
+      "price": 30,
+      "sellValue": 15,
+      "cloutValue": 0,
+      "styleValue": 0,
+      "statEffects": {
+        "hunger": 30,
+        "mood": 5
+      }
+    },
+    {
+      "id": "courtside-tickets",
+      "nameKey": "items.courtsideTickets.name",
+      "descriptionKey": "items.courtsideTickets.description",
+      "category": "gift",
+      "rarity": "rare",
+      "currency": "cash",
+      "price": 150,
+      "sellValue": 90,
+      "cloutValue": 0,
+      "styleValue": 0,
+      "statEffects": {
+        "mood": 25
+      }
+    },
+    {
+      "id": "fairy-string-lights",
+      "nameKey": "items.fairyStringLights.name",
+      "descriptionKey": "items.fairyStringLights.description",
+      "category": "decor",
+      "rarity": "common",
+      "currency": "cash",
+      "price": 24,
+      "sellValue": 9,
+      "cloutValue": 0,
+      "styleValue": 0,
+      "statEffects": {},
+      "decor": {
+        "fits": "wall",
+        "homeScore": 4,
+        "variants": [
+          {
+            "id": "warm-white",
+            "token": "cream-100",
+            "nameKey": "colors.warmWhite.name"
+          },
+          {
+            "id": "pink",
+            "token": "pink-400",
+            "nameKey": "colors.pink.name"
+          },
+          {
+            "id": "yellow",
+            "token": "taxi-400",
+            "nameKey": "colors.yellow.name"
+          }
+        ]
+      }
+    },
+    {
+      "id": "windowsill-monstera",
+      "nameKey": "items.windowsillMonstera.name",
+      "descriptionKey": "items.windowsillMonstera.description",
+      "category": "decor",
+      "rarity": "common",
+      "currency": "cash",
+      "price": 20,
+      "sellValue": 8,
+      "cloutValue": 0,
+      "styleValue": 0,
+      "statEffects": {},
+      "decor": {
+        "fits": "surface",
+        "homeScore": 3,
+        "variants": [
+          {
+            "id": "terracotta",
+            "token": "orange-400",
+            "nameKey": "colors.terracotta.name"
+          },
+          {
+            "id": "mint",
+            "token": "mint-400",
+            "nameKey": "colors.mint.name"
+          },
+          {
+            "id": "charcoal",
+            "token": "charcoal-800",
+            "nameKey": "colors.charcoal.name"
+          }
+        ]
+      }
+    },
+    {
+      "id": "thrift-flatweave-rug",
+      "nameKey": "items.thriftFlatweaveRug.name",
+      "descriptionKey": "items.thriftFlatweaveRug.description",
+      "category": "decor",
+      "rarity": "medium",
+      "currency": "cash",
+      "price": 70,
+      "sellValue": 35,
+      "cloutValue": 0,
+      "styleValue": 0,
+      "statEffects": {},
+      "decor": {
+        "fits": "floor",
+        "homeScore": 8,
+        "variants": [
+          {
+            "id": "oatmeal",
+            "token": "sand-200",
+            "nameKey": "colors.oatmeal.name"
+          },
+          {
+            "id": "teal",
+            "token": "teal-700",
+            "nameKey": "colors.teal.name"
+          },
+          {
+            "id": "terracotta",
+            "token": "orange-400",
+            "nameKey": "colors.terracotta.name"
+          }
+        ]
+      }
+    },
+    {
+      "id": "crate-record-player",
+      "nameKey": "items.crateRecordPlayer.name",
+      "descriptionKey": "items.crateRecordPlayer.description",
+      "category": "decor",
+      "rarity": "medium",
+      "currency": "cash",
+      "price": 95,
+      "sellValue": 47,
+      "cloutValue": 0,
+      "styleValue": 0,
+      "statEffects": {},
+      "decor": {
+        "fits": "surface",
+        "homeScore": 10,
+        "variants": [
+          {
+            "id": "lilac",
+            "token": "lilac-300",
+            "nameKey": "colors.lilac.name"
+          },
+          {
+            "id": "sky-blue",
+            "token": "sky-400",
+            "nameKey": "colors.skyBlue.name"
+          },
+          {
+            "id": "pink",
+            "token": "pink-400",
+            "nameKey": "colors.pink.name"
+          }
+        ]
+      }
+    },
+    {
+      "id": "custom-neon-sign",
+      "nameKey": "items.customNeonSign.name",
+      "descriptionKey": "items.customNeonSign.description",
+      "category": "decor",
+      "rarity": "rare",
+      "currency": "cash",
+      "price": 240,
+      "sellValue": 144,
+      "cloutValue": 0,
+      "styleValue": 0,
+      "statEffects": {},
+      "decor": {
+        "fits": "wall",
+        "homeScore": 18,
+        "variants": [
+          {
+            "id": "pink",
+            "token": "pink-400",
+            "nameKey": "colors.pink.name"
+          },
+          {
+            "id": "sky-blue",
+            "token": "sky-400",
+            "nameKey": "colors.skyBlue.name"
+          },
+          {
+            "id": "mint",
+            "token": "mint-400",
+            "nameKey": "colors.mint.name"
+          },
+          {
+            "id": "yellow",
+            "token": "taxi-400",
+            "nameKey": "colors.yellow.name"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cloud-lounge-chair",
+      "nameKey": "items.cloudLoungeChair.name",
+      "descriptionKey": "items.cloudLoungeChair.description",
+      "category": "decor",
+      "rarity": "rare",
+      "currency": "cash",
+      "price": 300,
+      "sellValue": 180,
+      "cloutValue": 0,
+      "styleValue": 0,
+      "statEffects": {},
+      "decor": {
+        "fits": "floor",
+        "homeScore": 22,
+        "variants": [
+          {
+            "id": "lilac",
+            "token": "lilac-300",
+            "nameKey": "colors.lilac.name"
+          },
+          {
+            "id": "warm-white",
+            "token": "cream-100",
+            "nameKey": "colors.warmWhite.name"
+          },
+          {
+            "id": "sky-blue",
+            "token": "sky-400",
+            "nameKey": "colors.skyBlue.name"
+          }
+        ]
+      }
+    }
+  ]
+}

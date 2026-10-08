@@ -1,0 +1,13 @@
+{
+  "strings": {
+    "places.locked.label": "{place}. {reason}",
+    "places.panel.title": "Places",
+    "places.panel.chooserTitle": "Which place?",
+    "places.panel.chooserHint": "A few places sit close together there. Pick one.",
+    "places.panel.showAll": "Show all places",
+    "places.panel.close": "Close",
+    "places.panel.closeLabel": "Close the places list",
+    "places.announce.opened": "{place} selected",
+    "places.memorials.open": "Memorials are open to everyone."
+  }
+}

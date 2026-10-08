@@ -1,0 +1,8 @@
+{
+  "jobs": [
+    { "id": "barista", "nameKey": "jobs.barista.name" },
+    { "id": "retail", "nameKey": "jobs.retail.name" },
+    { "id": "delivery", "nameKey": "jobs.delivery.name" },
+    { "id": "junior-dev", "nameKey": "jobs.juniorDev.name" }
+  ]
+}

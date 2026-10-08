@@ -1,0 +1,14 @@
+{
+  "id": "nyc",
+  "strings": {
+    "voice.bodega": "Bacon egg & cheese. It's giving breakfast of champions.",
+    "voice.trainDelay": "The train is 'experiencing delays.' You are experiencing main-character suffering.",
+    "voice.rentDue": "Landlord said 'rent' and your wallet said 'not today.'",
+    "voice.cloutUp": "Your name's starting to ring. Brooklyn noticed.",
+    "voice.landmarkFlex": "{landmark} at golden hour. The algorithm is about to eat.",
+    "voice.friendPrompt": "That W deserves witnesses. Tag a friend in?",
+    "voice.clubDoor": "Bouncer checked the list, then checked your clout. Not tonight.",
+    "voice.lockedHome": "Manhattan loft? On bodega money? Work your way here.",
+    "voice.someoneNearby": "You're not the only one out tonight. {count} people on this block."
+  }
+}

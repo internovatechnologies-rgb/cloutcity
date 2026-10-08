@@ -1,0 +1,4552 @@
+{
+  "version": 1,
+  "maxDeltaE": 20,
+  "sources": [
+    {
+      "id": "kaykit-city-builder-bits",
+      "kind": "cc0-pack",
+      "title": "KayKit City Builder Bits",
+      "version": "1.0",
+      "author": "Kay Lousberg",
+      "homepage": "https://kaylousberg.itch.io/city-builder-bits",
+      "licence": "CC0-1.0",
+      "licenceEvidence": {
+        "entry": "LICENSE.txt",
+        "mustContain": [
+          "License: (Creative Commons Zero, CC0)",
+          "http://creativecommons.org/publicdomain/zero/1.0/"
+        ]
+      },
+      "download": {
+        "kind": "github-raw",
+        "repo": "KayKit-Game-Assets/KayKit-City-Builder-Bits-1.0",
+        "commit": "63976910ca04d16f0fc531b9c614244be8128713",
+        "root": "addons/kaykit_city_builder_bits/Assets/gltf"
+      },
+      "factorEncoding": "linear",
+      "grade": {
+        "lightness": 1,
+        "chroma": 0.85
+      }
+    },
+    {
+      "id": "kaykit-furniture-bits",
+      "kind": "cc0-pack",
+      "title": "KayKit Furniture Bits",
+      "version": "1.0",
+      "author": "Kay Lousberg",
+      "homepage": "https://kaylousberg.itch.io/furniture-bits",
+      "licence": "CC0-1.0",
+      "licenceEvidence": {
+        "entry": "LICENSE.txt",
+        "mustContain": [
+          "License: (Creative Commons Zero, CC0)",
+          "http://creativecommons.org/publicdomain/zero/1.0/"
+        ]
+      },
+      "download": {
+        "kind": "github-raw",
+        "repo": "KayKit-Game-Assets/KayKit-Furniture-Bits-1.0",
+        "commit": "96d5930a8dbdb363409bbc2d3341718b00e17c9c",
+        "root": "addons/kaykit_furniture_bits/Assets/gltf"
+      },
+      "factorEncoding": "linear",
+      "grade": {
+        "lightness": 1,
+        "chroma": 0.8
+      }
+    },
+    {
+      "id": "kaykit-restaurant-bits",
+      "kind": "cc0-pack",
+      "title": "KayKit Restaurant Bits",
+      "version": "1.0",
+      "author": "Kay Lousberg",
+      "homepage": "https://kaylousberg.itch.io/restaurant-bits",
+      "licence": "CC0-1.0",
+      "licenceEvidence": {
+        "entry": "LICENSE.txt",
+        "mustContain": [
+          "License: (Creative Commons Zero, CC0)",
+          "http://creativecommons.org/publicdomain/zero/1.0/"
+        ]
+      },
+      "download": {
+        "kind": "github-raw",
+        "repo": "KayKit-Game-Assets/KayKit-Restaurant-Bits-1.0",
+        "commit": "153c8a7535b48237854cb54ff6890679f8c574d1",
+        "root": "addons/kaykit_restaurant_bits/Assets/gltf"
+      },
+      "factorEncoding": "linear",
+      "grade": {
+        "lightness": 1,
+        "chroma": 0.8
+      }
+    },
+    {
+      "id": "kenney-mini-characters",
+      "kind": "cc0-pack",
+      "title": "Kenney Mini Characters",
+      "version": "1.0",
+      "author": "Kenney",
+      "homepage": "https://kenney.nl/assets/mini-characters",
+      "licence": "CC0-1.0",
+      "licenceEvidence": {
+        "entry": "License.txt",
+        "mustContain": [
+          "License: (Creative Commons Zero, CC0)",
+          "http://creativecommons.org/publicdomain/zero/1.0/"
+        ]
+      },
+      "download": {
+        "kind": "zip",
+        "url": "https://kenney.nl/media/pages/assets/mini-characters/bfc7e272b4-1774770718/kenney_mini-characters.zip",
+        "file": "kenney_mini-characters.zip",
+        "root": "Models/GLB format"
+      },
+      "factorEncoding": "linear",
+      "grade": {
+        "lightness": 1,
+        "chroma": 1
+      }
+    },
+    {
+      "id": "kenney-furniture-kit",
+      "kind": "cc0-pack",
+      "title": "Kenney Furniture Kit",
+      "version": "2.0",
+      "author": "Kenney",
+      "homepage": "https://kenney.nl/assets/furniture-kit",
+      "licence": "CC0-1.0",
+      "licenceEvidence": {
+        "entry": "License.txt",
+        "mustContain": [
+          "License: (Creative Commons Zero, CC0)",
+          "http://creativecommons.org/publicdomain/zero/1.0/"
+        ]
+      },
+      "download": {
+        "kind": "zip",
+        "url": "https://kenney.nl/media/pages/assets/furniture-kit/440e0608a4-1677580847/kenney_furniture-kit.zip",
+        "file": "kenney_furniture-kit.zip",
+        "root": "Models/GLTF format"
+      },
+      "factorEncoding": "srgb",
+      "grade": {
+        "lightness": 1,
+        "chroma": 0.85
+      }
+    },
+    {
+      "id": "kenney-city-kit-commercial",
+      "kind": "cc0-pack",
+      "title": "Kenney City Kit (Commercial)",
+      "version": "2.1",
+      "author": "Kenney",
+      "homepage": "https://kenney.nl/assets/city-kit-commercial",
+      "licence": "CC0-1.0",
+      "licenceEvidence": {
+        "entry": "License.txt",
+        "mustContain": [
+          "License: (Creative Commons Zero, CC0)",
+          "http://creativecommons.org/publicdomain/zero/1.0/"
+        ]
+      },
+      "download": {
+        "kind": "zip",
+        "url": "https://kenney.nl/media/pages/assets/city-kit-commercial/a742d900eb-1753115042/kenney_city-kit-commercial_2.1.zip",
+        "file": "kenney_city-kit-commercial_2.1.zip",
+        "root": "Models/GLB format"
+      },
+      "factorEncoding": "linear",
+      "grade": {
+        "lightness": 1,
+        "chroma": 1
+      }
+    },
+    {
+      "id": "kenney-nature-kit",
+      "kind": "cc0-pack",
+      "title": "Kenney Nature Kit",
+      "version": "2.1",
+      "author": "Kenney",
+      "homepage": "https://kenney.nl/assets/nature-kit",
+      "licence": "CC0-1.0",
+      "licenceEvidence": {
+        "entry": "License.txt",
+        "mustContain": [
+          "License: (Creative Commons Zero, CC0)",
+          "http://creativecommons.org/publicdomain/zero/1.0/"
+        ]
+      },
+      "download": {
+        "kind": "zip",
+        "url": "https://kenney.nl/media/pages/assets/nature-kit/37ac38a37b-1677698939/kenney_nature-kit.zip",
+        "file": "kenney_nature-kit.zip",
+        "root": "Models/GLTF format"
+      },
+      "factorEncoding": "srgb",
+      "grade": {
+        "lightness": 1,
+        "chroma": 1
+      }
+    },
+    {
+      "id": "clout-city-blender",
+      "kind": "blender-script",
+      "title": "Clout City Blender models",
+      "version": "1",
+      "author": "Clout City: NYC",
+      "homepage": "https://www.blender.org/",
+      "licence": "project-original",
+      "licenceEvidence": {
+        "entry": "scripts/blender/run.py",
+        "mustContain": ["Licence: project-original"]
+      },
+      "download": {
+        "kind": "local",
+        "root": "scripts/blender/out"
+      },
+      "factorEncoding": "linear",
+      "grade": {
+        "lightness": 1,
+        "chroma": 1
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "taxi",
+      "source": "kaykit-city-builder-bits",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "car_taxi.gltf"
+        }
+      ],
+      "category": "vehicle",
+      "fit": {
+        "length": 4.9
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 0.5,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "taxi-400",
+        "rubber-900",
+        "steel-400",
+        "glass-600",
+        "signal-500",
+        "lamp-200",
+        "paint-100",
+        "asphalt-800"
+      ],
+      "maxDeltaE": 30,
+      "emissive": ["lamp-200"],
+      "slots": [],
+      "clips": [],
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.taxi",
+      "remap": {
+        "#f1c55e": "taxi-400"
+      },
+      "remapMaxDeltaE": 1
+    },
+    {
+      "id": "sedan",
+      "source": "kaykit-city-builder-bits",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "car_sedan.gltf"
+        }
+      ],
+      "category": "vehicle",
+      "fit": {
+        "length": 4.8
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 0.5,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "navy-700",
+        "rubber-900",
+        "steel-400",
+        "glass-600",
+        "signal-500",
+        "lamp-200",
+        "paint-100",
+        "asphalt-800"
+      ],
+      "maxDeltaE": 30,
+      "emissive": ["lamp-200"],
+      "slots": [
+        {
+          "name": "body",
+          "tokens": ["navy-700"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.sedan"
+    },
+    {
+      "id": "hatchback",
+      "source": "kaykit-city-builder-bits",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "car_hatchback.gltf"
+        }
+      ],
+      "category": "vehicle",
+      "fit": {
+        "length": 4.2
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 0.5,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "red-600",
+        "rubber-900",
+        "steel-400",
+        "glass-600",
+        "signal-500",
+        "lamp-200",
+        "paint-100",
+        "asphalt-800"
+      ],
+      "maxDeltaE": 30,
+      "emissive": ["lamp-200"],
+      "slots": [
+        {
+          "name": "body",
+          "tokens": ["red-600"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.hatchback"
+    },
+    {
+      "id": "streetlight",
+      "source": "kaykit-city-builder-bits",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "streetlight.gltf"
+        }
+      ],
+      "category": "street-prop",
+      "fit": {
+        "height": 8.5
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["steel-400", "lamp-200"],
+      "maxDeltaE": 30,
+      "emissive": ["lamp-200"],
+      "slots": [],
+      "clips": [],
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.streetlight"
+    },
+    {
+      "id": "hydrant",
+      "source": "kaykit-city-builder-bits",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "firehydrant.gltf"
+        }
+      ],
+      "category": "street-prop",
+      "fit": {
+        "height": 0.75
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["signal-500", "steel-400"],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [],
+      "clips": [],
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.hydrant"
+    },
+    {
+      "id": "bench",
+      "source": "kaykit-city-builder-bits",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "bench.gltf"
+        }
+      ],
+      "category": "street-prop",
+      "fit": {
+        "length": 1.8
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["wood-500", "iron-900"],
+      "remap": {
+        "#b27052": "wood-500",
+        "#858f94": "iron-900"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [],
+      "clips": [],
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.bench"
+    },
+    {
+      "id": "bush",
+      "source": "kaykit-city-builder-bits",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "bush.gltf"
+        }
+      ],
+      "category": "street-prop",
+      "fit": {
+        "height": 1.0
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["leaf-500", "leaf-700", "terracotta-500"],
+      "remap": {
+        "#007e52": "leaf-500",
+        "#d86f34": "terracotta-500"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [],
+      "clips": [],
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.bush"
+    },
+    {
+      "id": "traffic-light",
+      "source": "kaykit-city-builder-bits",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "trafficlight_A.gltf"
+        }
+      ],
+      "category": "street-prop",
+      "fit": {
+        "height": 4.5
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["iron-900", "steel-400", "signal-500", "amber-400", "go-500"],
+      "remap": {
+        "#cd9343": "iron-900",
+        "#f79945": "amber-400",
+        "#c1202d": "signal-500",
+        "#007751": "go-500",
+        "#939fa4": "steel-400"
+      },
+      "maxDeltaE": 25,
+      "emissive": ["signal-500", "amber-400", "go-500"],
+      "slots": [],
+      "clips": [],
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.trafficLight"
+    },
+    {
+      "id": "trash-bags",
+      "source": "kaykit-city-builder-bits",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "trash_A.gltf"
+        }
+      ],
+      "category": "street-prop",
+      "fit": {
+        "length": 1.2
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["rubber-900"],
+      "remap": {
+        "#685a51": "rubber-900"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [],
+      "clips": [],
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.trashBags"
+    },
+    {
+      "id": "dumpster",
+      "source": "kaykit-city-builder-bits",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "dumpster.gltf"
+        }
+      ],
+      "category": "street-prop",
+      "fit": {
+        "length": 1.9
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["forest-600", "rubber-900"],
+      "remap": {
+        "#008654": "forest-600",
+        "#2a2a2a": "rubber-900"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [],
+      "clips": [],
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.dumpster"
+    },
+    {
+      "id": "water-tower",
+      "source": "kaykit-city-builder-bits",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "watertower.gltf"
+        }
+      ],
+      "category": "street-prop",
+      "fit": {
+        "height": 7.5
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["wood-700", "steel-700", "iron-900"],
+      "remap": {
+        "#8b4a37": "wood-700",
+        "#747d82": "steel-700",
+        "#3f4549": "iron-900"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [],
+      "clips": [],
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.waterTower"
+    },
+    {
+      "id": "tree-oak",
+      "source": "kenney-nature-kit",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "tree_oak.glb"
+        }
+      ],
+      "category": "tree",
+      "fit": {
+        "height": 9
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["leaf-700", "bark-700"],
+      "remap": {
+        "#29c9ab": "leaf-700",
+        "#e28357": "bark-700"
+      },
+      "maxDeltaE": 60,
+      "emissive": [],
+      "slots": [],
+      "clips": [],
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.treeOak"
+    },
+    {
+      "id": "tree-round",
+      "source": "kenney-nature-kit",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "tree_default.glb"
+        }
+      ],
+      "category": "tree",
+      "fit": {
+        "height": 8
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["leaf-500", "bark-700"],
+      "remap": {
+        "#29c9ab": "leaf-500",
+        "#e28357": "bark-700"
+      },
+      "maxDeltaE": 60,
+      "emissive": [],
+      "slots": [],
+      "clips": [],
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.treeRound"
+    },
+    {
+      "id": "tree-tall",
+      "source": "kenney-nature-kit",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "tree_detailed.glb"
+        }
+      ],
+      "category": "tree",
+      "fit": {
+        "height": 10
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["grass-500", "bark-700"],
+      "remap": {
+        "#29c9ab": "grass-500",
+        "#e28357": "bark-700"
+      },
+      "maxDeltaE": 60,
+      "emissive": [],
+      "slots": [],
+      "clips": [],
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.treeTall"
+    },
+    {
+      "id": "block-a",
+      "source": "kenney-city-kit-commercial",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "low-detail-building-a.glb"
+        }
+      ],
+      "category": "building",
+      "fit": {
+        "scale": 12
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["brick-600", "glass-600"],
+      "remap": {
+        "#e1e1ec": "brick-600",
+        "#71768d": "glass-600"
+      },
+      "maxDeltaE": 40,
+      "emissive": ["glass-600"],
+      "glow": {
+        "glass-600": "window-200"
+      },
+      "slots": [
+        {
+          "name": "facade",
+          "tokens": ["brick-600"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "playable",
+      "instanced": true,
+      "nameKey": "models.name.blockA"
+    },
+    {
+      "id": "block-b",
+      "source": "kenney-city-kit-commercial",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "low-detail-building-b.glb"
+        }
+      ],
+      "category": "building",
+      "fit": {
+        "scale": 12
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["concrete-400", "glass-600"],
+      "remap": {
+        "#e1e1ec": "concrete-400",
+        "#71768d": "glass-600"
+      },
+      "maxDeltaE": 40,
+      "emissive": ["glass-600"],
+      "glow": {
+        "glass-600": "window-200"
+      },
+      "slots": [
+        {
+          "name": "facade",
+          "tokens": ["concrete-400"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "playable",
+      "instanced": true,
+      "nameKey": "models.name.blockB"
+    },
+    {
+      "id": "block-c",
+      "source": "kenney-city-kit-commercial",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "low-detail-building-c.glb"
+        }
+      ],
+      "category": "building",
+      "fit": {
+        "scale": 12
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["brick-500", "glass-600"],
+      "remap": {
+        "#e1e1ec": "brick-500",
+        "#71768d": "glass-600"
+      },
+      "maxDeltaE": 40,
+      "emissive": ["glass-600"],
+      "glow": {
+        "glass-600": "window-200"
+      },
+      "slots": [
+        {
+          "name": "facade",
+          "tokens": ["brick-500"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "playable",
+      "instanced": true,
+      "nameKey": "models.name.blockC"
+    },
+    {
+      "id": "block-d",
+      "source": "kenney-city-kit-commercial",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "low-detail-building-d.glb"
+        }
+      ],
+      "category": "building",
+      "fit": {
+        "scale": 12
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["brownstone-700", "glass-600"],
+      "remap": {
+        "#e1e1ec": "brownstone-700",
+        "#71768d": "glass-600"
+      },
+      "maxDeltaE": 40,
+      "emissive": ["glass-600"],
+      "glow": {
+        "glass-600": "window-200"
+      },
+      "slots": [
+        {
+          "name": "facade",
+          "tokens": ["brownstone-700"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "playable",
+      "instanced": true,
+      "nameKey": "models.name.blockD"
+    },
+    {
+      "id": "block-e",
+      "source": "kenney-city-kit-commercial",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "low-detail-building-e.glb"
+        }
+      ],
+      "category": "building",
+      "fit": {
+        "scale": 12
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["limestone-200", "glass-600"],
+      "remap": {
+        "#e1e1ec": "limestone-200",
+        "#71768d": "glass-600"
+      },
+      "maxDeltaE": 40,
+      "emissive": ["glass-600"],
+      "glow": {
+        "glass-600": "window-200"
+      },
+      "slots": [
+        {
+          "name": "facade",
+          "tokens": ["limestone-200"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "playable",
+      "instanced": true,
+      "nameKey": "models.name.blockE"
+    },
+    {
+      "id": "block-f",
+      "source": "kenney-city-kit-commercial",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "low-detail-building-f.glb"
+        }
+      ],
+      "category": "building",
+      "fit": {
+        "scale": 12
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["brick-600", "glass-600"],
+      "remap": {
+        "#e1e1ec": "brick-600",
+        "#71768d": "glass-600"
+      },
+      "maxDeltaE": 40,
+      "emissive": ["glass-600"],
+      "glow": {
+        "glass-600": "window-200"
+      },
+      "slots": [
+        {
+          "name": "facade",
+          "tokens": ["brick-600"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "playable",
+      "instanced": true,
+      "nameKey": "models.name.blockF"
+    },
+    {
+      "id": "building-a",
+      "source": "kenney-city-kit-commercial",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "building-a.glb"
+        }
+      ],
+      "category": "building",
+      "fit": {
+        "scale": 12
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 0.5,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 0.75,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["brick-500", "glass-600", "iron-900"],
+      "remap": {
+        "#efeff5": "brick-500",
+        "#71768d": "glass-600",
+        "#3d3f4b": "iron-900"
+      },
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "facade",
+          "tokens": ["brick-500"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "after-playable",
+      "instanced": false,
+      "nameKey": "models.name.buildingA"
+    },
+    {
+      "id": "building-b",
+      "source": "kenney-city-kit-commercial",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "building-b.glb"
+        }
+      ],
+      "category": "building",
+      "fit": {
+        "scale": 12
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 0.5,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 0.75,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["limestone-200", "glass-600", "iron-900"],
+      "remap": {
+        "#efeff5": "limestone-200",
+        "#71768d": "glass-600",
+        "#3d3f4b": "iron-900"
+      },
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "facade",
+          "tokens": ["limestone-200"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "after-playable",
+      "instanced": false,
+      "nameKey": "models.name.buildingB"
+    },
+    {
+      "id": "building-c",
+      "source": "kenney-city-kit-commercial",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "building-c.glb"
+        }
+      ],
+      "category": "building",
+      "fit": {
+        "scale": 12
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 0.5,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 0.75,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["brownstone-700", "glass-600", "iron-900"],
+      "remap": {
+        "#efeff5": "brownstone-700",
+        "#71768d": "glass-600",
+        "#3d3f4b": "iron-900"
+      },
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "facade",
+          "tokens": ["brownstone-700"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "after-playable",
+      "instanced": false,
+      "nameKey": "models.name.buildingC"
+    },
+    {
+      "id": "building-d",
+      "source": "kenney-city-kit-commercial",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "building-d.glb"
+        }
+      ],
+      "category": "building",
+      "fit": {
+        "scale": 12
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 0.5,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 0.75,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["concrete-400", "glass-600", "iron-900"],
+      "remap": {
+        "#efeff5": "concrete-400",
+        "#71768d": "glass-600",
+        "#3d3f4b": "iron-900"
+      },
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "facade",
+          "tokens": ["concrete-400"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "after-playable",
+      "instanced": false,
+      "nameKey": "models.name.buildingD"
+    },
+    {
+      "id": "awning",
+      "source": "kenney-city-kit-commercial",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "detail-awning.glb"
+        }
+      ],
+      "category": "building-detail",
+      "fit": {
+        "scale": 12
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["forest-600", "steel-400"],
+      "remap": {
+        "#329c74": "forest-600",
+        "#747990": "steel-400"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "canvas",
+          "tokens": ["forest-600"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.awning"
+    },
+    {
+      "id": "awning-wide",
+      "source": "kenney-city-kit-commercial",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "detail-awning-wide.glb"
+        }
+      ],
+      "category": "building-detail",
+      "fit": {
+        "scale": 12
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["forest-600", "steel-400"],
+      "remap": {
+        "#329c74": "forest-600",
+        "#747990": "steel-400"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "canvas",
+          "tokens": ["forest-600"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "after-playable",
+      "instanced": true,
+      "nameKey": "models.name.awningWide"
+    },
+    {
+      "id": "bed",
+      "source": "kaykit-furniture-bits",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "bed_double_A.gltf"
+        }
+      ],
+      "category": "furniture",
+      "fit": {
+        "length": 2.1
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["wood-700", "paint-100", "fabric-500"],
+      "remap": {
+        "#8a4a37": "wood-700",
+        "#d3dadd": "paint-100",
+        "#4a7fbf": "fabric-500"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "bedding",
+          "tokens": ["fabric-500"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.bed"
+    },
+    {
+      "id": "couch",
+      "source": "kaykit-furniture-bits",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "couch.gltf"
+        }
+      ],
+      "category": "furniture",
+      "fit": {
+        "length": 2.1
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["fabric-500"],
+      "remap": {
+        "#77bbde": "fabric-500"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "upholstery",
+          "tokens": ["fabric-500"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.couch"
+    },
+    {
+      "id": "armchair",
+      "source": "kaykit-furniture-bits",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "armchair.gltf"
+        }
+      ],
+      "category": "furniture",
+      "fit": {
+        "length": 0.95
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["fabric-700"],
+      "remap": {
+        "#77bbde": "fabric-700"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "upholstery",
+          "tokens": ["fabric-700"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.armchair"
+    },
+    {
+      "id": "floor-lamp",
+      "source": "kaykit-furniture-bits",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "lamp_standing.gltf"
+        }
+      ],
+      "category": "furniture",
+      "fit": {
+        "height": 1.6
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["lamp-200", "steel-400", "iron-900"],
+      "remap": {
+        "#eeecea": "lamp-200",
+        "#d6dde0": "steel-400",
+        "#596064": "iron-900"
+      },
+      "maxDeltaE": 40,
+      "emissive": ["lamp-200"],
+      "slots": [],
+      "clips": [],
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.floorLamp"
+    },
+    {
+      "id": "table-lamp",
+      "source": "kaykit-furniture-bits",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "lamp_table.gltf"
+        }
+      ],
+      "category": "furniture",
+      "fit": {
+        "height": 0.55
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["lamp-200", "steel-400", "fabric-500"],
+      "remap": {
+        "#eeecea": "lamp-200",
+        "#d6dde0": "steel-400",
+        "#4d83c1": "fabric-500"
+      },
+      "maxDeltaE": 40,
+      "emissive": ["lamp-200"],
+      "slots": [],
+      "clips": [],
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.tableLamp"
+    },
+    {
+      "id": "rug",
+      "source": "kaykit-furniture-bits",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "rug_rectangle_stripes_A.gltf"
+        }
+      ],
+      "category": "furniture",
+      "fit": {
+        "length": 2.4
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["fabric-300", "rust-500"],
+      "remap": {
+        "#f9ab4f": "fabric-300",
+        "#f89f48": "rust-500"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "pattern",
+          "tokens": ["fabric-300", "rust-500"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.rug"
+    },
+    {
+      "id": "shelf",
+      "source": "kaykit-furniture-bits",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "shelf_B_large_decorated.gltf"
+        }
+      ],
+      "category": "furniture",
+      "fit": {
+        "length": 1.2
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["wood-500", "wood-300", "fabric-700", "denim-600", "mustard-400"],
+      "remap": {
+        "#b67455": "wood-500"
+      },
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [],
+      "clips": [],
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.shelf"
+    },
+    {
+      "id": "fridge",
+      "source": "kaykit-restaurant-bits",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "fridge_A.gltf"
+        }
+      ],
+      "category": "furniture",
+      "fit": {
+        "height": 1.8
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["plastic-100", "steel-400", "iron-900"],
+      "remap": {
+        "#2ebf99": "plastic-100",
+        "#838e93": "steel-400"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [],
+      "clips": [],
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.fridge"
+    },
+    {
+      "id": "stove",
+      "source": "kaykit-restaurant-bits",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "stove_single.gltf"
+        }
+      ],
+      "category": "furniture",
+      "fit": {
+        "height": 0.92
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["steel-400", "iron-900", "plastic-100", "signal-500"],
+      "remap": {
+        "#6b7478": "iron-900",
+        "#ed2024": "plastic-100",
+        "#909ba1": "steel-400",
+        "#060708": "iron-900"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [],
+      "clips": [],
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.stove"
+    },
+    {
+      "id": "crate",
+      "source": "kaykit-restaurant-bits",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "crate.gltf"
+        }
+      ],
+      "category": "furniture",
+      "fit": {
+        "length": 0.6
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["wood-500", "wood-700"],
+      "remap": {
+        "#a36149": "wood-500",
+        "#7d3d2c": "wood-700"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [],
+      "clips": [],
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.crate"
+    },
+    {
+      "id": "plant",
+      "source": "kenney-furniture-kit",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "pottedPlant.glb"
+        }
+      ],
+      "category": "furniture",
+      "fit": {
+        "height": 0.9
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["terracotta-500", "leaf-500", "bark-700"],
+      "remap": {
+        "#e59964": "terracotta-500",
+        "#2ed193": "leaf-500",
+        "#ad744c": "bark-700"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "pot",
+          "tokens": ["terracotta-500"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.plant"
+    },
+    {
+      "id": "desk",
+      "source": "kenney-furniture-kit",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "desk.glb"
+        }
+      ],
+      "category": "furniture",
+      "fit": {
+        "length": 1.4
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["wood-300", "steel-400"],
+      "remap": {
+        "#e59964": "wood-300",
+        "#bdd2d6": "steel-400"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [],
+      "clips": [],
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.desk"
+    },
+    {
+      "id": "tv",
+      "source": "kenney-furniture-kit",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "televisionModern.glb"
+        }
+      ],
+      "category": "furniture",
+      "fit": {
+        "length": 1.1
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["screen-900", "steel-400"],
+      "remap": {
+        "#4e6363": "screen-900",
+        "#bdd2d6": "steel-400"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [],
+      "clips": [],
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.tv"
+    },
+    {
+      "id": "speaker",
+      "source": "kenney-furniture-kit",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "speaker.glb"
+        }
+      ],
+      "category": "furniture",
+      "fit": {
+        "height": 1.0
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["charcoal-800", "wood-500"],
+      "remap": {
+        "#5e7777": "charcoal-800",
+        "#e59964": "wood-500"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [],
+      "clips": [],
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.speaker"
+    },
+    {
+      "id": "radio",
+      "source": "kenney-furniture-kit",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "radio.glb"
+        }
+      ],
+      "category": "furniture",
+      "fit": {
+        "length": 0.35
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["wood-500", "charcoal-800", "steel-400"],
+      "remap": {
+        "#e59964": "wood-500",
+        "#5e7777": "charcoal-800",
+        "#bdd2d6": "steel-400"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [],
+      "clips": [],
+      "loadPhase": "apartment",
+      "instanced": false,
+      "nameKey": "models.name.radio"
+    },
+    {
+      "id": "wall",
+      "source": "kenney-furniture-kit",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "wall.glb"
+        }
+      ],
+      "category": "room-shell",
+      "fit": {
+        "height": 2.7
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["wall-100", "wood-500", "steel-700"],
+      "remap": {
+        "#ffffff": "wall-100",
+        "#e59964": "wood-500",
+        "#4e6363": "steel-700"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "paint",
+          "tokens": ["wall-100"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "apartment",
+      "instanced": true,
+      "nameKey": "models.name.wall"
+    },
+    {
+      "id": "wall-window",
+      "source": "kenney-furniture-kit",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "wallWindow.glb"
+        }
+      ],
+      "category": "room-shell",
+      "fit": {
+        "height": 2.7
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["wall-100", "wood-500", "steel-700", "glass-300"],
+      "remap": {
+        "#ffffff": "wall-100",
+        "#e59964": "wood-500",
+        "#4e6363": "steel-700",
+        "#b2d3c4": "glass-300"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "paint",
+          "tokens": ["wall-100"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "apartment",
+      "instanced": true,
+      "nameKey": "models.name.wallWindow"
+    },
+    {
+      "id": "wall-doorway",
+      "source": "kenney-furniture-kit",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "wallDoorway.glb"
+        }
+      ],
+      "category": "room-shell",
+      "fit": {
+        "height": 2.7
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["wall-100", "wood-500", "steel-700"],
+      "remap": {
+        "#ffffff": "wall-100",
+        "#e59964": "wood-500",
+        "#4e6363": "steel-700"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "paint",
+          "tokens": ["wall-100"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "apartment",
+      "instanced": true,
+      "nameKey": "models.name.wallDoorway"
+    },
+    {
+      "id": "floor",
+      "source": "kenney-furniture-kit",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "floorFull.glb"
+        }
+      ],
+      "category": "room-shell",
+      "fit": {
+        "length": 2.09
+      },
+      "pivot": "bottom-center",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["floor-600"],
+      "remap": {
+        "#e59964": "floor-600"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "boards",
+          "tokens": ["floor-600"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "apartment",
+      "instanced": true,
+      "nameKey": "models.name.floor"
+    },
+    {
+      "id": "avatar-rig",
+      "source": "kenney-mini-characters",
+      "kind": "rig",
+      "entries": [
+        {
+          "path": "character-female-a.glb"
+        }
+      ],
+      "category": "avatar-rig",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [],
+      "emissive": [],
+      "slots": [],
+      "clips": [
+        "idle",
+        "walk",
+        "sprint",
+        "sit",
+        "drive",
+        "pick-up",
+        "interact-right",
+        "emote-yes",
+        "emote-no",
+        "holding-right"
+      ],
+      "loadPhase": "playable",
+      "instanced": false,
+      "nameKey": "models.name.avatarRig"
+    },
+    {
+      "id": "head-female-a",
+      "source": "kenney-mini-characters",
+      "kind": "skinned",
+      "entries": [
+        {
+          "path": "character-female-a.glb"
+        }
+      ],
+      "mesh": "head-mesh",
+      "category": "avatar-head",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "hair-100",
+        "hair-200",
+        "hair-300",
+        "hair-700",
+        "hair-900"
+      ],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "skin",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        },
+        {
+          "name": "hair",
+          "tokens": ["hair-100", "hair-200", "hair-300", "hair-700", "hair-900"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.headFemaleA"
+    },
+    {
+      "id": "body-female-a",
+      "source": "kenney-mini-characters",
+      "kind": "skinned",
+      "entries": [
+        {
+          "path": "character-female-a.glb"
+        }
+      ],
+      "mesh": "body-mesh",
+      "category": "avatar-body",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "denim-600",
+        "navy-800",
+        "olive-600",
+        "rust-500",
+        "cream-100",
+        "charcoal-800",
+        "red-600",
+        "mustard-400",
+        "teal-600",
+        "blush-300",
+        "white-50"
+      ],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "skin",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        },
+        {
+          "name": "top",
+          "tokens": [
+            "denim-600",
+            "navy-800",
+            "olive-600",
+            "rust-500",
+            "cream-100",
+            "charcoal-800",
+            "red-600",
+            "mustard-400",
+            "teal-600",
+            "blush-300",
+            "white-50"
+          ],
+          "joints": ["torso", "arm-left", "arm-right", "head"]
+        },
+        {
+          "name": "bottom",
+          "tokens": [
+            "denim-600",
+            "navy-800",
+            "olive-600",
+            "rust-500",
+            "cream-100",
+            "charcoal-800",
+            "red-600",
+            "mustard-400",
+            "teal-600",
+            "blush-300",
+            "white-50"
+          ],
+          "joints": ["root", "leg-left", "leg-right"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.bodyFemaleA"
+    },
+    {
+      "id": "head-female-b",
+      "source": "kenney-mini-characters",
+      "kind": "skinned",
+      "entries": [
+        {
+          "path": "character-female-b.glb"
+        }
+      ],
+      "mesh": "head-mesh",
+      "category": "avatar-head",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "hair-100",
+        "hair-200",
+        "hair-300",
+        "hair-700",
+        "hair-900"
+      ],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "skin",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        },
+        {
+          "name": "hair",
+          "tokens": ["hair-100", "hair-200", "hair-300", "hair-700", "hair-900"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.headFemaleB"
+    },
+    {
+      "id": "body-female-b",
+      "source": "kenney-mini-characters",
+      "kind": "skinned",
+      "entries": [
+        {
+          "path": "character-female-b.glb"
+        }
+      ],
+      "mesh": "body-mesh",
+      "category": "avatar-body",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "denim-600",
+        "navy-800",
+        "olive-600",
+        "rust-500",
+        "cream-100",
+        "charcoal-800",
+        "red-600",
+        "mustard-400",
+        "teal-600",
+        "blush-300",
+        "white-50"
+      ],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "skin",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        },
+        {
+          "name": "top",
+          "tokens": [
+            "denim-600",
+            "navy-800",
+            "olive-600",
+            "rust-500",
+            "cream-100",
+            "charcoal-800",
+            "red-600",
+            "mustard-400",
+            "teal-600",
+            "blush-300",
+            "white-50"
+          ],
+          "joints": ["torso", "arm-left", "arm-right", "head"]
+        },
+        {
+          "name": "bottom",
+          "tokens": [
+            "denim-600",
+            "navy-800",
+            "olive-600",
+            "rust-500",
+            "cream-100",
+            "charcoal-800",
+            "red-600",
+            "mustard-400",
+            "teal-600",
+            "blush-300",
+            "white-50"
+          ],
+          "joints": ["root", "leg-left", "leg-right"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.bodyFemaleB"
+    },
+    {
+      "id": "head-female-c",
+      "source": "kenney-mini-characters",
+      "kind": "skinned",
+      "entries": [
+        {
+          "path": "character-female-c.glb"
+        }
+      ],
+      "mesh": "head-mesh",
+      "category": "avatar-head",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "hair-100",
+        "hair-200",
+        "hair-300",
+        "hair-700",
+        "hair-900"
+      ],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "skin",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        },
+        {
+          "name": "hair",
+          "tokens": ["hair-100", "hair-200", "hair-300", "hair-700", "hair-900"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.headFemaleC"
+    },
+    {
+      "id": "body-female-c",
+      "source": "kenney-mini-characters",
+      "kind": "skinned",
+      "entries": [
+        {
+          "path": "character-female-c.glb"
+        }
+      ],
+      "mesh": "body-mesh",
+      "category": "avatar-body",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "denim-600",
+        "navy-800",
+        "olive-600",
+        "rust-500",
+        "cream-100",
+        "charcoal-800",
+        "red-600",
+        "mustard-400",
+        "teal-600",
+        "blush-300",
+        "white-50"
+      ],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "skin",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        },
+        {
+          "name": "top",
+          "tokens": [
+            "denim-600",
+            "navy-800",
+            "olive-600",
+            "rust-500",
+            "cream-100",
+            "charcoal-800",
+            "red-600",
+            "mustard-400",
+            "teal-600",
+            "blush-300",
+            "white-50"
+          ],
+          "joints": ["torso", "arm-left", "arm-right", "head"]
+        },
+        {
+          "name": "bottom",
+          "tokens": [
+            "denim-600",
+            "navy-800",
+            "olive-600",
+            "rust-500",
+            "cream-100",
+            "charcoal-800",
+            "red-600",
+            "mustard-400",
+            "teal-600",
+            "blush-300",
+            "white-50"
+          ],
+          "joints": ["root", "leg-left", "leg-right"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.bodyFemaleC"
+    },
+    {
+      "id": "head-female-d",
+      "source": "kenney-mini-characters",
+      "kind": "skinned",
+      "entries": [
+        {
+          "path": "character-female-d.glb"
+        }
+      ],
+      "mesh": "head-mesh",
+      "category": "avatar-head",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "hair-100",
+        "hair-200",
+        "hair-300",
+        "hair-700",
+        "hair-900"
+      ],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "skin",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        },
+        {
+          "name": "hair",
+          "tokens": ["hair-100", "hair-200", "hair-300", "hair-700", "hair-900"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.headFemaleD"
+    },
+    {
+      "id": "body-female-d",
+      "source": "kenney-mini-characters",
+      "kind": "skinned",
+      "entries": [
+        {
+          "path": "character-female-d.glb"
+        }
+      ],
+      "mesh": "body-mesh",
+      "category": "avatar-body",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "denim-600",
+        "navy-800",
+        "olive-600",
+        "rust-500",
+        "cream-100",
+        "charcoal-800",
+        "red-600",
+        "mustard-400",
+        "teal-600",
+        "blush-300",
+        "white-50"
+      ],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "skin",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        },
+        {
+          "name": "top",
+          "tokens": [
+            "denim-600",
+            "navy-800",
+            "olive-600",
+            "rust-500",
+            "cream-100",
+            "charcoal-800",
+            "red-600",
+            "mustard-400",
+            "teal-600",
+            "blush-300",
+            "white-50"
+          ],
+          "joints": ["torso", "arm-left", "arm-right", "head"]
+        },
+        {
+          "name": "bottom",
+          "tokens": [
+            "denim-600",
+            "navy-800",
+            "olive-600",
+            "rust-500",
+            "cream-100",
+            "charcoal-800",
+            "red-600",
+            "mustard-400",
+            "teal-600",
+            "blush-300",
+            "white-50"
+          ],
+          "joints": ["root", "leg-left", "leg-right"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.bodyFemaleD"
+    },
+    {
+      "id": "head-female-e",
+      "source": "kenney-mini-characters",
+      "kind": "skinned",
+      "entries": [
+        {
+          "path": "character-female-e.glb"
+        }
+      ],
+      "mesh": "head-mesh",
+      "category": "avatar-head",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "hair-100",
+        "hair-200",
+        "hair-300",
+        "hair-700",
+        "hair-900"
+      ],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "skin",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        },
+        {
+          "name": "hair",
+          "tokens": ["hair-100", "hair-200", "hair-300", "hair-700", "hair-900"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.headFemaleE"
+    },
+    {
+      "id": "body-female-e",
+      "source": "kenney-mini-characters",
+      "kind": "skinned",
+      "entries": [
+        {
+          "path": "character-female-e.glb"
+        }
+      ],
+      "mesh": "body-mesh",
+      "category": "avatar-body",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "denim-600",
+        "navy-800",
+        "olive-600",
+        "rust-500",
+        "cream-100",
+        "charcoal-800",
+        "red-600",
+        "mustard-400",
+        "teal-600",
+        "blush-300",
+        "white-50"
+      ],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "skin",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        },
+        {
+          "name": "top",
+          "tokens": [
+            "denim-600",
+            "navy-800",
+            "olive-600",
+            "rust-500",
+            "cream-100",
+            "charcoal-800",
+            "red-600",
+            "mustard-400",
+            "teal-600",
+            "blush-300",
+            "white-50"
+          ],
+          "joints": ["torso", "arm-left", "arm-right", "head"]
+        },
+        {
+          "name": "bottom",
+          "tokens": [
+            "denim-600",
+            "navy-800",
+            "olive-600",
+            "rust-500",
+            "cream-100",
+            "charcoal-800",
+            "red-600",
+            "mustard-400",
+            "teal-600",
+            "blush-300",
+            "white-50"
+          ],
+          "joints": ["root", "leg-left", "leg-right"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.bodyFemaleE"
+    },
+    {
+      "id": "head-female-f",
+      "source": "kenney-mini-characters",
+      "kind": "skinned",
+      "entries": [
+        {
+          "path": "character-female-f.glb"
+        }
+      ],
+      "mesh": "head-mesh",
+      "category": "avatar-head",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "hair-100",
+        "hair-200",
+        "hair-300",
+        "hair-700",
+        "hair-900"
+      ],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "skin",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        },
+        {
+          "name": "hair",
+          "tokens": ["hair-100", "hair-200", "hair-300", "hair-700", "hair-900"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.headFemaleF"
+    },
+    {
+      "id": "body-female-f",
+      "source": "kenney-mini-characters",
+      "kind": "skinned",
+      "entries": [
+        {
+          "path": "character-female-f.glb"
+        }
+      ],
+      "mesh": "body-mesh",
+      "category": "avatar-body",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "denim-600",
+        "navy-800",
+        "olive-600",
+        "rust-500",
+        "cream-100",
+        "charcoal-800",
+        "red-600",
+        "mustard-400",
+        "teal-600",
+        "blush-300",
+        "white-50"
+      ],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "skin",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        },
+        {
+          "name": "top",
+          "tokens": [
+            "denim-600",
+            "navy-800",
+            "olive-600",
+            "rust-500",
+            "cream-100",
+            "charcoal-800",
+            "red-600",
+            "mustard-400",
+            "teal-600",
+            "blush-300",
+            "white-50"
+          ],
+          "joints": ["torso", "arm-left", "arm-right", "head"]
+        },
+        {
+          "name": "bottom",
+          "tokens": [
+            "denim-600",
+            "navy-800",
+            "olive-600",
+            "rust-500",
+            "cream-100",
+            "charcoal-800",
+            "red-600",
+            "mustard-400",
+            "teal-600",
+            "blush-300",
+            "white-50"
+          ],
+          "joints": ["root", "leg-left", "leg-right"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.bodyFemaleF"
+    },
+    {
+      "id": "head-male-a",
+      "source": "kenney-mini-characters",
+      "kind": "skinned",
+      "entries": [
+        {
+          "path": "character-male-a.glb"
+        }
+      ],
+      "mesh": "head-mesh",
+      "category": "avatar-head",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "hair-100",
+        "hair-200",
+        "hair-300",
+        "hair-700",
+        "hair-900"
+      ],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "skin",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        },
+        {
+          "name": "hair",
+          "tokens": ["hair-100", "hair-200", "hair-300", "hair-700", "hair-900"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.headMaleA"
+    },
+    {
+      "id": "body-male-a",
+      "source": "kenney-mini-characters",
+      "kind": "skinned",
+      "entries": [
+        {
+          "path": "character-male-a.glb"
+        }
+      ],
+      "mesh": "body-mesh",
+      "category": "avatar-body",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "denim-600",
+        "navy-800",
+        "olive-600",
+        "rust-500",
+        "cream-100",
+        "charcoal-800",
+        "red-600",
+        "mustard-400",
+        "teal-600",
+        "blush-300",
+        "white-50"
+      ],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "skin",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        },
+        {
+          "name": "top",
+          "tokens": [
+            "denim-600",
+            "navy-800",
+            "olive-600",
+            "rust-500",
+            "cream-100",
+            "charcoal-800",
+            "red-600",
+            "mustard-400",
+            "teal-600",
+            "blush-300",
+            "white-50"
+          ],
+          "joints": ["torso", "arm-left", "arm-right", "head"]
+        },
+        {
+          "name": "bottom",
+          "tokens": [
+            "denim-600",
+            "navy-800",
+            "olive-600",
+            "rust-500",
+            "cream-100",
+            "charcoal-800",
+            "red-600",
+            "mustard-400",
+            "teal-600",
+            "blush-300",
+            "white-50"
+          ],
+          "joints": ["root", "leg-left", "leg-right"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.bodyMaleA"
+    },
+    {
+      "id": "head-male-b",
+      "source": "kenney-mini-characters",
+      "kind": "skinned",
+      "entries": [
+        {
+          "path": "character-male-b.glb"
+        }
+      ],
+      "mesh": "head-mesh",
+      "category": "avatar-head",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "hair-100",
+        "hair-200",
+        "hair-300",
+        "hair-700",
+        "hair-900"
+      ],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "skin",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        },
+        {
+          "name": "hair",
+          "tokens": ["hair-100", "hair-200", "hair-300", "hair-700", "hair-900"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.headMaleB"
+    },
+    {
+      "id": "body-male-b",
+      "source": "kenney-mini-characters",
+      "kind": "skinned",
+      "entries": [
+        {
+          "path": "character-male-b.glb"
+        }
+      ],
+      "mesh": "body-mesh",
+      "category": "avatar-body",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "denim-600",
+        "navy-800",
+        "olive-600",
+        "rust-500",
+        "cream-100",
+        "charcoal-800",
+        "red-600",
+        "mustard-400",
+        "teal-600",
+        "blush-300",
+        "white-50"
+      ],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "skin",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        },
+        {
+          "name": "top",
+          "tokens": [
+            "denim-600",
+            "navy-800",
+            "olive-600",
+            "rust-500",
+            "cream-100",
+            "charcoal-800",
+            "red-600",
+            "mustard-400",
+            "teal-600",
+            "blush-300",
+            "white-50"
+          ],
+          "joints": ["torso", "arm-left", "arm-right", "head"]
+        },
+        {
+          "name": "bottom",
+          "tokens": [
+            "denim-600",
+            "navy-800",
+            "olive-600",
+            "rust-500",
+            "cream-100",
+            "charcoal-800",
+            "red-600",
+            "mustard-400",
+            "teal-600",
+            "blush-300",
+            "white-50"
+          ],
+          "joints": ["root", "leg-left", "leg-right"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.bodyMaleB"
+    },
+    {
+      "id": "head-male-c",
+      "source": "kenney-mini-characters",
+      "kind": "skinned",
+      "entries": [
+        {
+          "path": "character-male-c.glb"
+        }
+      ],
+      "mesh": "head-mesh",
+      "category": "avatar-head",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "hair-100",
+        "hair-200",
+        "hair-300",
+        "hair-700",
+        "hair-900"
+      ],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "skin",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        },
+        {
+          "name": "hair",
+          "tokens": ["hair-100", "hair-200", "hair-300", "hair-700", "hair-900"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.headMaleC"
+    },
+    {
+      "id": "body-male-c",
+      "source": "kenney-mini-characters",
+      "kind": "skinned",
+      "entries": [
+        {
+          "path": "character-male-c.glb"
+        }
+      ],
+      "mesh": "body-mesh",
+      "category": "avatar-body",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "denim-600",
+        "navy-800",
+        "olive-600",
+        "rust-500",
+        "cream-100",
+        "charcoal-800",
+        "red-600",
+        "mustard-400",
+        "teal-600",
+        "blush-300",
+        "white-50"
+      ],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "skin",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        },
+        {
+          "name": "top",
+          "tokens": [
+            "denim-600",
+            "navy-800",
+            "olive-600",
+            "rust-500",
+            "cream-100",
+            "charcoal-800",
+            "red-600",
+            "mustard-400",
+            "teal-600",
+            "blush-300",
+            "white-50"
+          ],
+          "joints": ["torso", "arm-left", "arm-right", "head"]
+        },
+        {
+          "name": "bottom",
+          "tokens": [
+            "denim-600",
+            "navy-800",
+            "olive-600",
+            "rust-500",
+            "cream-100",
+            "charcoal-800",
+            "red-600",
+            "mustard-400",
+            "teal-600",
+            "blush-300",
+            "white-50"
+          ],
+          "joints": ["root", "leg-left", "leg-right"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.bodyMaleC"
+    },
+    {
+      "id": "head-male-d",
+      "source": "kenney-mini-characters",
+      "kind": "skinned",
+      "entries": [
+        {
+          "path": "character-male-d.glb"
+        }
+      ],
+      "mesh": "head-mesh",
+      "category": "avatar-head",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "hair-100",
+        "hair-200",
+        "hair-300",
+        "hair-700",
+        "hair-900"
+      ],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "skin",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        },
+        {
+          "name": "hair",
+          "tokens": ["hair-100", "hair-200", "hair-300", "hair-700", "hair-900"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.headMaleD"
+    },
+    {
+      "id": "body-male-d",
+      "source": "kenney-mini-characters",
+      "kind": "skinned",
+      "entries": [
+        {
+          "path": "character-male-d.glb"
+        }
+      ],
+      "mesh": "body-mesh",
+      "category": "avatar-body",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "denim-600",
+        "navy-800",
+        "olive-600",
+        "rust-500",
+        "cream-100",
+        "charcoal-800",
+        "red-600",
+        "mustard-400",
+        "teal-600",
+        "blush-300",
+        "white-50"
+      ],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "skin",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        },
+        {
+          "name": "top",
+          "tokens": [
+            "denim-600",
+            "navy-800",
+            "olive-600",
+            "rust-500",
+            "cream-100",
+            "charcoal-800",
+            "red-600",
+            "mustard-400",
+            "teal-600",
+            "blush-300",
+            "white-50"
+          ],
+          "joints": ["torso", "arm-left", "arm-right", "head"]
+        },
+        {
+          "name": "bottom",
+          "tokens": [
+            "denim-600",
+            "navy-800",
+            "olive-600",
+            "rust-500",
+            "cream-100",
+            "charcoal-800",
+            "red-600",
+            "mustard-400",
+            "teal-600",
+            "blush-300",
+            "white-50"
+          ],
+          "joints": ["root", "leg-left", "leg-right"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.bodyMaleD"
+    },
+    {
+      "id": "head-male-e",
+      "source": "kenney-mini-characters",
+      "kind": "skinned",
+      "entries": [
+        {
+          "path": "character-male-e.glb"
+        }
+      ],
+      "mesh": "head-mesh",
+      "category": "avatar-head",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "hair-100",
+        "hair-200",
+        "hair-300",
+        "hair-700",
+        "hair-900"
+      ],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "skin",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        },
+        {
+          "name": "hair",
+          "tokens": ["hair-100", "hair-200", "hair-300", "hair-700", "hair-900"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.headMaleE"
+    },
+    {
+      "id": "body-male-e",
+      "source": "kenney-mini-characters",
+      "kind": "skinned",
+      "entries": [
+        {
+          "path": "character-male-e.glb"
+        }
+      ],
+      "mesh": "body-mesh",
+      "category": "avatar-body",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "denim-600",
+        "navy-800",
+        "olive-600",
+        "rust-500",
+        "cream-100",
+        "charcoal-800",
+        "red-600",
+        "mustard-400",
+        "teal-600",
+        "blush-300",
+        "white-50"
+      ],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "skin",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        },
+        {
+          "name": "top",
+          "tokens": [
+            "denim-600",
+            "navy-800",
+            "olive-600",
+            "rust-500",
+            "cream-100",
+            "charcoal-800",
+            "red-600",
+            "mustard-400",
+            "teal-600",
+            "blush-300",
+            "white-50"
+          ],
+          "joints": ["torso", "arm-left", "arm-right", "head"]
+        },
+        {
+          "name": "bottom",
+          "tokens": [
+            "denim-600",
+            "navy-800",
+            "olive-600",
+            "rust-500",
+            "cream-100",
+            "charcoal-800",
+            "red-600",
+            "mustard-400",
+            "teal-600",
+            "blush-300",
+            "white-50"
+          ],
+          "joints": ["root", "leg-left", "leg-right"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.bodyMaleE"
+    },
+    {
+      "id": "head-male-f",
+      "source": "kenney-mini-characters",
+      "kind": "skinned",
+      "entries": [
+        {
+          "path": "character-male-f.glb"
+        }
+      ],
+      "mesh": "head-mesh",
+      "category": "avatar-head",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "hair-100",
+        "hair-200",
+        "hair-300",
+        "hair-700",
+        "hair-900"
+      ],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "skin",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        },
+        {
+          "name": "hair",
+          "tokens": ["hair-100", "hair-200", "hair-300", "hair-700", "hair-900"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.headMaleF"
+    },
+    {
+      "id": "body-male-f",
+      "source": "kenney-mini-characters",
+      "kind": "skinned",
+      "entries": [
+        {
+          "path": "character-male-f.glb"
+        }
+      ],
+      "mesh": "body-mesh",
+      "category": "avatar-body",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 0.6,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "denim-600",
+        "navy-800",
+        "olive-600",
+        "rust-500",
+        "cream-100",
+        "charcoal-800",
+        "red-600",
+        "mustard-400",
+        "teal-600",
+        "blush-300",
+        "white-50"
+      ],
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "skin",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        },
+        {
+          "name": "top",
+          "tokens": [
+            "denim-600",
+            "navy-800",
+            "olive-600",
+            "rust-500",
+            "cream-100",
+            "charcoal-800",
+            "red-600",
+            "mustard-400",
+            "teal-600",
+            "blush-300",
+            "white-50"
+          ],
+          "joints": ["torso", "arm-left", "arm-right", "head"]
+        },
+        {
+          "name": "bottom",
+          "tokens": [
+            "denim-600",
+            "navy-800",
+            "olive-600",
+            "rust-500",
+            "cream-100",
+            "charcoal-800",
+            "red-600",
+            "mustard-400",
+            "teal-600",
+            "blush-300",
+            "white-50"
+          ],
+          "joints": ["root", "leg-left", "leg-right"]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.bodyMaleF"
+    },
+    {
+      "id": "glasses",
+      "source": "kenney-mini-characters",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "aid-glasses.glb"
+        }
+      ],
+      "category": "avatar-accessory",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["iron-900", "glass-300", "steel-400"],
+      "remap": {
+        "#a6add0": "glass-300",
+        "#e2e2ed": "steel-400"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.glasses"
+    },
+    {
+      "id": "sunglasses",
+      "source": "kenney-mini-characters",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "aid-sunglasses.glb"
+        }
+      ],
+      "category": "avatar-accessory",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": ["iron-900"],
+      "remap": {
+        "#3f3f46": "iron-900"
+      },
+      "maxDeltaE": 40,
+      "emissive": [],
+      "slots": [],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.sunglasses"
+    },
+    {
+      "id": "hearing-aid",
+      "source": "kenney-mini-characters",
+      "kind": "static",
+      "entries": [
+        {
+          "path": "aid_hearing.glb"
+        }
+      ],
+      "category": "avatar-accessory",
+      "fit": {
+        "scale": 2.2
+      },
+      "pivot": "source",
+      "tiers": {
+        "low": {
+          "ratio": 1,
+          "error": 0.02
+        },
+        "mid": {
+          "ratio": 1.0,
+          "error": 0.02
+        },
+        "high": {
+          "ratio": 1.0,
+          "error": 0.02
+        }
+      },
+      "swatches": [
+        "skin-100",
+        "skin-200",
+        "skin-300",
+        "skin-400",
+        "skin-500",
+        "skin-600",
+        "skin-700",
+        "skin-800",
+        "steel-400"
+      ],
+      "remap": {
+        "#a6add0": "steel-400"
+      },
+      "maxDeltaE": 30,
+      "emissive": [],
+      "slots": [
+        {
+          "name": "shell",
+          "tokens": [
+            "skin-100",
+            "skin-200",
+            "skin-300",
+            "skin-400",
+            "skin-500",
+            "skin-600",
+            "skin-700",
+            "skin-800"
+          ]
+        }
+      ],
+      "clips": [],
+      "loadPhase": "creator",
+      "instanced": false,
+      "nameKey": "models.name.hearingAid"
+    }
+  ],
+  "excluded": [
+    {
+      "item": "KayKit City Builder Bits `car_police.gltf`",
+      "reason": "Police livery (LEGAL): no law-enforcement markings in the city."
+    },
+    {
+      "item": "KayKit City Builder Bits `car_stationwagon.gltf`",
+      "reason": "Not needed yet (three cars cover traffic variety)."
+    },
+    {
+      "item": "Pack textures, previews and source files",
+      "reason": "Only geometry and baked colours ship (no images, no pack artwork as files)."
+    },
+    {
+      "item": "Quaternius packs",
+      "reason": "Rejected at planning: per-item downloads with no pinnable archive."
+    },
+    {
+      "item": "Poly Pizza models",
+      "reason": "Rejected at planning: per-model licences and authors, not pinnable as one pack."
+    },
+    {
+      "item": "Kenney Mini Characters wheelchairs and canes",
+      "reason": "Deferred (A11Y-5): they need pose, travel and animation work first."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "placeId": "late-lantern-deli",
+  "actionId": "bodega-breakfast",
+  "maxSteps": 6,
+  "maxCharsPerStep": 80,
+  "freshStartMaxGameMinutes": 1440,
+  "timing": {
+    "targetSeconds": 20,
+    "readCharsPerSecond": 25,
+    "secondsPerTap": 1
+  },
+  "newPlayerNoticeMax": 3,
+  "meaningfulNotices": ["tour", "level-up", "goals-ready", "event", "icon", "update", "rent"]
+}

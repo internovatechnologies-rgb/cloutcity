@@ -1,0 +1,27 @@
+{
+  "strings": {
+    "loading.welcome": "Loading the welcome card",
+    "loading.event": "Loading the event",
+    "loading.place": "Loading this place",
+    "loading.sound": "Loading the sound controls",
+    "loading.soundSettings": "Loading settings",
+    "loading.levelUp": "Loading the level-up message",
+    "loading.hudPanels": "Loading the inventory, rent and home buttons",
+    "loading.inventory": "Loading your inventory",
+    "loading.rent": "Loading your rent",
+    "loading.home": "Loading your home",
+    "loading.failed": "That didn't load. Check your connection and try again.",
+    "loading.retry": "Try again",
+    "loading.goals": "Loading your goals",
+    "loading.iconMoment": "Loading your Icon moment",
+    "loading.hud": "Loading your stats",
+    "loading.more": "Loading more options",
+    "loading.places": "Loading the places list",
+    "loading.tour": "Loading the tour",
+    "loading.me": "Loading your profile",
+    "loading.safety": "Loading the safety message",
+    "loading.notices": "Loading a message from the moderators",
+    "loading.cloudSave": "Loading your cloud save",
+    "loading.rentNotice": "Loading the rent notice"
+  }
+}

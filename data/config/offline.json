@@ -1,0 +1,8 @@
+{
+  "registration": {
+    "idleTimeoutMs": 5000
+  },
+  "tierWarm": {
+    "skipAtOrBelowDeviceMemoryGB": 2
+  }
+}

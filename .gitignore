@@ -9,3 +9,39 @@ docs/local/
 .claude/worktrees/
 # Per-user Claude Code settings (permissions etc.)
 .claude/settings.local.json
+
+# --- dependencies ---
+node_modules/
+
+# --- environment files (secrets) ---
+.env
+.env.*
+!.env.example
+
+# --- build output ---
+.next/
+.next-e2e/
+.next-e2e-supabase/
+.next-e2e-dpl/
+out/
+build/
+next-env.d.ts
+*.tsbuildinfo
+
+# --- test artefacts ---
+coverage/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# --- geo download cache (raw NYC Open Data / MTA GTFS files; npm run geo:build) ---
+/.cache/
+
+# --- Supabase CLI local state ---
+supabase/.temp/
+supabase/.branches/
+
+# --- OS / editor ---
+.DS_Store
+*.log

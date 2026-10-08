@@ -1,0 +1,256 @@
+{
+  "venues": [
+    {
+      "id": "late-lantern-deli",
+      "nameKey": "venues.lateLanternDeli.name",
+      "blurbKey": "venues.lateLanternDeli.blurb",
+      "type": "bodega",
+      "borough": "queens",
+      "zoneId": "qn01",
+      "location": { "lat": 40.7644, "lng": -73.9235 },
+      "hours": "24h"
+    },
+    {
+      "id": "nenas-window-arepas",
+      "nameKey": "venues.nenasWindowArepas.name",
+      "blurbKey": "venues.nenasWindowArepas.blurb",
+      "type": "food-spot",
+      "borough": "queens",
+      "zoneId": "qn01",
+      "location": { "lat": 40.7593, "lng": -73.9196 },
+      "hours": { "open": "07:00", "close": "23:00" }
+    },
+    {
+      "id": "station-30-av",
+      "nameKey": "venues.station30Av.name",
+      "blurbKey": "venues.station30Av.blurb",
+      "type": "subway-station",
+      "borough": "queens",
+      "zoneId": "qn01",
+      "location": { "lat": 40.76678, "lng": -73.92148 },
+      "hours": "24h",
+      "stationId": "r04"
+    },
+    {
+      "id": "rep-count-gym",
+      "nameKey": "venues.repCountGym.name",
+      "blurbKey": "venues.repCountGym.blurb",
+      "type": "gym",
+      "borough": "queens",
+      "zoneId": "qn01",
+      "location": { "lat": 40.7499, "lng": -73.9375 },
+      "hours": { "open": "05:00", "close": "23:00" }
+    },
+    {
+      "id": "steam-vent-coffee",
+      "nameKey": "venues.steamVentCoffee.name",
+      "blurbKey": "venues.steamVentCoffee.blurb",
+      "type": "coffee-shop",
+      "borough": "queens",
+      "zoneId": "qn01",
+      "location": { "lat": 40.7681, "lng": -73.9113 },
+      "hours": { "open": "06:00", "close": "19:00" },
+      "jobIds": ["barista"]
+    },
+    {
+      "id": "rerun-racks",
+      "nameKey": "venues.rerunRacks.name",
+      "blurbKey": "venues.rerunRacks.blurb",
+      "type": "thrift",
+      "borough": "queens",
+      "zoneId": "qn01",
+      "location": { "lat": 40.7628, "lng": -73.9255 },
+      "hours": { "open": "11:00", "close": "20:00" },
+      "jobIds": ["retail"]
+    },
+    {
+      "id": "glowmatic",
+      "nameKey": "venues.glowmatic.name",
+      "blurbKey": "venues.glowmatic.blurb",
+      "type": "club",
+      "borough": "queens",
+      "zoneId": "qn02",
+      "location": { "lat": 40.744, "lng": -73.953 },
+      "hours": { "open": "22:00", "close": "04:00" }
+    },
+    {
+      "id": "northside-dispatch",
+      "nameKey": "venues.northsideDispatch.name",
+      "blurbKey": "venues.northsideDispatch.blurb",
+      "type": "job-site",
+      "borough": "queens",
+      "zoneId": "qn02",
+      "location": { "lat": 40.7395, "lng": -73.933 },
+      "hours": { "open": "06:00", "close": "22:00" },
+      "jobIds": ["delivery"]
+    },
+    {
+      "id": "two-moons-deli",
+      "nameKey": "venues.twoMoonsDeli.name",
+      "blurbKey": "venues.twoMoonsDeli.blurb",
+      "type": "bodega",
+      "borough": "brooklyn",
+      "zoneId": "bk01",
+      "location": { "lat": 40.711, "lng": -73.957 },
+      "hours": { "open": "06:00", "close": "02:00" }
+    },
+    {
+      "id": "kettle-and-clove",
+      "nameKey": "venues.kettleAndClove.name",
+      "blurbKey": "venues.kettleAndClove.blurb",
+      "type": "food-spot",
+      "borough": "brooklyn",
+      "zoneId": "bk03",
+      "location": { "lat": 40.6807, "lng": -73.95 },
+      "hours": { "open": "10:00", "close": "22:00" }
+    },
+    {
+      "id": "station-bedford-av",
+      "nameKey": "venues.stationBedfordAv.name",
+      "blurbKey": "venues.stationBedfordAv.blurb",
+      "type": "subway-station",
+      "borough": "brooklyn",
+      "zoneId": "bk01",
+      "location": { "lat": 40.71731, "lng": -73.95687 },
+      "hours": "24h",
+      "stationId": "l08"
+    },
+    {
+      "id": "stoop-strength-gym",
+      "nameKey": "venues.stoopStrengthGym.name",
+      "blurbKey": "venues.stoopStrengthGym.blurb",
+      "type": "gym",
+      "borough": "brooklyn",
+      "zoneId": "bk02",
+      "location": { "lat": 40.6905, "lng": -73.987 },
+      "hours": { "open": "05:00", "close": "23:00" }
+    },
+    {
+      "id": "ninth-hour-coffee",
+      "nameKey": "venues.ninthHourCoffee.name",
+      "blurbKey": "venues.ninthHourCoffee.blurb",
+      "type": "coffee-shop",
+      "borough": "brooklyn",
+      "zoneId": "bk01",
+      "location": { "lat": 40.721, "lng": -73.956 },
+      "hours": { "open": "07:00", "close": "18:00" },
+      "jobIds": ["barista"]
+    },
+    {
+      "id": "hand-me-up-thrift",
+      "nameKey": "venues.handMeUpThrift.name",
+      "blurbKey": "venues.handMeUpThrift.blurb",
+      "type": "thrift",
+      "borough": "brooklyn",
+      "zoneId": "bk04",
+      "location": { "lat": 40.704, "lng": -73.922 },
+      "hours": { "open": "11:00", "close": "20:00" },
+      "jobIds": ["retail"]
+    },
+    {
+      "id": "brickwave",
+      "nameKey": "venues.brickwave.name",
+      "blurbKey": "venues.brickwave.blurb",
+      "type": "club",
+      "borough": "brooklyn",
+      "zoneId": "bk06",
+      "location": { "lat": 40.677, "lng": -73.988 },
+      "hours": { "open": "22:00", "close": "04:00" }
+    },
+    {
+      "id": "wallabout-freight",
+      "nameKey": "venues.wallaboutFreight.name",
+      "blurbKey": "venues.wallaboutFreight.blurb",
+      "type": "job-site",
+      "borough": "brooklyn",
+      "zoneId": "bk02",
+      "location": { "lat": 40.699, "lng": -73.971 },
+      "hours": { "open": "06:00", "close": "22:00" },
+      "jobIds": ["delivery"]
+    },
+    {
+      "id": "owl-hours-deli",
+      "nameKey": "venues.owlHoursDeli.name",
+      "blurbKey": "venues.owlHoursDeli.blurb",
+      "type": "bodega",
+      "borough": "manhattan",
+      "zoneId": "mn03",
+      "location": { "lat": 40.7205, "lng": -73.989 },
+      "hours": "24h"
+    },
+    {
+      "id": "steam-window-dumplings",
+      "nameKey": "venues.steamWindowDumplings.name",
+      "blurbKey": "venues.steamWindowDumplings.blurb",
+      "type": "food-spot",
+      "borough": "manhattan",
+      "zoneId": "mn03",
+      "location": { "lat": 40.7158, "lng": -73.998 },
+      "hours": { "open": "10:00", "close": "22:00" }
+    },
+    {
+      "id": "station-union-sq",
+      "nameKey": "venues.stationUnionSq.name",
+      "blurbKey": "venues.stationUnionSq.blurb",
+      "type": "subway-station",
+      "borough": "manhattan",
+      "zoneId": "mn05",
+      "location": { "lat": 40.73467, "lng": -73.98995 },
+      "hours": "24h",
+      "stationId": "635"
+    },
+    {
+      "id": "lift-lane-fitness",
+      "nameKey": "venues.liftLaneFitness.name",
+      "blurbKey": "venues.liftLaneFitness.blurb",
+      "type": "gym",
+      "borough": "manhattan",
+      "zoneId": "mn04",
+      "location": { "lat": 40.744, "lng": -73.993 },
+      "hours": { "open": "05:00", "close": "23:00" }
+    },
+    {
+      "id": "overtime-espresso",
+      "nameKey": "venues.overtimeEspresso.name",
+      "blurbKey": "venues.overtimeEspresso.blurb",
+      "type": "coffee-shop",
+      "borough": "manhattan",
+      "zoneId": "mn03",
+      "location": { "lat": 40.728, "lng": -73.985 },
+      "hours": { "open": "07:00", "close": "20:00" },
+      "jobIds": ["barista"]
+    },
+    {
+      "id": "sidecut-studio",
+      "nameKey": "venues.sidecutStudio.name",
+      "blurbKey": "venues.sidecutStudio.blurb",
+      "type": "boutique",
+      "borough": "manhattan",
+      "zoneId": "mn02",
+      "location": { "lat": 40.7225, "lng": -74.0005 },
+      "hours": { "open": "11:00", "close": "20:00" },
+      "jobIds": ["retail"]
+    },
+    {
+      "id": "afterglass",
+      "nameKey": "venues.afterglass.name",
+      "blurbKey": "venues.afterglass.blurb",
+      "type": "club",
+      "borough": "manhattan",
+      "zoneId": "mn02",
+      "location": { "lat": 40.74, "lng": -74.006 },
+      "hours": { "open": "22:00", "close": "04:00" }
+    },
+    {
+      "id": "sixth-floor-labs",
+      "nameKey": "venues.sixthFloorLabs.name",
+      "blurbKey": "venues.sixthFloorLabs.blurb",
+      "type": "job-site",
+      "borough": "manhattan",
+      "zoneId": "mn05",
+      "location": { "lat": 40.7405, "lng": -73.993 },
+      "hours": { "open": "09:00", "close": "18:00" },
+      "jobIds": ["junior-dev"]
+    }
+  ]
+}

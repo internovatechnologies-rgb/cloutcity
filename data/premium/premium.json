@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "id": "placeholder-badge",
+      "nameKey": "premium.placeholderBadge.name",
+      "kind": "badge",
+      "rarity": "common",
+      "currency": "usd",
+      "priceTier": "tier-1",
+      "cloutValue": 1,
+      "styleValue": 1
+    }
+  ]
+}

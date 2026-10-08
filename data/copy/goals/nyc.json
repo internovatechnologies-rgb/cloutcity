@@ -1,0 +1,13 @@
+{
+  "id": "nyc",
+  "strings": {
+    "goals.intro": "Make it in New York, one move at a time.",
+    "goals.goal.reachLocal.hint": "Get the block talking about you.",
+    "goals.goal.reachSceneRegular.hint": "Be the face every spot recognizes.",
+    "goals.goal.reachKnown.hint": "Your name's ringing across the boroughs.",
+    "goals.goal.reachFamous.hint": "The whole timeline knows the name.",
+    "goals.goal.reachIcon.hint": "Make it in New York. For real.",
+    "goals.icon.title": "Icon status",
+    "goals.icon.copied": "Copied. Go post it."
+  }
+}

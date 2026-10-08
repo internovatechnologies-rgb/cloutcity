@@ -1,0 +1,6 @@
+{
+  "minimumAge": 18,
+  "underAgeLockHours": 24,
+  "birthYearSpan": 100,
+  "consentVersion": "2026-10-06"
+}

@@ -1,0 +1,22 @@
+{
+  "strings": {
+    "credits.title": "Credits",
+    "credits.intro": "Clout City: NYC draws the city from public data. These are the sources and the terms they come with.",
+    "credits.nyc.heading": "NYC Open Data",
+    "credits.nyc.body": "Borough land, water, parks and play zones: data from NYC Open Data, provided by the NYC Department of City Planning (Borough Boundaries clipped to shoreline, 2020 Neighborhood Tabulation Areas). The shapes in the game are simplified artwork derived from it, not the original data.",
+    "credits.nyc.disclaimer": "The City of New York can not vouch for the accuracy or completeness of data provided by this web site or application or for the usefulness or integrity of the web site or application. This site provides applications using data that has been modified for use from its original source, NYC.gov, the official web site of the City of New York.",
+    "credits.mta.heading": "MTA",
+    "credits.mta.body": "Subway data: MTA New York City Transit static GTFS, obtained from an MTA server and stored on our own server. Lines and stations are simplified artwork derived from it. Clout City is not endorsed by, licensed by or affiliated with the MTA. This data may not be accurate, complete, timely or real time.",
+    "credits.osm.heading": "OpenStreetMap",
+    "credits.osm.body": "OpenStreetMap: not used.",
+    "credits.handles.heading": "Handle filter word lists",
+    "credits.handles.body": "The handle filter uses \"List of Dirty, Naughty, Obscene, and Otherwise Bad Words\" by Shutterstock and contributors (CC BY 4.0) and The Big Username Blocklist by Martin Sandström (MIT), plus words of our own. Both lists are modified: terms were reformatted, moved, added and removed. They are used on our server only.",
+    "credits.models.heading": "3D models",
+    "credits.models.body": "Characters, furniture, vehicles, street props and buildings are hand-made low-poly models from free packs released under CC0 (public domain), recoloured and optimised for the game. No credit is required; we credit them with thanks. Landmark models are our own, built with Blender scripts.",
+    "credits.models.pack": "{title} {version} by {author} ({licence})",
+    "credits.models.licence.cc0": "CC0 1.0",
+    "credits.models.licence.mit": "MIT",
+    "credits.models.licence.original": "made for Clout City",
+    "credits.back": "Back to the map"
+  }
+}

@@ -1,0 +1,398 @@
+{
+  "time": {
+    "gameMinutesPerRealMinute": 10,
+    "gameDayHours": 24,
+    "rentPeriodGameDays": 7,
+    "startMinuteOfDay": 480,
+    "speeds": [1, 2],
+    "maxTickRealMs": 5000,
+    "tickIntervalMs": 1000
+  },
+  "start": { "cash": 150, "home": "queens-room" },
+  "stats": {
+    "max": 100,
+    "start": { "energy": 100, "hunger": 80, "mood": 70 },
+    "decayPerGameHour": { "energy": 3, "hunger": 6, "mood": 2 },
+    "atZero": {
+      "energy": { "extraDecayPerGameHour": { "mood": 3 }, "durationMultiplier": 1.5 },
+      "hunger": { "extraDecayPerGameHour": { "energy": 3, "mood": 4 }, "durationMultiplier": 1 },
+      "mood": { "extraDecayPerGameHour": {}, "durationMultiplier": 1.25 }
+    }
+  },
+  "actions": {
+    "maxDurationMin": 1440,
+    "catalog": {
+      "sleep": {
+        "durationMin": 480,
+        "cashCost": 0,
+        "energyCost": 0,
+        "statEffects": { "energy": 55, "mood": 5 }
+      },
+      "nap": {
+        "durationMin": 60,
+        "cashCost": 0,
+        "energyCost": 0,
+        "statEffects": { "energy": 4 }
+      },
+      "bodega-breakfast": {
+        "durationMin": 20,
+        "cashCost": 10,
+        "energyCost": 0,
+        "statEffects": { "hunger": 40, "mood": 5 }
+      },
+      "home-meal": {
+        "durationMin": 45,
+        "cashCost": 8,
+        "energyCost": 5,
+        "statEffects": { "hunger": 50 }
+      },
+      "deli-coffee": {
+        "durationMin": 10,
+        "cashCost": 12,
+        "energyCost": 0,
+        "statEffects": { "energy": 20 }
+      },
+      "walk-in-the-park": {
+        "durationMin": 60,
+        "cashCost": 0,
+        "energyCost": 10,
+        "statEffects": { "mood": 15 }
+      }
+    }
+  },
+  "rentPerWeek": { "queens-room": 280, "brooklyn-1br": 520, "manhattan-loft": 1100 },
+  "jobs": {
+    "shiftHours": 4,
+    "hourlyWage": { "barista": 14, "retail": 16, "delivery": 18, "junior-dev": 35 },
+    "energyCostPerShift": { "barista": 15, "retail": 25, "delivery": 40, "junior-dev": 15 },
+    "requiredCloutLevel": { "junior-dev": "local" }
+  },
+  "housing": {
+    "moveInCost": { "brooklyn-1br": 400, "manhattan-loft": 1000 }
+  },
+  "home": {
+    "baseScore": { "queens-room": 0, "brooklyn-1br": 10, "manhattan-loft": 25 },
+    "maxClout": 60,
+    "moveLogMax": 20
+  },
+  "rent": {
+    "lateFees": [0, 30],
+    "evictAfterMissed": 3
+  },
+  "clout": {
+    "levels": [
+      { "id": "nobody", "minClout": 0 },
+      { "id": "local", "minClout": 100 },
+      { "id": "scene-regular", "minClout": 300 },
+      { "id": "known", "minClout": 800 },
+      { "id": "famous", "minClout": 2000 },
+      { "id": "icon", "minClout": 5000 }
+    ],
+    "sources": { "firstPaycheck": 10 },
+    "flex": {
+      "durationMin": 30,
+      "energyCost": 10,
+      "cashCost": 0,
+      "baseClout": 4,
+      "maxPerGameDay": 3,
+      "venueTypes": ["boutique"],
+      "viral": {
+        "baseChance": 0.05,
+        "perStylePoint": 0.005,
+        "maxChance": 0.4,
+        "cloutMultiplier": 5
+      }
+    },
+    "style": {
+      "pctPerPoint": 2,
+      "maxBonusPct": 50,
+      "appliesTo": ["flex", "event", "paycheck"]
+    },
+    "ledger": { "maxEntries": 100 },
+    "caps": { "byCurrency": { "usd": 200 } }
+  },
+  "costs": { "food": { "min": 4, "max": 12 }, "subwayFare": 3 },
+  "transit": {
+    "minTripM": 25,
+    "snapToLandM": 300,
+    "walk": {
+      "speedKmh": 4.8,
+      "detourFactor": 1.3,
+      "energyPerKm": 2,
+      "maxWaterM": 50
+    },
+    "taxi": {
+      "speedKmh": 20,
+      "detourFactor": 1.3,
+      "pickupMin": 5,
+      "baseFare": 3,
+      "perKm": 2,
+      "maxWaterM": 50,
+      "estimateDetourFactor": 3
+    },
+    "subway": {
+      "speedKmh": 32,
+      "dwellMinPerStop": 0.5,
+      "boardWaitMin": 4,
+      "transferPenaltyMin": 4,
+      "transferWalkMaxM": 300,
+      "accessCandidates": 3,
+      "accessMaxM": 1500,
+      "stationSnapM": 10,
+      "pathJoinM": 5
+    },
+    "crossings": [
+      {
+        "id": "brooklyn-bridge",
+        "a": { "lat": 40.7115, "lng": -74.0035 },
+        "b": { "lat": 40.7, "lng": -73.99 }
+      },
+      {
+        "id": "manhattan-bridge",
+        "a": { "lat": 40.7155, "lng": -73.9945 },
+        "b": { "lat": 40.6995, "lng": -73.987 }
+      },
+      {
+        "id": "williamsburg-bridge",
+        "a": { "lat": 40.7186, "lng": -73.9866 },
+        "b": { "lat": 40.7103, "lng": -73.961 }
+      },
+      {
+        "id": "queensboro-bridge",
+        "a": { "lat": 40.7615, "lng": -73.964 },
+        "b": { "lat": 40.7505, "lng": -73.94 }
+      },
+      {
+        "id": "queens-midtown-tunnel",
+        "a": { "lat": 40.7465, "lng": -73.9745 },
+        "b": { "lat": 40.7415, "lng": -73.949 }
+      },
+      {
+        "id": "hugh-l-carey-tunnel",
+        "a": { "lat": 40.707, "lng": -74.015 },
+        "b": { "lat": 40.688, "lng": -74.0005 }
+      },
+      {
+        "id": "rfk-bridge-manhattan",
+        "a": { "lat": 40.8018, "lng": -73.933 },
+        "b": { "lat": 40.7935, "lng": -73.9215 }
+      },
+      {
+        "id": "rfk-bridge-queens",
+        "a": { "lat": 40.7935, "lng": -73.9215 },
+        "b": { "lat": 40.777, "lng": -73.92 }
+      },
+      {
+        "id": "rfk-bridge-bronx",
+        "a": { "lat": 40.7935, "lng": -73.9215 },
+        "b": { "lat": 40.807, "lng": -73.917 }
+      },
+      {
+        "id": "third-avenue-bridge",
+        "a": { "lat": 40.8045, "lng": -73.934 },
+        "b": { "lat": 40.8095, "lng": -73.929 }
+      },
+      {
+        "id": "macombs-dam-bridge",
+        "a": { "lat": 40.8268, "lng": -73.9378 },
+        "b": { "lat": 40.828, "lng": -73.926 }
+      },
+      {
+        "id": "washington-bridge",
+        "a": { "lat": 40.8475, "lng": -73.933 },
+        "b": { "lat": 40.849, "lng": -73.918 }
+      },
+      {
+        "id": "broadway-bridge",
+        "a": { "lat": 40.8705, "lng": -73.9145 },
+        "b": { "lat": 40.8762, "lng": -73.9105 }
+      },
+      {
+        "id": "whitestone-bridge",
+        "a": { "lat": 40.813, "lng": -73.831 },
+        "b": { "lat": 40.7875, "lng": -73.8225 }
+      },
+      {
+        "id": "throgs-neck-bridge",
+        "a": { "lat": 40.822, "lng": -73.806 },
+        "b": { "lat": 40.786, "lng": -73.79 }
+      },
+      {
+        "id": "verrazzano-narrows-bridge",
+        "a": { "lat": 40.613, "lng": -74.03 },
+        "b": { "lat": 40.6045, "lng": -74.068 }
+      },
+      {
+        "id": "pulaski-bridge",
+        "a": { "lat": 40.731, "lng": -73.952 },
+        "b": { "lat": 40.744, "lng": -73.951 }
+      },
+      {
+        "id": "kosciuszko-bridge",
+        "a": { "lat": 40.7215, "lng": -73.931 },
+        "b": { "lat": 40.732, "lng": -73.92 }
+      },
+      {
+        "id": "marine-parkway-bridge",
+        "a": { "lat": 40.588, "lng": -73.896 },
+        "b": { "lat": 40.567, "lng": -73.885 }
+      },
+      {
+        "id": "cross-bay-bridge-north",
+        "a": { "lat": 40.65, "lng": -73.838 },
+        "b": { "lat": 40.618, "lng": -73.821 }
+      },
+      {
+        "id": "cross-bay-bridge-south",
+        "a": { "lat": 40.6083, "lng": -73.816 },
+        "b": { "lat": 40.586, "lng": -73.817 }
+      },
+      {
+        "id": "roosevelt-island-bridge",
+        "a": { "lat": 40.7615, "lng": -73.9495 },
+        "b": { "lat": 40.7625, "lng": -73.939 }
+      },
+      {
+        "id": "city-island-bridge",
+        "a": { "lat": 40.8545, "lng": -73.7905 },
+        "b": { "lat": 40.858, "lng": -73.799 }
+      }
+    ],
+    "roadWaypoints": [
+      { "id": "bensonhurst", "at": { "lat": 40.62, "lng": -74.0 } },
+      { "id": "staten-island-east-shore", "at": { "lat": 40.615, "lng": -74.08 } },
+      { "id": "far-rockaway", "at": { "lat": 40.596, "lng": -73.77 } },
+      { "id": "rockaway-beach-east", "at": { "lat": 40.5925, "lng": -73.79 } },
+      { "id": "rockaway-beach-west", "at": { "lat": 40.586, "lng": -73.815 } },
+      { "id": "rockaway-park", "at": { "lat": 40.5806, "lng": -73.8358 } },
+      { "id": "neponsit", "at": { "lat": 40.5745, "lng": -73.86 } },
+      { "id": "jacob-riis-park", "at": { "lat": 40.568, "lng": -73.875 } },
+      { "id": "breezy-point", "at": { "lat": 40.5586, "lng": -73.904 } },
+      { "id": "howard-beach-south", "at": { "lat": 40.657, "lng": -73.84 } },
+      { "id": "howard-beach-north", "at": { "lat": 40.665, "lng": -73.84 } },
+      { "id": "pelham-bay-park", "at": { "lat": 40.866, "lng": -73.81 } }
+    ],
+    "rushHour": {
+      "windows": [
+        { "startMin": 420, "endMin": 600 },
+        { "startMin": 960, "endMin": 1140 }
+      ],
+      "subwayDurationMultiplier": 1.3,
+      "subwayMoodDrain": 4,
+      "taxiDurationMultiplier": 1.25
+    },
+    "delay": {
+      "probability": 0.05,
+      "rushProbability": 0.12,
+      "minutes": { "min": 5, "max": 20 },
+      "moodDrain": 3
+    },
+    "animation": {
+      "maxMs": 3000,
+      "msPerGameMinute": 60
+    }
+  },
+  "target": {
+    "shiftsPerDay": 2,
+    "weeklySavings": 150,
+    "firstUpgradeGameDay": { "min": 10, "max": 14 }
+  },
+  "items": {
+    "resalePct": { "common": 40, "medium": 50, "rare": 60 },
+    "depreciationPctPerGameDay": 5,
+    "minResalePct": 50,
+    "maxGiftStack": 10
+  },
+  "events": { "rollChance": 0.3, "defaultCooldownMin": 1440, "maxPendingEffects": 100 },
+  "rarityTiers": ["common", "medium", "rare"],
+  "premiumPriceTiersUsd": { "tier-1": 2, "tier-2": 5, "tier-3": 10 },
+  "boroughs": {
+    "queens": { "access": "open" },
+    "brooklyn": { "access": "clout", "level": "local" },
+    "manhattan": { "access": "clout", "level": "scene-regular" },
+    "bronx": { "access": "expanding-soon" },
+    "staten-island": { "access": "expanding-soon" }
+  },
+  "place": {
+    "venueActions": {
+      "bodega": ["bodega-breakfast"],
+      "food-spot": ["street-meal"],
+      "subway-station": [],
+      "park": ["walk-in-the-park"],
+      "gym": ["workout"],
+      "coffee-shop": ["coffee"],
+      "boutique": [],
+      "thrift": [],
+      "club": [],
+      "job-site": []
+    },
+    "homeActions": ["sleep", "nap", "home-meal"],
+    "actions": {
+      "coffee": {
+        "durationMin": 15,
+        "cashCost": 5,
+        "energyCost": 0,
+        "statEffects": { "energy": 10, "mood": 2 }
+      },
+      "street-meal": {
+        "durationMin": 30,
+        "cashCost": 9,
+        "energyCost": 0,
+        "statEffects": { "hunger": 45, "mood": 5 }
+      },
+      "workout": {
+        "durationMin": 60,
+        "cashCost": 8,
+        "energyCost": 20,
+        "statEffects": { "mood": 12 }
+      }
+    },
+    "clubs": {
+      "glowmatic": {
+        "coverCharge": 15,
+        "minCloutLevel": "local",
+        "refusalKey": "club.door.refused",
+        "durationMin": 120,
+        "energyCost": 15,
+        "moodGain": 10,
+        "cloutGain": 10
+      },
+      "brickwave": {
+        "coverCharge": 20,
+        "minCloutLevel": "scene-regular",
+        "refusalKey": "club.door.refused",
+        "durationMin": 120,
+        "energyCost": 15,
+        "moodGain": 10,
+        "cloutGain": 15
+      },
+      "afterglass": {
+        "coverCharge": 30,
+        "minCloutLevel": "known",
+        "refusalKey": "club.door.refusedVip",
+        "durationMin": 120,
+        "energyCost": 15,
+        "moodGain": 10,
+        "cloutGain": 25
+      }
+    },
+    "visit": { "durationMin": 60, "energyCost": 5, "moodGain": 10 },
+    "flexMultiplier": {
+      "default": 1,
+      "byLandmark": {
+        "brooklyn-bridge": 2,
+        "statue-of-liberty": 2,
+        "times-square": 2,
+        "central-park": 1.5,
+        "deco-spire": 1.5,
+        "dumbo": 1.5,
+        "high-line": 1.5,
+        "wedge-building": 1.5,
+        "coney-island-boardwalk": 1.5,
+        "washington-square-arch": 1.25,
+        "queens-ballpark": 1.25,
+        "brooklyn-arena": 1.25
+      }
+    }
+  }
+}

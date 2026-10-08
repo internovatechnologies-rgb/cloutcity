@@ -1,0 +1,1 @@
+{"format":"cc-geo-v1","derived":true,"notice":"Simplified artwork derived from NYC Department of City Planning data; not the original data.","sources":["dcp-borough-boundaries"],"projection":{"id":"cc-enu-v1","originLat":40.7,"originLng":-73.98},"sea":[[-25589,-26720,51254,0,0,52885,-51254,0]]}

@@ -1,0 +1,9 @@
+{
+  "id": "nyc",
+  "strings": {
+    "boroughs.brooklyn.locked": "Brooklyn's not checking for you yet. Get to {level} and come through. Right now you're {current}.",
+    "boroughs.manhattan.locked": "Manhattan? On bodega money? Hit {level} first. You're {current} right now.",
+    "boroughs.bronx.teaser": "The Bronx is expanding soon. The Bronx ballpark is already warming up.",
+    "boroughs.statenIsland.teaser": "Staten Island is expanding soon. The ferry's coming, just not yet."
+  }
+}

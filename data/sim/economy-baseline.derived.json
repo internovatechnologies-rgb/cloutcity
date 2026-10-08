@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "generatedBy": "src/engine/sim/economy.sim.test.ts",
+  "days": 30,
+  "bestJob": "retail",
+  "jobs": {
+    "barista": {
+      "finalCash": 752,
+      "minCash": 147,
+      "weeklySavings": [
+        112,
+        112,
+        112
+      ],
+      "firstAffordableDay": 14
+    },
+    "retail": {
+      "finalCash": 884,
+      "minCash": 147,
+      "weeklySavings": [
+        140,
+        140,
+        140
+      ],
+      "firstAffordableDay": 13
+    },
+    "delivery": {
+      "finalCash": 748,
+      "minCash": 147,
+      "weeklySavings": [
+        106,
+        114,
+        106
+      ],
+      "firstAffordableDay": 14
+    }
+  },
+  "cash": {
+    "maxGainPerAction": 72,
+    "maxGainPerGameDay": 144,
+    "maxGainPerGameHour": 18
+  },
+  "clout": {
+    "maxGainPerAction": 25,
+    "maxGainPerGameDay": 25,
+    "sources": {
+      "flex": 25,
+      "paycheck": 10
+    }
+  },
+  "actions": {
+    "maxPerGameDay": 16
+  },
+  "pace": {
+    "cashPerTap": 38.96,
+    "cloutPerTap": 22.38
+  }
+}

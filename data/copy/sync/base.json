@@ -1,0 +1,27 @@
+{
+  "strings": {
+    "sync.status.local": "Saved on this device",
+    "sync.status.syncing": "Saving to your account",
+    "sync.status.synced.guest": "Saved as a guest",
+    "sync.status.offline": "Offline. Saved on this device",
+    "sync.status.paused": "Account save paused",
+    "sync.status.conflict": "Two saves found",
+    "sync.status.update": "Update the game to save",
+    "sync.status.behind": "Account game is newer",
+    "sync.label": "Cloud save: {status}",
+    "sync.sheet.title": "Cloud save",
+    "sync.sheet.local": "Your progress lives on this device. It saves to your account game once you're online.",
+    "sync.sheet.synced.guest": "Your progress is saved to your account game as a guest.",
+    "sync.sheet.syncing": "Saving your progress to your account game.",
+    "sync.sheet.offline": "No connection. Keep playing: your progress is saved on this device and goes to your account game when you're back online.",
+    "sync.sheet.paused": "Saving to your account game is paused because the server could not accept this save. Keep playing on this device; we'll try again later.",
+    "sync.sheet.update": "Your account game was saved by a newer version of the game. Reload to update, then saving picks back up.",
+    "sync.sheet.behind": "This device's game is from before your last prestige, so it can't replace your account game. Use your account game instead.",
+    "sync.sheet.conflict": "This device and your account game have different progress. Pick the one to keep. The other is replaced.",
+    "sync.sheet.keepLocal": "Keep this device's progress",
+    "sync.sheet.useCloud": "Use the account game",
+    "sync.sheet.retry": "Try again now",
+    "sync.sheet.reload": "Reload",
+    "sync.announce": "Cloud save: {status}"
+  }
+}

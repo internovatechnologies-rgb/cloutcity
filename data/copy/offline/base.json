@@ -1,0 +1,10 @@
+{
+  "strings": {
+    "offline.title": "You're offline",
+    "offline.body": "This page needs a connection. Your game is saved on this device and the city plays without one.",
+    "offline.back": "Back to the city",
+    "offline.update.message": "A new version of Clout City is ready.",
+    "offline.update.action": "Update now",
+    "offline.update.dismiss": "Not now"
+  }
+}

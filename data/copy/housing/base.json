@@ -1,0 +1,19 @@
+{
+  "strings": {
+    "housing.queensRoom.name": "Queens room",
+    "housing.brooklyn1br.name": "Brooklyn 1BR",
+    "housing.manhattanLoft.name": "Manhattan loft",
+    "housing.rent.perWeek": "{home}: {rent} a week",
+    "housing.rent.ranked": "{home}: {rent} a week, the {rank} rent in the city",
+    "housing.rent.moreThan": "{home} costs {difference} a week more than {other}.",
+    "housing.rent.lessThan": "{home} costs {difference} a week less than {other}.",
+    "housing.rent.sameAs": "{home} costs the same as {other}.",
+    "housing.slot.wall1.name": "Main wall",
+    "housing.slot.wall2.name": "Wall by the window",
+    "housing.slot.wall3.name": "Wall by the door",
+    "housing.slot.floor1.name": "Middle of the floor",
+    "housing.slot.floor2.name": "Front corner of the floor",
+    "housing.slot.surface1.name": "Windowsill",
+    "housing.slot.surface2.name": "Side table"
+  }
+}

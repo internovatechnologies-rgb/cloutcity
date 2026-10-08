@@ -1,0 +1,13 @@
+{
+  "strings": {
+    "boroughs.queens.name": "Queens",
+    "boroughs.brooklyn.name": "Brooklyn",
+    "boroughs.manhattan.name": "Manhattan",
+    "boroughs.bronx.name": "The Bronx",
+    "boroughs.statenIsland.name": "Staten Island",
+    "boroughs.brooklyn.locked": "Brooklyn is locked: reach {level} clout to unlock it. You're at {current}.",
+    "boroughs.manhattan.locked": "Manhattan is locked: reach {level} clout to unlock it. You're at {current}.",
+    "boroughs.bronx.teaser": "The Bronx is expanding soon, starting with the Bronx ballpark.",
+    "boroughs.statenIsland.teaser": "Staten Island is expanding soon, starting with the Staten Island Ferry."
+  }
+}

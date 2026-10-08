@@ -1,0 +1,22 @@
+{
+  "minLength": 3,
+  "maxLength": 16,
+  "minLetters": 2,
+  "generated": {
+    "digits": 2,
+    "fallbackDigits": 4,
+    "attempts": 20
+  },
+  "changes": {
+    "freeChanges": 1,
+    "perWindow": 2,
+    "windowDays": 30,
+    "minIntervalHours": 24
+  },
+  "quarantineDays": 30,
+  "rateLimits": {
+    "checkHandle": { "max": 30, "windowMs": 60000 },
+    "publicProfile": { "max": 120, "windowMs": 60000 }
+  },
+  "publicProfilesMaxIds": 50
+}
